@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Kickdudes">
+  <meta name="author" content="Twinsynergy.co.th">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script src="js/jquery.js" type="text/javascript" ></script>
+  <script src="js/bootstrap.js" type="text/javascript" ></script>
+
+  <!--Addition-->
+  <script src="js/easing.js"></script>
+  <script src="js/scrolling-nav.js"></script>
+  <script src="js/scrollspy.js"></script>
+  <script src="js/magic/magic.js" type="text/javascript" ></script>
+  <script src="js/magic/tween.js" type="text/javascript" ></script>
+  <script src="js/magic/plugins/animation.gsap.min.js" type="text/javascript"></script>
+  <script src="js/magic/plugins/debug.addIndicators.min.js" type="text/javascript"></script>
+
+
+</head>
+<body id="home" data-spy="scroll" data-target=".navbar-fixed-top" >
+  <header>
+    <nav class="navbar navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header"><a href=""><img src="images/logo.png" alt="kickdudes" id="logo"></a></div>
+
+          <ul class="nav navbar-nav navbar-right" role="menu">
+            <li><a id="about_m" class="page-scroll" href="#about" >about</a></li>
+            <li><a id="feature_m" class="page-scroll" href="#feature" >feature</a></li>
+            <li><a id="contact_m" class="page-scroll" href="#contact" >contact</a></li>
+          </ul>
+
+      </div>
+    </nav>
+  </header>
+  <section id="welcome">
+    <div class="container">
+      <div class="row">
+        <div class="intro col-md-12">
+          <h1>Welcome to kickdudes</h1>
+
+          <a href="#about" class="page-scroll"><span class="glyphicon glyphicon-menu-down" id="magic_arrow"></span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="about" class="vertical_align_wrap">
+    <div class="container">
+      <div id="animate_about" class="content row">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ut tempore ab eveniet voluptatem, nesciunt, aut dolorem est sit et corporis id facere distinctio. Nulla repellat molestiae aut, ipsum saepe!
+      </div>
+      <script>
+        //Magic
+        var controller = new ScrollMagic.Controller({
+          globalSceneOptions: {
+
+            }
+        });
+        //about
+        // build tween
+        var tween = TweenMax.to("#animate_about", 0.5,{color: "red"});
+        new ScrollMagic.Scene({triggerElement: "#about"})
+          .setTween(tween)
+          //.setClassToggle("#about_m", "active")
+          .addIndicators()
+          .addTo(controller);
+      </script>
+    </div>
+  </section>
+  <section id="feature" class="vertical_align_wrap" >
+    <div class="container">
+      <div id="animate_feature" class="row">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem reprehenderit non quisquam, quam vel atque eos, maiores, modi, debitis iure quidem enim vitae consequuntur earum magni! Obcaecati earum aperiam, placeat?
+      </div>
+      <script>
+        //about
+        // build tween
+	      var tween = TweenMax.to("#animate_feature", 1, {className: "+=fish"});
+
+        new ScrollMagic.Scene({triggerElement: "#feature"})
+          .setTween(tween)
+          //.setClassToggle("#feature_m", "active")
+          .addIndicators()
+          .addTo(controller);
+      </script>
+    </div>
+  </section>
+  <section id="contact" class="vertical_align_wrap">
+    <div class="container">
+      <div class="row">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam in quo, maxime at qui, repellendus blanditiis eum commodi voluptatum quos ab laboriosam fugit voluptatem! Quae beatae optio itaque, earum delectus.
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="row">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam fugiat facilis repudiandae pariatur deleniti, culpa modi delectus provident, voluptatum molestias, nihil ipsa illo maiores dolorem nam aut velit, quisquam explicabo.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

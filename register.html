@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Kickdudes">
+  <meta name="author" content="Twinsynergy.co.th">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Holder registration</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <script src="js/jquery.js" type="text/javascript" ></script>
+  <script src="js/bootstrap.js" type="text/javascript" ></script>
+
+  <!--Addition-->
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+  <script src="js/validate.js" type="text/javascript" ></script>
+  <script src="js/floatlabels.js" type="text/javascript" ></script>
+  <script src="js/tab.js" type="text/javascript" ></script>
+  <script src="js/kickdudes.js" type="text/javascript" ></script>
+
+</head>
+<body id="holder_regis">
+  <header>
+    <nav class="navbar navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header"><a href="index.html"><img src="images/logo.png" alt="kickdudes" id="logo"></a></div>
+
+          <ul class="nav navbar-nav navbar-right" role="menu">
+            <li><a id="about_m" class="page-scroll" href="#about" >about</a></li>
+            <li><a id="feature_m" class="page-scroll" href="#feature" >feature</a></li>
+            <li><a id="contact_m" class="page-scroll" href="#contact" >contact</a></li>
+          </ul>
+
+      </div>
+    </nav>
+  </header>
+  <section id="main-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active">
+            <a href="#player" aria-controls="player" role="tab" data-toggle="tab">นักเตะ (Player)</a>
+          </li>
+          <li role="presentation">
+            <a href="#holder" aria-controls="holder" role="tab" data-toggle="tab">เจ้าของสนาม (Holder field)</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane fade in active" id="player">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nemo corporis, ex, adipisci eos tempora. Aliquid sequi voluptatibus dolorum dignissimos in nesciunt quas laborum, at, voluptas aperiam consequatur, iure quibusdam!
+          </div>
+          <div role="tabpanel" class="tab-pane fade" id="holder">
+            <form action="#" id="holder_form" class="form-horizontal">
+              <h2>holder information</h2>
+              <div class="row">
+                <div class="form-group">
+                  <div class="col-md-6">
+                    <input type="text" id="name_holder" name="name_holder" class="floatlabel form-control" placeholder="ชื่อ" />
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" id="lastname_holder" name="lastname_holder" class="floatlabel form-control" placeholder="นามสกุล">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="col-md-6">
+                    <input type="email" id="email_holder" name="email_holder" class="floatlabel form-control" placeholder="อีเมล">
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" id="phone_holder" name="phone_holder" class="floatlabel form-control" data-label="ตัวอย่าง: 0824567890" placeholder="เบอร์โทรติดต่อ">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="col-md-6">
+                    <select id="bank_holder" name="bank_holder" class="form-control">
+                      <option>เลือกธนาคาร</option>
+                      <option value="BKKB">ธนาคารกรุงเทพ</option>
+                      <option value="AYUD">ธนาคารกรุงศรีอยุธยา</option>
+                      <option value="KASI">ธนาคารกสิกรไทย</option>
+                      <option value="UBOB">ธนาคารซีไอเอ็มบีไทย</option>
+                      <option value="TMBK">ธนาคารทหารไทย</option>
+                      <option value="SICO">ธนาคารไทยพาณิชย์</option>
+                      <option value="THBK">ธนาคารธนชาต</option>
+                      <option value="UOVB">ธนาคารยูโอบี</option>
+                      <option value="KRTH">ธนาคารกรุงไทย</option>
+                      <option value="GSB">ธนาคารออมสิน</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" id="bank_id_holder" name="bank_id_holder" class="floatlabel form-control" data-label="ตัวอย่าง: 0711062862" placeholder="เลขบัญชี">
+                  </div>
+                </div>
+              </div>
+
+              <h2>field information</h2>
+              <div class="row">
+                <div class="form-group">
+                  <div class="col-md-8">
+                    <input type="text" id="name_field" name="name_field" class="floatlabel form-control" placeholder="ชื่อสนาม">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-md-3">
+                    <input type="file" id="file_field" name="file_field" >
+                  </div>
+                  <p class="help-block col-md-6">A block of help text that breaks onto a new line and may extend beyond one line.</p>
+                </div>
+              </div>
+              <!-- <div class="g-recaptcha col-md-offset-4" data-sitekey="6LfxDQUTAAAAAFFxkCInbU6wpib1DDNixhWXEA_6"></div>
+               -->
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div> <!--.row-->
+  </div> <!--.container-->
+</section> <!--#main-container-->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam fugiat facilis repudiandae pariatur deleniti, culpa modi delectus provident, voluptatum molestias, nihil ipsa illo maiores dolorem nam aut velit, quisquam explicabo.
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
