@@ -3,6 +3,9 @@ $(function() {
   //float label
   $('input.floatlabel').floatlabel();
 
+  //Select
+  $('.selectpicker').selectpicker();
+
   //Validate holder form
   $('#holder_form').validate({
     errorElement: "p",
