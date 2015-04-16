@@ -6,6 +6,7 @@
 /*Variables*/
 @kickdudes: #50AA8D;
 @kickdudes-dark: #2F5E4E;
+@footer: #414141;
 
 /*Mixins*/
 
@@ -24,6 +25,11 @@ a{
   padding: 80px 0;
   h2,h3{ text-align: center; }
   h2{ margin-bottom: 70px; color: #fff; text-transform: uppercase; }
+}
+footer,
+#keep{
+  background-color: @footer;
+  color: #fff;
 }
 
 /*From element*/
@@ -162,6 +168,7 @@ body{
 }
 
 #feature{
+  h2{ padding: 0 300px; }
   .feature_list{
     li{
       text-align: center;
@@ -171,6 +178,41 @@ body{
     p{
       color: #fff;
     }
+  }
+}
+
+#keep{
+  text-align: center;
+  color: @gray-lighter;
+  h2{ text-transform: capitalize; margin-bottom: 60px; color: @gray-lighter; }
+  padding: 30px 0 60px 0;
+  li{
+    margin: 0 50px;
+  }
+  img{ margin-bottom: 20px; }
+}
+
+footer{
+  border-top: 1px solid #333333;
+  position: relative;
+  color: #fff;
+  font-size: 14px;
+  &:before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #666666;
+  }
+  h2{ text-align: center; }
+  a{
+    color: #fff;
+  }
+  .navbar-foot{
+    margin: 15px 0;
   }
 }
 
