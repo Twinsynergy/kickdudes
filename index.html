@@ -18,11 +18,14 @@
   <script src="js/easing.js"></script>
   <script src="js/scrolling-nav.js"></script>
   <script src="js/scrollspy.js"></script>
+  <script src="js/validate.js" type="text/javascript" ></script>
+  <script src="js/validate-home.js" type="text/javascript" ></script>
   <script src="js/magic/magic.js" type="text/javascript" ></script>
   <script src="js/magic/tween.js" type="text/javascript" ></script>
   <script src="js/magic/plugins/animation.gsap.min.js" type="text/javascript"></script>
   <script src="js/magic/plugins/debug.addIndicators.min.js" type="text/javascript"></script>
   <script>
+  var controller = new ScrollMagic.Controller();
   //jQuery to collapse the navbar on scroll
   $(window).scroll(function() {
       if ($(".navbar").offset().top > 50) {
@@ -43,9 +46,9 @@
           <ul class="nav navbar-nav navbar-right" role="menu">
             <li><a id="about_m" class="page-scroll" href="#about" >about</a></li>
             <li><a id="feature_m" class="page-scroll" href="#feature" >features</a></li>
-            <li><a id="feature_m" class="page-scroll" href="#map" >map</a></li>
+            <li><a id="feature_m" class="page-scroll" href="#why" >why</a></li>
             <li><a id="contact_m" class="page-scroll" href="#contact" >contact</a></li>
-            <li class="dropdown hidden">
+            <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Languages <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="#">English</a></li>
@@ -63,10 +66,13 @@
         <div class="intro col-md-12">
           <div class="row">
             <section id="title_about" class="col-md-8">
-              <h1>Welcome to the world of Kickdudes</h1>
+              <h1 class="animated fadeInDown">Welcome to the world of Kickdudes</h1>
               <p>
                 Kickdudes is a private space where you can share each moment only with that special someone.
 Create, share, and remember all your moments with each other. Get started now!
+              </p>
+              <p class="app_store">
+                <a href="#"><img src="images/app_store_icon.png" alt="app store" /></a>
               </p>
             </section>
             <section id="iphone" class="col-md-4">
@@ -86,21 +92,21 @@ Create, share, and remember all your moments with each other. Get started now!
       <div id="animate_feature" class="content row">
         <h2>the world best soccer player community app.</h2>
           <ul class="feature_list list-inline">
-            <li class="feature_look col-md-4">
+            <li class="animated col-md-4">
               <img src="images/icon_feature_001.png" alt="look around" />
               <h3>look around</h3>
               <p>
                 หาเพื่อนใหม่ที่อยู่ใกล้ตัวคุณได้แบบง่ายๆ ด้วยฟั่งชั่นดูรอบๆ ในพื้นที่รอบตัวคุณ
               </p>
             </li>
-            <li class="feature_same col-md-4">
+            <li class="animated col-md-4">
               <img src="images/icon_feature_002.png" alt="same lifestyle" />
               <h3>same lifestyle</h3>
               <p>
                 หาเพื่อนใหม่ที่อยู่ใกล้ตัวคุณได้แบบง่ายๆ ด้วยฟั่งชั่นดูรอบๆ ในพื้นที่รอบตัวคุณ
               </p>
             </li>
-            <li class="feature_add col-md-4">
+            <li class="animated col-md-4">
               <img src="images/icon_feature_003.png" alt="add status" />
               <h3>add status</h3>
               <p>
@@ -110,46 +116,93 @@ Create, share, and remember all your moments with each other. Get started now!
           </ul>
       </div>
       <script>
-        //Magic
-        var controller = new ScrollMagic.Controller({
-          globalSceneOptions: {
-
-            }
-        });
-        //about
-        // build tween
-        // var tween = TweenMax.to("#animate_feature", 0.5,{color: "red"});
+        //feature
         new ScrollMagic.Scene({triggerElement: "#feature"})
-          .setTween(tween)
+          .setClassToggle(".animated", "fadeInUp")
           .addIndicators()
           .addTo(controller);
       </script>
     </div>
-  </section>
-  <section id="map" class="vertical_align_wrap" >
+  </section><!--#feature-->
+
+  <section id="why" class="vertical_align_wrap" >
     <div class="container">
-      <div id="animate_map" class="row">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem reprehenderit non quisquam, quam vel atque eos, maiores, modi, debitis iure quidem enim vitae consequuntur earum magni! Obcaecati earum aperiam, placeat?
+      <div id="animate_why" class="row">
+        <div class="people_opa col-md-12">
+          <h2>Why us?</h2>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam vitae voluptatibus illum a, nulla laborum, ad consectetur sit tempore modi, autem labore accusantium sint asperiores odio iste quaerat nemo repellat.
+        </div>
       </div>
       <script>
-        //map
+        //why
         // build tween
-	      var tween = TweenMax.to("#animate_map", 1, {className: "+=fish"});
-
-        new ScrollMagic.Scene({triggerElement: "#map"})
+	      var tween = TweenMax.to("#animate_why", 1, {className: "+=fish"});
+        new ScrollMagic.Scene({triggerElement: "#why"})
           .setTween(tween)
           .addIndicators()
           .addTo(controller);
       </script>
     </div>
-  </section>
+  </section><!--#why-->
+
+  <section id="signup">
+    <div class="container">
+      <p>
+        Interested in Kickdudes for your application?
+        <a href="#" class="animated btn btn-danger btn-lg">sign up now!!!</a>
+      </p>
+      <script>
+        //sigup
+        // build tween
+	      var tween = TweenMax.to(".animated", 1, {className: "+=shake"});
+        new ScrollMagic.Scene({triggerElement: "#signup"})
+          .setTween(tween)
+          .addIndicators()
+          .addTo(controller);
+      </script>
+    </div>
+  </section><!--#signup-->
+
   <section id="contact" class="vertical_align_wrap">
     <div class="container">
       <div class="row">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam in quo, maxime at qui, repellendus blanditiis eum commodi voluptatum quos ab laboriosam fugit voluptatem! Quae beatae optio itaque, earum delectus.
+        <div class="col-md-6">
+          <div id="adddress">
+            <h2>contact us</h2>
+            <p>
+              TWIN SYNERGY CO., LTD. 230 SOI PHATTHANAKARN 29, PHATTHAKARN RD., SUAN LUANG, BANGKOK 10250
+            </p>
+            <p>TEL: 090-669-8968</p>
+            <p><img src="images/icon_contact.png" alt="contact"></p>
+          </div>
+        </div>
+        <div class="col-md-6">
+            <form id="contact-form" class="animated" action="#">
+              <div class="form-group">
+                <input type="text" id="name_contact" name="name_contact" class="form-control" placeholder="ชื่อ และนามสกุล ผู้ติดต่อ" />
+              </div>
+              <div class="form-group">
+                <input type="email" id="email_contact" name="email_contact" class="form-control" placeholder="อีเมล" />
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" id="message_contact" name="message_contact" placeholder="พิมพ์ข้อความที่ต้องการ" rows="5"></textarea>
+              </div>
+              <div class="form-group">
+                <input class="btn btn-success" type="submit" value="ส่งข้อความ">
+              </div>
+            </form>
+        </div>
       </div>
     </div>
-  </section>
+    <script>
+      //contact
+      new ScrollMagic.Scene({triggerElement: "#contact"})
+        .setClassToggle("#contact-form", "lightSpeedIn")
+        .addIndicators()
+        .addTo(controller);
+    </script>
+  </section><!--#contact-->
+
   <section id="keep">
     <div class="container">
       <div class="row">
@@ -172,7 +225,8 @@ Create, share, and remember all your moments with each other. Get started now!
 
       </div>
     </div>
-  </section>
+  </section><!--#keep-->
+
   <footer>
     <div class="container">
       <div class="row">

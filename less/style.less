@@ -1,6 +1,6 @@
 @import "bootstrap/bootstrap.less";
 @import "bootstrap-select.less";
-@import "animate.less";
+@import "animate/animate.less";
 @import "mdi.less";
 
 /*Variables*/
@@ -33,7 +33,14 @@ footer,
 }
 
 /*From element*/
-
+form{
+  .form-control{
+    &:focus{ border-color: transparent; box-shadow: none; }
+  }
+  textarea {
+    resize: none;
+  }
+}
 
 /*Keyframes*/
 /* Chrome, Safari, Opera */
@@ -81,6 +88,8 @@ body{
   .transition(all .3s ease-in-out );
 }
 .navbar-nav{
+  opacity: 0;
+  .transition( opacity 1s ease-in-out );
   a{
     color: #000;
     text-transform: uppercase;
@@ -107,10 +116,11 @@ body{
   li.active a{ color: @kickdudes !important; }
   .dropdown.open,
   .dropdown-menu{
-    background-color: #399986;
+    background-color: #399986 !important;
     a{ color: #fff; }
   }
   .dropdown-menu{ border-top: 0; }
+  .navbar-nav{ opacity: 1; }
 }
 
 #about{
@@ -148,7 +158,7 @@ body{
     padding-top: 20px;
     img{ max-height: 500px; }
   }
-
+  .app_store{ margin-top: 30px; }
 }
 #magic_arrow{
   color: #fff;
@@ -173,12 +183,53 @@ body{
     li{
       text-align: center;
       padding: 0 10px;
+      opacity: 0;
     }
     h3{ color: @kickdudes-dark; text-transform: capitalize; margin: 20px 0; }
     p{
       color: #fff;
     }
   }
+}
+
+#why{
+  background-color: @kickdudes-dark;
+  color: #fff;
+  .people_opa{
+    background: transparent url(../images/people-opacity.png) top right no-repeat;
+    height: 800px;
+  }
+}
+
+#signup{
+  text-align: center;
+  text-transform: capitalize;
+  background-color: @kickdudes;
+  color: #fff;
+  padding: 35px 0;
+  font-size: 20px;
+  .btn{ margin-left: 20px; }
+}
+
+#contact{
+  background: transparent url(../images/bg_contact.jpg) center center no-repeat;
+  color: #fff;
+  padding-top: 200px;
+  padding-bottom: 160px;
+  h2{ text-transform: uppercase; text-decoration: underline; text-align: left; margin-bottom: 25px; }
+  p{ margin-bottom: 30px; }
+}
+#contact-form{
+  opacity: 0;
+  .btn{
+    width: 100%;
+    background-color: @kickdudes;
+    border-color: @kickdudes-dark;
+    &:hover{
+      background-color: @kickdudes-dark;
+    }
+  }
+  .error{ color: @brand-danger; }
 }
 
 #keep{
@@ -208,14 +259,12 @@ footer{
     background-color: #666666;
   }
   h2{ text-align: center; }
-  a{
+  a,
+  a:hover{
     color: #fff;
+    text-decoration: none;
   }
   .navbar-foot{
     margin: 15px 0;
   }
-}
-
-#map{
-  background-color: @kickdudes-dark;
 }
