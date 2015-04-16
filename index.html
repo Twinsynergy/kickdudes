@@ -76,7 +76,6 @@ Create, share, and remember all your moments with each other. Get started now!
               <a href="#feature" id="magic_arrow" class="page-scroll"><span class="mdi mdi-chevron-down" ></span></a>
             </section>
           </div>
-
         </div>
       </div>
     </div>
@@ -85,7 +84,30 @@ Create, share, and remember all your moments with each other. Get started now!
   <section id="feature" class="vertical_align_wrap">
     <div class="container">
       <div id="animate_feature" class="content row">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ut tempore ab eveniet voluptatem, nesciunt, aut dolorem est sit et corporis id facere distinctio. Nulla repellat molestiae aut, ipsum saepe!
+        <h2>the world best soccer player community app.</h2>
+          <ul class="feature_list list-inline">
+            <li class="feature_look col-md-4">
+              <img src="images/icon_feature_001.png" alt="look around" />
+              <h3>look around</h3>
+              <p>
+                หาเพื่อนใหม่ที่อยู่ใกล้ตัวคุณได้แบบง่ายๆ ด้วยฟั่งชั่นดูรอบๆ ในพื้นที่รอบตัวคุณ
+              </p>
+            </li>
+            <li class="feature_same col-md-4">
+              <img src="images/icon_feature_002.png" alt="same lifestyle" />
+              <h3>same lifestyle</h3>
+              <p>
+                หาเพื่อนใหม่ที่อยู่ใกล้ตัวคุณได้แบบง่ายๆ ด้วยฟั่งชั่นดูรอบๆ ในพื้นที่รอบตัวคุณ
+              </p>
+            </li>
+            <li class="feature_add col-md-4">
+              <img src="images/icon_feature_003.png" alt="add status" />
+              <h3>add status</h3>
+              <p>
+                หาเพื่อนใหม่ที่อยู่ใกล้ตัวคุณได้แบบง่ายๆ ด้วยฟั่งชั่นดูรอบๆ ในพื้นที่รอบตัวคุณ
+              </p>
+            </li>
+          </ul>
       </div>
       <script>
         //Magic
@@ -96,10 +118,9 @@ Create, share, and remember all your moments with each other. Get started now!
         });
         //about
         // build tween
-        var tween = TweenMax.to("#animate_feature", 0.5,{color: "red"});
+        // var tween = TweenMax.to("#animate_feature", 0.5,{color: "red"});
         new ScrollMagic.Scene({triggerElement: "#feature"})
           .setTween(tween)
-          //.setClassToggle("#about_m", "active")
           .addIndicators()
           .addTo(controller);
       </script>
@@ -111,13 +132,12 @@ Create, share, and remember all your moments with each other. Get started now!
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem reprehenderit non quisquam, quam vel atque eos, maiores, modi, debitis iure quidem enim vitae consequuntur earum magni! Obcaecati earum aperiam, placeat?
       </div>
       <script>
-        //about
+        //map
         // build tween
 	      var tween = TweenMax.to("#animate_map", 1, {className: "+=fish"});
 
         new ScrollMagic.Scene({triggerElement: "#map"})
           .setTween(tween)
-          //.setClassToggle("#feature_m", "active")
           .addIndicators()
           .addTo(controller);
       </script>
