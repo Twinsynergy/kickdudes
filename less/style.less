@@ -17,6 +17,7 @@ a{
     color: #000;
   }
 }
+.text-c{ text-align: center; }
 
 /*Layout*/
 .vertical_align_wrap{
@@ -57,6 +58,7 @@ a{
 /*Miscellaneous*/
 body{
   color: #000;
+  font-size: 16px;
   background-color: @kickdudes;
   position: relative;
   padding-top: 80px;
@@ -70,8 +72,8 @@ body{
   width: 191px;
   height: 55px;
   background: transparent url(../images/logo.png) 0 0 no-repeat;
+  .transition(all .3s ease-in-out );
 }
-.navbar{ .transition(all 2s ease-in-out ); }
 .navbar-nav{
   a{
     color: #000;
@@ -109,24 +111,51 @@ body{
   background: transparent url(../images/bg_mainpage.jpg) center center no-repeat;
   .row{ height: 100vh; }
   .intro{
-    text-align: center;
-    color: #fff;
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    display: table;
+    .row{
+      display: table-cell;
+      vertical-align: middle;
+    }
   }
+  #title_about{
+    padding-top: 130px;
+  }
+  h1{
+    color: #fff;
+    font-size: 50px;
+    text-indent: 60px;
+    position: relative;
+    margin-bottom: 25px;
+    &:before{
+      position: absolute;
+      display: inline-block;
+      background: transparent url(../images/icon-open-message.png) 0 0 no-repeat;
+      top: 0;
+      left: 0;
+      content: " ";
+      width: 45px;
+      height: 42px;
+    }
+  }
+  #iphone{
+    text-align: center;
+    padding-top: 20px;
+    img{ max-height: 500px; }
+  }
+
 }
 #magic_arrow{
   color: #fff;
-  width: 45px;
-  height: 45px;
-  font-size: 40px;
+  width: 49px;
+  height: 49px;
+  display: inline-block;
+  font-size: 35px;
   border: 1px solid #fff;
   border-radius: 50%;
-  -webkit-animation: zoom 3s infinite; /* Chrome, Safari, Opera */
-  animation: zoom 1s infinite;
+  .mdi{
+    -webkit-animation: zoom 3s infinite; /* Chrome, Safari, Opera */
+    animation: zoom 3s infinite;
+  }
   &:hover{
     background-color: rgba(255,255,255,.3);
   }
