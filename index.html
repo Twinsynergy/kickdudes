@@ -30,8 +30,10 @@
   $(window).scroll(function() {
       if ($(".navbar").offset().top > 50) {
           $(".navbar-fixed-top").addClass("navbar-kick");
+          $(".navbar-fixed-top .navbar-nav").show();
       } else {
           $(".navbar-fixed-top").removeClass("navbar-kick");
+          $(".navbar-fixed-top .navbar-nav").fadeOut(200);
       }
   });
   </script>
