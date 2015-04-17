@@ -86,7 +86,7 @@ body{
   background: transparent url(../images/bg_navbar.png) top left repeat-x;
   .box-shadow(  0 1px 2px rgba(0,0,0,.20) );
   min-height: inherit;
-  top: -60px;
+  /* top: -60px; */
   .transition(all .5s);
 }
 .navbar-nav{
@@ -104,13 +104,6 @@ body{
       a{ color: @gray; }
     }
   }
-  .dropdown-menu{
-    background-color: transparent !important;
-  }
-}
-.navbar-kick{
-  #logo{ .scale(.7); }
-  top: 0;
   li.active a{ color: @kickdudes !important; }
   .dropdown.open,
   .dropdown-menu{
@@ -118,6 +111,11 @@ body{
     a{ color: #fff; }
   }
   .dropdown-menu{ border-top: 0; }
+}
+.navbar-kick{
+  #logo{ .scale(.7); }
+  top: 0;
+
 }
 
 #about{
@@ -263,5 +261,29 @@ footer{
   }
   .navbar-foot{
     margin: 15px 0;
+  }
+}
+
+/*Regis page*/
+.signupform-formemail{
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  .transition(all .5s ease-in-out);
+}
+.signupform-start{
+  height: 5em;
+  overflow: hidden;
+  .transition(all .5s ease-in-out);
+}
+.signupform-formstate{
+  .signup-btn-email,
+  .signupform-start{
+    height: 0;
+    opacity: 0;
+  }
+  .signupform-formemail{
+    height: 16em;
+    opacity: 1;
   }
 }
