@@ -39,26 +39,26 @@
 </head>
 <body id="home" data-spy="scroll" data-target=".navbar-fixed-top" >
   <header>
-    <nav class="navbar navbar-fixed-top" role="navigation">
-      <div class="container">
-        <a href="index.html" id="logo" ></a>
 
-          <ul class="nav navbar-nav navbar-right" role="menu">
-            <li><a id="about_m" class="page-scroll" href="#about" >about</a></li>
-            <li><a id="feature_m" class="page-scroll" href="#feature" >features</a></li>
-            <li><a id="feature_m" class="page-scroll" href="#why" >why</a></li>
-            <li><a id="contact_m" class="page-scroll" href="#contact" >contact</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Languages <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">English</a></li>
-                <li><a href="#">Thai</a></li>
-              </ul>
-            </li>
-          </ul>
+      <nav class="navbar navbar-fixed-top" role="navigation">
+        <div class="container">
+          <a href="index.html" id="logo" ></a>
 
-      </div>
-    </nav>
+            <ul class="nav navbar-nav navbar-right" role="menu">
+              <li><a id="about_m" class="page-scroll" href="#about" >about</a></li>
+              <li><a id="feature_m" class="page-scroll" href="#feature" >features</a></li>
+              <li><a id="feature_m" class="page-scroll" href="#why" >why</a></li>
+              <li><a id="contact_m" class="page-scroll" href="#contact" >contact</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Languages <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">English</a></li>
+                  <li><a href="#">Thai</a></li>
+                </ul>
+              </li>
+            </ul>
+        </div>
+      </nav>
   </header>
   <section id="about">
     <div class="container">
@@ -149,7 +149,7 @@ Create, share, and remember all your moments with each other. Get started now!
     <div class="container">
       <p>
         Interested in Kickdudes for your application?
-        <a href="#" class="animated btn btn-danger btn-lg">sign up now!!!</a>
+        <a href="register.html" class="animated btn btn-danger btn-lg">sign up now!!!</a>
       </p>
       <script>
         //sigup
@@ -177,6 +177,8 @@ Create, share, and remember all your moments with each other. Get started now!
           </div>
         </div>
         <div class="col-md-6">
+        <script src='https://www.google.com/recaptcha/api.js'></script>
+
             <form id="contact-form" class="animated" action="#">
               <div class="form-group">
                 <input type="text" id="name_contact" name="name_contact" class="form-control" placeholder="ชื่อ และนามสกุล ผู้ติดต่อ" />
@@ -188,6 +190,7 @@ Create, share, and remember all your moments with each other. Get started now!
                 <textarea class="form-control" id="message_contact" name="message_contact" placeholder="พิมพ์ข้อความที่ต้องการ" rows="5"></textarea>
               </div>
               <div class="form-group">
+                <div class="g-recaptcha" data-sitekey="6LfxDQUTAAAAAFFxkCInbU6wpib1DDNixhWXEA_6"></div>
                 <input class="btn btn-success" type="submit" value="ส่งข้อความ">
               </div>
             </form>

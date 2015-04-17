@@ -1,11 +1,13 @@
 $(function() {
 
-  //float label
-  $('input.floatlabel').floatlabel();
+  //Click open signup player
+  $('.signup-btn-email').click(function(){
+    $('.signupform-container').addClass("signupform-formstate");
+  });
+
 
   //Select
   $('.selectpicker').selectpicker();
-
   //Validate holder form
   $('#holder_form').validate({
     errorElement: "p",
