@@ -87,9 +87,13 @@ body{
   background: transparent url(../images/logo.png) 0 0 no-repeat;
   .transition(all .3s ease-in-out );
 }
+.navbar-fixed-top{
+  background: none;
+  .transition(all 1s );
+}
 .navbar-nav{
-  opacity: 0;
-  .transition( opacity 1s ease-in-out );
+  visibility: hidden;
+  .transition( all .5s ease-in-out );
   a{
     color: #000;
     text-transform: uppercase;
@@ -120,7 +124,7 @@ body{
     a{ color: #fff; }
   }
   .dropdown-menu{ border-top: 0; }
-  .navbar-nav{ opacity: 1; }
+  .navbar-nav{ visibility: initial; }
 }
 
 #about{
