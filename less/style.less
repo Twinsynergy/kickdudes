@@ -85,15 +85,16 @@ body{
   width: 191px;
   height: 55px;
   background: transparent url(../images/logo.png) 0 0 no-repeat;
-  .transition(all .3s ease-in-out );
+  .transition(transform .3s ease-in-out );
 }
 .navbar-fixed-top{
-  background: none;
-  .transition(all 1s );
+  background: transparent url(../images/bg_navbar.png) top left repeat-x;
+  .box-shadow(  0 1px 2px rgba(0,0,0,.20) );
+  min-height: inherit;
+  top: -60px;
+  .transition(all .5s);
 }
 .navbar-nav{
-  display: none;
-  .transition( all .5s ease-in-out );
   a{
     color: #000;
     text-transform: uppercase;
@@ -113,9 +114,8 @@ body{
   }
 }
 .navbar-kick{
-  background: transparent url(../images/bg_navbar.png) top left repeat-x;
-  .box-shadow(  0 1px 2px rgba(0,0,0,.20) );
   #logo{ .scale(.7); }
+  top: 0;
   li.active a{ color: @kickdudes !important; }
   .dropdown.open,
   .dropdown-menu{
