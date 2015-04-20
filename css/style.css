@@ -13254,6 +13254,13 @@ a:hover {
 .text-c {
   text-align: center;
 }
+.btn-success {
+  background-color: #50aa8d;
+}
+.btn-success:hover {
+  background-color: #2f5e4e;
+  border-color: #2f5e4e;
+}
 .btn-blank {
   border: 2px solid #fff;
   background-color: rgba(255, 255, 255, 0.2);
@@ -13585,6 +13592,81 @@ footer .navbar-foot {
   margin: 15px 0;
 }
 /*Regis page*/
+body#register {
+  background: transparent url(../images/bg_mainpage.jpg) 0 0 no-repeat;
+}
+body#register .navbar-fixed-top {
+  top: 0;
+}
+body#register h1 {
+  color: #555555;
+}
+.signupform {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  color: #fff;
+  padding: 0;
+}
+.signupform .nav-tabs {
+  border-bottom: none;
+}
+.signupform .nav-tabs li {
+  width: 50%;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+.signupform .nav-tabs li a {
+  color: #eeeeee;
+  border: 0;
+  margin-right: 0;
+  border-radius: 0;
+  height: 50px;
+  background: transparent url(../images/bg_box.png) 0 0 repeat;
+}
+.signupform .nav-tabs li a:hover {
+  border-radius: 0;
+}
+.signupform .nav-tabs li.active a {
+  background: transparent url(../images/bg_tab_select.png) 0 0 repeat;
+  border-radius: 0;
+  border: none;
+  color: #fff;
+}
+.signupform .tab-content {
+  background: transparent url(../images/bg_tab_select.png) 0 0 repeat;
+  padding: 40px 50px;
+}
+.signupform h2 {
+  margin-top: 0;
+}
+.signupform-container {
+  margin-top: 25px;
+  text-align: center;
+}
+.signupform-container .btn {
+  text-transform: capitalize;
+}
+.signupform-container .help-block {
+  color: #fff;
+}
+.signupform-container h2 {
+  text-align: left;
+  font-size: 20px;
+  margin: 20px 0;
+}
+.signupform-container label {
+  text-align: left;
+  width: 100%;
+}
+.signup-ordivider {
+  background: transparent url(../images/line-or.png) top center no-repeat;
+  width: 100%;
+  height: 27px;
+  overflow: hidden;
+  text-indent: -9999px;
+  margin: 20px 0;
+}
 .signupform-formemail {
   height: 0;
   opacity: 0;
@@ -13593,8 +13675,12 @@ footer .navbar-foot {
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
+.signupform-formemail .btn {
+  padding-left: 50px;
+  padding-right: 50px;
+}
 .signupform-start {
-  height: 5em;
+  height: 7em;
   overflow: hidden;
   -webkit-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
@@ -13606,7 +13692,7 @@ footer .navbar-foot {
   opacity: 0;
 }
 .signupform-formstate .signupform-formemail {
-  height: 16em;
+  height: 19em;
   opacity: 1;
 }
 /* Large devices (large desktops, 1200px and up) */

@@ -28,11 +28,9 @@
       <nav class="navbar navbar-fixed-top" role="navigation">
         <div class="container">
           <a href="index.html" id="logo" ></a>
-
             <ul class="nav navbar-nav navbar-right" role="menu">
               <li><a id="about_m" class="page-scroll" href="#about" >about</a></li>
               <li><a id="feature_m" class="page-scroll" href="#feature" >features</a></li>
-              <li><a id="feature_m" class="page-scroll" href="#why" >why</a></li>
               <li><a id="contact_m" class="page-scroll" href="#contact" >contact</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Languages <span class="caret"></span></a>
@@ -48,108 +46,104 @@
   <section id="main-container">
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
-
+      <div class="signupform col-md-8 col-md-offset-2">
+        <h1>สมัครสมาชิก</h1>
         <ul class="nav nav-tabs" role="tablist">
           <li role="presentation" class="active">
-            <a href="#player" aria-controls="player" role="tab" data-toggle="tab">นักเตะ (Player)</a>
+            <a href="#player" aria-controls="player" role="tab" data-toggle="tab">นักเตะ</a>
           </li>
           <li role="presentation">
-            <a href="#holder" aria-controls="holder" role="tab" data-toggle="tab">เจ้าของสนาม (Holder field)</a>
+            <a href="#holder" aria-controls="holder" role="tab" data-toggle="tab">เจ้าของสนาม</a>
           </li>
         </ul>
 
         <div class="tab-content">
           <div role="tabpanel" class="tab-pane fade in active" id="player">
-            <h2>Player information</h2>
+
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos voluptates tempore voluptatem, doloremque perspiciatis minus incidunt officia delectus, accusamus at natus sit, enim corrupti! Ratione tempore ea et illo vitae.</p>
 
             <div class="signupform-container">
               <div class="signupform-start">
-                <a href="#" class="btn btn-success">sign up with facebook</a>
+                <a href="#" class="btn btn-primary btn-lg">sign up with facebook</a>
                 <div class="signup-ordivider">or</div>
               </div>
-              <form action="#" class="signupform-formemail row">
+              <form action="#" class="signupform-formemail">
                 <div class="form-group">
-                  <input type="text" class="form-control" placeholder="textttt" id="" name="">
+                  <input type="text" class="form-control" placeholder="ชื่อ" id="name_player" name="name_player">
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" placeholder="textttt" id="" name="">
+                  <input type="text" class="form-control" placeholder="นามสกุล" id="lastname_player" name="lastname_player">
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" placeholder="textttt" id="" name="">
+                  <input type="text" class="form-control" placeholder="อีเมล" id="email_player" name="email_player">
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" placeholder="textttt" id="" name="">
+                  <input type="text" class="form-control" placeholder="รหัสผ่าน" id="password_player" name="password_player">
                 </div>
-                <input type="submit" class="btn btn-default">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="เบอร์โทรที่สามารถติดต่อได้" id="phone_player" name="phone_player">
+                </div>
+                <input type="submit" class="btn btn-success btn-lg" value="สมัครสมาชิก" />
               </form>
-              <a href="#" class="btn btn-default signup-btn-email">Sign Up with email</a>
-            </div>
+              <a href="#" class="btn btn-success btn-lg signup-btn-email">Sign Up with email</a>
+            </div> <!--.signupform-container-->
 
           </div>
           <div role="tabpanel" class="tab-pane fade" id="holder">
-            <h2>holder information</h2>
-            <form action="#" id="holder_form" class="form-horizontal">
-              <div class="row">
-                <div class="form-group">
-                  <div class="col-md-6">
-                    <input type="text" id="name_holder" name="name_holder" class="floatlabel form-control" placeholder="ชื่อ" />
-                  </div>
-                  <div class="col-md-6">
-                    <input type="text" id="lastname_holder" name="lastname_holder" class="floatlabel form-control" placeholder="นามสกุล">
-                  </div>
-                </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos in hic fugit officiis blanditiis architecto vero deserunt similique minima unde aspernatur, veniam, praesentium temporibus nobis quisquam non ducimus omnis eius!</p>
+            <div class="signupform-container">
+              <form action="#" id="holder_form" class="form-horizontal">
 
-                <div class="form-group">
-                  <div class="col-md-6">
-                    <input type="email" id="email_holder" name="email_holder" class="floatlabel form-control" placeholder="อีเมล">
+                  <div class="form-group">
+                    <input type="text" id="name_holder" name="name_holder" class="form-control" placeholder="ชื่อ" />
                   </div>
-                  <div class="col-md-6">
-                    <input type="text" id="phone_holder" name="phone_holder" class="floatlabel form-control" data-label="ตัวอย่าง: 0824567890" placeholder="เบอร์โทรติดต่อ">
+                  <div class="form-group">
+                    <input type="text" id="lastname_holder" name="lastname_holder" class="form-control" placeholder="นามสกุล">
                   </div>
-                </div>
+                  <div class="form-group">
+                      <input type="email" id="email_holder" name="email_holder" class="form-control" placeholder="อีเมล">
+                  </div>
+                  <div class="form-group">
+                      <input type="text" id="phone_holder" name="phone_holder" class="form-control" data-label="ตัวอย่าง: 0824567890" placeholder="เบอร์โทรติดต่อ">
+                  </div>
 
-                <div class="form-group">
-                  <div class="col-md-6">
-                    <select id="bank_holder" name="bank_holder" class="selectpicker form-control">
-                      <option>เลือกธนาคาร</option>
-                      <option value="BKKB">ธนาคารกรุงเทพ</option>
-                      <option value="AYUD">ธนาคารกรุงศรีอยุธยา</option>
-                      <option value="KASI">ธนาคารกสิกรไทย</option>
-                      <option value="UBOB">ธนาคารซีไอเอ็มบีไทย</option>
-                      <option value="TMBK">ธนาคารทหารไทย</option>
-                      <option value="SICO">ธนาคารไทยพาณิชย์</option>
-                      <option value="THBK">ธนาคารธนชาต</option>
-                      <option value="UOVB">ธนาคารยูโอบี</option>
-                      <option value="KRTH">ธนาคารกรุงไทย</option>
-                      <option value="GSB">ธนาคารออมสิน</option>
-                    </select>
-                  </div>
-                  <div class="col-md-6">
-                    <input type="text" id="bank_id_holder" name="bank_id_holder" class="floatlabel form-control" data-label="ตัวอย่าง: 0711062862" placeholder="เลขบัญชี">
-                  </div>
-                </div>
-              </div>
+                  <div class="form-group">
 
-              <h2>field information</h2>
-              <div class="row">
-                <div class="form-group">
-                  <div class="col-md-8">
-                    <input type="text" id="name_field" name="name_field" class="floatlabel form-control" placeholder="ชื่อสนาม">
+                      <select id="bank_holder" name="bank_holder" class="selectpicker form-control">
+                        <option>เลือกธนาคาร</option>
+                        <option value="BKKB">ธนาคารกรุงเทพ</option>
+                        <option value="AYUD">ธนาคารกรุงศรีอยุธยา</option>
+                        <option value="KASI">ธนาคารกสิกรไทย</option>
+                        <option value="UBOB">ธนาคารซีไอเอ็มบีไทย</option>
+                        <option value="TMBK">ธนาคารทหารไทย</option>
+                        <option value="SICO">ธนาคารไทยพาณิชย์</option>
+                        <option value="THBK">ธนาคารธนชาต</option>
+                        <option value="UOVB">ธนาคารยูโอบี</option>
+                        <option value="KRTH">ธนาคารกรุงไทย</option>
+                        <option value="GSB">ธนาคารออมสิน</option>
+                      </select>
                   </div>
-                </div>
-                <div class="form-group">
-                  <div class="col-md-3">
+                  <div class="form-group">
+                      <input type="text" id="bank_id_holder" name="bank_id_holder" class="form-control" data-label="ตัวอย่าง: 0711062862" placeholder="เลขบัญชี">
+
+                  </div>
+
+                <h2>รายละเอียดสนามฟุตบอล</h2>
+                  <div class="form-group">
+                      <input type="text" id="name_field" name="name_field" class="form-control" placeholder="ชื่อสนาม">
+
+                  </div>
+                  <div class="form-group">
+                    <label for="file_field">เอกสารยืนยันการเป็นเจ้าของสนามฟุตบอล</label>
                     <input type="file" id="file_field" name="file_field" >
+
+                    <p class="help-block">รองรับเฉพาะ pdf</p>
                   </div>
-                  <p class="help-block col-md-6">A block of help text that breaks onto a new line and may extend beyond one line.</p>
-                </div>
-              </div>
-              <!-- <div class="g-recaptcha col-md-offset-4" data-sitekey="6LfxDQUTAAAAAFFxkCInbU6wpib1DDNixhWXEA_6"></div>
-               -->
-              <button type="submit" class="btn btn-default">Submit</button>
-            </form>
+                <!-- <div class="g-recaptcha col-md-offset-4" data-sitekey="6LfxDQUTAAAAAFFxkCInbU6wpib1DDNixhWXEA_6"></div>
+                 -->
+                 <input type="submit" class="btn btn-success btn-lg" value="สมัครเจ้าของสนาม" />
+              </form>
+            </div> <!--.signupform-container-->
           </div>
         </div>
 
@@ -157,14 +151,21 @@
     </div> <!--.row-->
   </div> <!--.container-->
 </section> <!--#main-container-->
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam fugiat facilis repudiandae pariatur deleniti, culpa modi delectus provident, voluptatum molestias, nihil ipsa illo maiores dolorem nam aut velit, quisquam explicabo.
-        </div>
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <nav>
+          <ul class="list-inline navbar-foot navbar-left">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Privacy</a></li>
+          </ul>
+          <p class="navbar-text navbar-right">Copyright @Twinsynergy. All rights reserved.</p>
+        </nav>
       </div>
     </div>
-  </footer>
+  </div>
+</footer>
 </body>
 </html>
