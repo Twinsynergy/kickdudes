@@ -12,14 +12,26 @@ a{
   &:visit{
     color: #000;
   }
+  &:hover{ text-decoration: none; }
 }
 .text-c{ text-align: center; }
+.btn-blank{
+  border: 2px solid #fff;
+  background-color: rgba(255,255,255,.2);
+  color: #fff;
+  a{ color: #fff; }
+  &:hover{ color: #fff; }
+}
+i.mdi{ margin-right: 5px; }
 
 /*Layout*/
 .vertical_align_wrap{
   padding: 80px 0;
   h2,h3{ text-align: center; }
   h2{ margin-bottom: 70px; color: #fff; text-transform: uppercase; }
+  &:nth-child(2n){
+    background-color: @kickdudes-dark;
+  }
 }
 footer,
 #keep{
@@ -123,6 +135,7 @@ body{
   .row{ height: 100vh; }
   .intro{
     display: table;
+    position: relative;
     .row{
       display: table-cell;
       vertical-align: middle;
@@ -137,6 +150,7 @@ body{
     text-indent: 60px;
     position: relative;
     margin-bottom: 25px;
+    display: none;
     &:before{
       position: absolute;
       display: inline-block;
@@ -148,12 +162,30 @@ body{
       height: 42px;
     }
   }
+  .app_store{
+    margin-top: 30px;
+    .clearfix();
+    a{
+      font-size: 22px;
+      text-transform: uppercase;
+      margin-right: 10px;
+      background-color: rgba(0,0,0,.8);
+    }
+  }
   #iphone{
     text-align: center;
     padding-top: 20px;
     img{ max-height: 500px; }
   }
-  .app_store{ margin-top: 30px; }
+}
+#logo_top{
+  position: absolute;
+  top: 0;
+  left: 15px;
+  display: inline-block;
+  width: 191px;
+  height: 55px;
+  background: transparent url(../images/logo.png) 0 0 no-repeat;
 }
 #magic_arrow{
   color: #fff;
@@ -173,33 +205,27 @@ body{
 }
 
 #feature{
-  h2{ padding: 0 300px; }
+  h2{ padding: 0 200px; }
   .feature_list{
     li{
       text-align: center;
-      padding: 0 10px;
+      padding: 0 20px;
       opacity: 0;
+      margin-bottom: 25px;
     }
     h3{ color: @kickdudes-dark; text-transform: capitalize; margin: 20px 0; }
     p{
       color: #fff;
     }
   }
-}
-
-#why{
-  background-color: @kickdudes-dark;
-  color: #fff;
-  .people_opa{
-    background: transparent url(../images/people-opacity.png) top right no-repeat;
-    height: 800px;
+  #animate_feature{
+    background: transparent url(../images/people-opacity.png) right 50px no-repeat;
   }
 }
 
 #signup{
   text-align: center;
   text-transform: capitalize;
-  background-color: @kickdudes;
   color: #fff;
   padding: 35px 0;
   font-size: 20px;

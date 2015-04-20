@@ -13248,8 +13248,25 @@ a {
 a:visit {
   color: #000;
 }
+a:hover {
+  text-decoration: none;
+}
 .text-c {
   text-align: center;
+}
+.btn-blank {
+  border: 2px solid #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+.btn-blank a {
+  color: #fff;
+}
+.btn-blank:hover {
+  color: #fff;
+}
+i.mdi {
+  margin-right: 5px;
 }
 /*Layout*/
 .vertical_align_wrap {
@@ -13263,6 +13280,9 @@ a:visit {
   margin-bottom: 70px;
   color: #fff;
   text-transform: uppercase;
+}
+.vertical_align_wrap:nth-child(2n) {
+  background-color: #2f5e4e;
 }
 footer,
 #keep {
@@ -13377,6 +13397,7 @@ body#home {
 }
 #about .intro {
   display: table;
+  position: relative;
 }
 #about .intro .row {
   display: table-cell;
@@ -13391,6 +13412,7 @@ body#home {
   text-indent: 60px;
   position: relative;
   margin-bottom: 25px;
+  display: none;
 }
 #about h1:before {
   position: absolute;
@@ -13402,6 +13424,31 @@ body#home {
   width: 45px;
   height: 42px;
 }
+#about .app_store {
+  margin-top: 30px;
+}
+#about .app_store:before,
+#about .app_store:after {
+  content: " ";
+  display: table;
+}
+#about .app_store:after {
+  clear: both;
+}
+#about .app_store:before,
+#about .app_store:after {
+  content: " ";
+  display: table;
+}
+#about .app_store:after {
+  clear: both;
+}
+#about .app_store a {
+  font-size: 22px;
+  text-transform: uppercase;
+  margin-right: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
 #about #iphone {
   text-align: center;
   padding-top: 20px;
@@ -13409,8 +13456,14 @@ body#home {
 #about #iphone img {
   max-height: 500px;
 }
-#about .app_store {
-  margin-top: 30px;
+#logo_top {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  display: inline-block;
+  width: 191px;
+  height: 55px;
+  background: transparent url(../images/logo.png) 0 0 no-repeat;
 }
 #magic_arrow {
   color: #fff;
@@ -13430,12 +13483,13 @@ body#home {
   background-color: rgba(255, 255, 255, 0.3);
 }
 #feature h2 {
-  padding: 0 300px;
+  padding: 0 200px;
 }
 #feature .feature_list li {
   text-align: center;
-  padding: 0 10px;
+  padding: 0 20px;
   opacity: 0;
+  margin-bottom: 25px;
 }
 #feature .feature_list h3 {
   color: #2f5e4e;
@@ -13445,18 +13499,12 @@ body#home {
 #feature .feature_list p {
   color: #fff;
 }
-#why {
-  background-color: #2f5e4e;
-  color: #fff;
-}
-#why .people_opa {
-  background: transparent url(../images/people-opacity.png) top right no-repeat;
-  height: 800px;
+#feature #animate_feature {
+  background: transparent url(../images/people-opacity.png) right 50px no-repeat;
 }
 #signup {
   text-align: center;
   text-transform: capitalize;
-  background-color: #50aa8d;
   color: #fff;
   padding: 35px 0;
   font-size: 20px;
