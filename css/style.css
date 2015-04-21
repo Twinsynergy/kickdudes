@@ -13216,37 +13216,37 @@ body#home {
   width: 45px;
   height: 42px;
 }
-#about .app_store {
-  margin-top: 30px;
-}
-#about .app_store:before,
-#about .app_store:after {
-  content: " ";
-  display: table;
-}
-#about .app_store:after {
-  clear: both;
-}
-#about .app_store:before,
-#about .app_store:after {
-  content: " ";
-  display: table;
-}
-#about .app_store:after {
-  clear: both;
-}
-#about .app_store a {
-  font-size: 22px;
-  text-transform: uppercase;
-  margin-right: 10px;
-  background-color: rgba(0, 0, 0, 0.8);
-}
 #about #iphone {
   text-align: center;
   padding-top: 20px;
 }
 #about #iphone img {
   max-height: 500px;
+}
+.app_store {
+  margin-top: 30px;
+}
+.app_store:before,
+.app_store:after {
+  content: " ";
+  display: table;
+}
+.app_store:after {
+  clear: both;
+}
+.app_store:before,
+.app_store:after {
+  content: " ";
+  display: table;
+}
+.app_store:after {
+  clear: both;
+}
+.app_store a {
+  font-size: 22px;
+  text-transform: uppercase;
+  margin-right: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 #logo_top {
   position: absolute;
@@ -13445,6 +13445,7 @@ body#register h1 {
   width: 100%;
 }
 .signupform-container input[type="text"],
+.signupform-container input[type="password"],
 .signupform-container input[type="email"],
 .signupform-container select {
   background-color: #eeeeee;
@@ -13487,6 +13488,19 @@ body#register h1 {
 .signupform-formstate .signupform-formemail {
   height: auto;
   opacity: 1;
+}
+.finish_submit {
+  margin-top: 50px;
+  background: transparent url(../images/bg_tab_select.png) 0 0 repeat;
+  color: #fff;
+  padding: 20px 30px;
+}
+.finish_submit h2 {
+  border-bottom: 1px solid #fff;
+  padding-bottom: 10px;
+}
+.finish_submit .app_store a {
+  margin-right: 0;
 }
 /* Large devices (large desktops, 1200px and up) */
 /* Medium devices (desktops, 992px and 1200px) */

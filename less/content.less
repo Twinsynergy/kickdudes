@@ -198,20 +198,21 @@ body{
       height: 42px;
     }
   }
-  .app_store{
-    margin-top: 30px;
-    .clearfix();
-    a{
-      font-size: 22px;
-      text-transform: uppercase;
-      margin-right: 10px;
-      background-color: rgba(0,0,0,.8);
-    }
-  }
+
   #iphone{
     text-align: center;
     padding-top: 20px;
     img{ max-height: 500px; }
+  }
+}
+.app_store{
+  margin-top: 30px;
+  .clearfix();
+  a{
+    font-size: 22px;
+    text-transform: uppercase;
+    margin-right: 10px;
+    background-color: rgba(0,0,0,.8);
   }
 }
 #logo_top{
@@ -386,6 +387,7 @@ body#register{
   }
   label{ text-align: left; width: 100%; }
   input[type="text"],
+  input[type="password"],
   input[type="email"],
   select{ background-color: @gray-lighter; }
   input[type="submit"]{ margin-top: 20px; }
@@ -419,5 +421,17 @@ body#register{
   .signupform-formemail{
     height: auto;
     opacity: 1;
+  }
+}
+.finish_submit{
+  margin-top: 50px;
+  background: transparent url(../images/bg_tab_select.png) 0 0 repeat;
+  color: #fff;
+  h2{ border-bottom: 1px solid #fff; padding-bottom: 10px; }
+  padding: 20px 30px;
+  .app_store{
+    a{
+      margin-right: 0;
+    }
   }
 }
