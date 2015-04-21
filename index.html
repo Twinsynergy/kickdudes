@@ -23,8 +23,8 @@
   <script src="js/magic/tween.js" type="text/javascript" ></script>
   <script src="js/magic/plugins/animation.gsap.min.js" type="text/javascript"></script>
   <script src="js/home.js" type="text/javascript" ></script>
-<script src="js/magic/plugins/debug.addIndicators.min.js" type="text/javascript"></script>
-  <script>
+<!-- <script src="js/magic/plugins/debug.addIndicators.min.js" type="text/javascript"></script>
+ -->  <script>
   var controller = new ScrollMagic.Controller();
   //jQuery to collapse the navbar on scroll
   $(window).scroll(function() {
@@ -141,7 +141,7 @@
         //feature
         new ScrollMagic.Scene({triggerElement: "#feature"})
           .setClassToggle(".animated", "fadeInUp")
-          .addIndicators()
+          // .addIndicators()
           .addTo(controller);
       </script>
     </div>
@@ -160,7 +160,7 @@
         // build tween
 	      new ScrollMagic.Scene({triggerElement: "#signup"})
           .setClassToggle(".animated", "shake")
-          .addIndicators()
+          // .addIndicators()
           .addTo(controller);
       </script>
     </div>
@@ -202,8 +202,8 @@
     <script>
       //contact
       new ScrollMagic.Scene({triggerElement: "#contact"})
-        .setClassToggle("#contact-form", "lightSpeedIn")
-        .addIndicators()
+        .setClassToggle("#contact-form", "fadeInUp")
+        // .addIndicators()
         .addTo(controller);
     </script>
   </section><!--#contact-->

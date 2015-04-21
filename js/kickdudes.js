@@ -5,13 +5,62 @@ $(function() {
     $('.signupform-container').addClass("signupform-formstate");
   });
 
+  //Input upload
+  $(document).on('change', '.btn-file :file', function() {
+    var input = $(this),
+        numFiles = input.get(0).files ? input.get(0).files.length : 1,
+        label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+    input.trigger('fileselect', [numFiles, label]);
+  });
 
-  //Select
-  $('.selectpicker').selectpicker();
+  $(document).ready( function() {
+      $('.btn-file :file').on('fileselect', function(event, numFiles, label) {
+
+          var input = $(this).parents('.input-group').find(':text'),
+              log = numFiles > 1 ? numFiles + ' files selected' : label;
+
+          if( input.length ) {
+              input.val(log);
+          } else {
+              if( log ) alert(log);
+          }
+
+      });
+  });
+
   //Validate holder form
+  $('#player_form').validate({
+    errorElement: "em",
+    rules:{
+      name_player: "required",
+      lastname_player: "required",
+      email_player: {
+        required: true,
+        email: true
+      },
+      password_player: "required",
+      phone_player: {
+        required: true,
+        number: true
+      }
+    },
+    messages: {
+      name_player: "ต้องกรอกข้อมูล",
+      lastname_player: "ต้องกรอกข้อมูล",
+      email_player:{
+        required : "ต้องกรอกข้อมูล",
+        email: "กรอกอีมลไม่ถูกต้อง"
+      },
+      password_player: "ต้องกรอกข้อมูล",
+      phone_player: {
+        required: "ต้องกรอกข้อมูล",
+        number: "ใส่ได้เฉพาะตัวเลข"
+      }
+    }
+  });
+
   $('#holder_form').validate({
-    errorElement: "p",
-		errorContainer: $(".error2"),
+    errorElement: "em",
     rules: {
       name_holder: "required",
       lastname_holder: "required",
@@ -29,7 +78,8 @@ $(function() {
         number: true
       },
       name_field: "required",
-      file_field: "required"
+      phone_field: "required",
+      // file_field: "required"
     },
     messages: {
       name_holder: "ต้องกรอกข้อมูล",
@@ -42,8 +92,10 @@ $(function() {
         required: "ต้องกรอกข้อมูล",
         number: "ใส่ได้เฉพาะตัวเลข"
       },
-      bank_holder: "Please enter your name of bank",
-      bank_id_holder: "Please enter your id bank"
+      bank_holder: "ต้องเลือกชื่อธนาคาร",
+      bank_id_holder: "กรอกเลขที่บัญชี",
+      name_field: "ต้องกรอกชื่อสนามฟุตบอลที่เป็นเจ้าของอยู่",
+      phone_field: "ต้องกรอกข้อมูล"
     }
   });
 

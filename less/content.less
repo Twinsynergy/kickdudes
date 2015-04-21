@@ -1,6 +1,7 @@
 /*Variables*/
 @kickdudes: #50AA8D;
 @kickdudes-dark: #2F5E4E;
+@brand-danger-light: #FFADAB;
 @footer: #414141;
 
 /*Mixins*/
@@ -29,6 +30,25 @@ a{
   a{ color: #fff; }
   &:hover{ color: #fff; }
 }
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
 i.mdi{ margin-right: 5px; }
 
 /*Layout*/
@@ -53,6 +73,16 @@ form{
   }
   textarea {
     resize: none;
+  }
+  input.error,
+  select.error{
+    border-color: transparent;
+    background-color: @brand-danger-light !important;
+  }
+  em.error{
+    text-align: left;
+    width: 100%;
+    display: inline-block;
   }
 }
 
@@ -84,7 +114,7 @@ form{
 
 /*Miscellaneous*/
 body{
-  color: #000;
+  color: @text-color;
   font-size: 16px;
   background-color: @kickdudes;
   position: relative;
@@ -347,6 +377,7 @@ body#register{
   .btn{
     text-transform: capitalize;
   }
+
   .help-block{ color: #fff; }
   h2 {
     text-align:left;
@@ -354,6 +385,10 @@ body#register{
     margin: 20px 0;
   }
   label{ text-align: left; width: 100%; }
+  input[type="text"],
+  input[type="email"],
+  select{ background-color: @gray-lighter; }
+  input[type="submit"]{ margin-top: 20px; }
 }
 .signup-ordivider{
   background: transparent url(../images/line-or.png) top center no-repeat;
@@ -382,7 +417,7 @@ body#register{
     opacity: 0;
   }
   .signupform-formemail{
-    height: 19em;
+    height: auto;
     opacity: 1;
   }
 }
