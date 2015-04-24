@@ -7,6 +7,18 @@
 /*Mixins*/
 
 /*Links and type*/
+@font-face {
+    font-family: kick_font;
+    src: url('../fonts/kick.eot');
+    src: url('../fonts/kick.eot?') format('embedded-opentype'),
+         url('../fonts/kick.woff') format('woff'),
+         url('../fonts/kick.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+h1,h2,h3{
+  font-family: kick_font;
+}
 a{
   color: #000;
   text-shadow: none !important;
@@ -16,6 +28,7 @@ a{
   &:hover{ text-decoration: none; }
 }
 .text-c{ text-align: center; }
+.btn{ font-family: kick_font; }
 .btn-success{
   background-color: @kickdudes;
   &:hover{
@@ -243,6 +256,7 @@ body{
 
 #feature{
   h2{ padding: 0 200px; }
+  img{ width: 150px; }
   .feature_list{
     li{
       text-align: center;
@@ -250,13 +264,14 @@ body{
       opacity: 0;
       margin-bottom: 25px;
     }
-    h3{ color: @kickdudes-dark; text-transform: capitalize; margin: 20px 0; }
+    h3{ color: #fff; text-transform: capitalize; margin: 20px 0; }
     p{
-      color: #fff;
+      color: @kickdudes-dark;
+      font-weight: lighter;
     }
   }
   #animate_feature{
-    background: transparent url(../images/people-opacity.png) right 50px no-repeat;
+    background: transparent url(../images/features/bg.png) center center no-repeat;
   }
 }
 
@@ -346,6 +361,8 @@ body#register{
       font-size: 20px;
       margin-bottom: 0;
       a{
+        font-family: kick_font;
+        font-size: 22px;
         color: @gray-lighter;
         border: 0;
         margin-right: 0;

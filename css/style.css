@@ -12997,6 +12997,18 @@ body {
 /*Variables*/
 /*Mixins*/
 /*Links and type*/
+@font-face {
+  font-family: kick_font;
+  src: url('../fonts/kick.eot');
+  src: url('../fonts/kick.eot?') format('embedded-opentype'), url('../fonts/kick.woff') format('woff'), url('../fonts/kick.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+h1,
+h2,
+h3 {
+  font-family: kick_font;
+}
 a {
   color: #000;
   text-shadow: none !important;
@@ -13009,6 +13021,9 @@ a:hover {
 }
 .text-c {
   text-align: center;
+}
+.btn {
+  font-family: kick_font;
 }
 .btn-success {
   background-color: #50aa8d;
@@ -13277,6 +13292,9 @@ body#home {
 #feature h2 {
   padding: 0 200px;
 }
+#feature img {
+  width: 150px;
+}
 #feature .feature_list li {
   text-align: center;
   padding: 0 20px;
@@ -13284,15 +13302,16 @@ body#home {
   margin-bottom: 25px;
 }
 #feature .feature_list h3 {
-  color: #2f5e4e;
+  color: #fff;
   text-transform: capitalize;
   margin: 20px 0;
 }
 #feature .feature_list p {
-  color: #fff;
+  color: #2f5e4e;
+  font-weight: lighter;
 }
 #feature #animate_feature {
-  background: transparent url(../images/people-opacity.png) right 50px no-repeat;
+  background: transparent url(../images/features/bg.png) center center no-repeat;
 }
 #signup {
   text-align: center;
@@ -13402,6 +13421,8 @@ body#register h1 {
   margin-bottom: 0;
 }
 .signupform .nav-tabs li a {
+  font-family: kick_font;
+  font-size: 22px;
   color: #eeeeee;
   border: 0;
   margin-right: 0;
