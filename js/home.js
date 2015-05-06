@@ -1,5 +1,10 @@
 $(function() {
 
+  //hamberger menu
+  $('.hamberger-menu').click(function(){
+    $('#main-navbar').toggle();
+  });
+
   //Validate holder form
   $('#contact-form').validate({
     errorElement: "em",

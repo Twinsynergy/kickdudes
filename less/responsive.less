@@ -20,19 +20,74 @@
 /* Medium devices (desktops, 992px and 1200px) */
 // ipad landscarp
 @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
-
+  #feature{
+    h2{
+      padding: 0 100px;
+    }
+  }
 }
 /* Small devices (tablets, 768px and 992px) */
 //ipad portrait
 @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+  #feature{
+    h2{
+      padding: 0;
+    }
+  }
 
 }
 /* Extra small devices (phones, less than 768px) */
 //iphone landscarp
 @media (max-width: @screen-xs-max) {
+  body{
+    font-size: 14px;
+  }
+  #main-navbar{
+    display: none;
+    margin-top: 60px;
+  }
+  #hamburger{
+    display: inline-block;
+    float: right;
+    margin-top: 25px;
+    margin-right: 40px;
+  }
 
+  #about{
+    .row{
+      height: auto;
+    }
+    #iphone{
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+  #magic_arrow{
+    margin: 20px 0;
+  }
+  .app_store{ text-align: center; }
+  #feature{
+    h2{
+      padding: 0;
+    }
+    .feature_list{
+      li{ width: 100%; }
+    }
+  }
+  #contact{
+    padding-top: 100px;
+  }
+  footer{
+    .navbar-foot{ float: left; }
+    .navbar-text{ float: right; }
+  }
 }
 //iphone portrait
 @media (max-width: 480px) {
-
+  .app_store{
+    a{ margin: 15px 0; }
+  }
+  #signup{
+    .btn{ margin: 15px 0; }
+  }
 }
