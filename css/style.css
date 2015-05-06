@@ -13217,16 +13217,14 @@ body#home {
 #hamburger span:after {
   bottom: -10px;
 }
-#hamburger span,
-#hamburger span:before,
-#hamburger span:after {
+/* 
+#hamburger span, #hamburger span:before, #hamburger span:after {
   transition: all 500ms ease-in-out;
 }
 #hamburger.active span {
   background-color: transparent;
 }
-#hamburger.active span:before,
-#hamburger.active span:after {
+#hamburger.active span:before, #hamburger.active span:after {
   top: 0;
 }
 #hamburger.active span:before {
@@ -13234,7 +13232,7 @@ body#home {
 }
 #hamburger.active span:after {
   transform: rotate(-45deg);
-}
+} */
 .sidr {
   display: none;
   position: absolute;
@@ -13500,7 +13498,7 @@ body#home {
   width: 49px;
   height: 49px;
   display: inline-block;
-  font-size: 2.1875rem;
+  font-size: 35px;
   border: 1px solid #fff;
   border-radius: 50%;
 }
@@ -13592,7 +13590,6 @@ footer {
   border-top: 1px solid #333333;
   position: relative;
   color: #fff;
-  font-size: 0.875rem;
 }
 footer:before {
   content: "";
@@ -13806,5 +13803,12 @@ body#register h1 {
   }
   #signup .btn {
     margin: 15px 0;
+  }
+  footer {
+    text-align: center;
+  }
+  footer .navbar-foot,
+  footer .navbar-text {
+    width: 100%;
   }
 }
