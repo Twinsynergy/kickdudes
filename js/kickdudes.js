@@ -4,7 +4,7 @@ $(function() {
   //   this.classList.toggle( "active" );
   // });
 
-  $('#main_navbar').clone().attr("id","nav_mobile").appendTo('nav.navbar-fixed-top .container').addClass('cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left');
+  $('#main_navbar').clone().attr("id","nav_mobile").addClass('cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left').appendTo('nav.navbar-fixed-top .container');
 
   var menuLeft = document.getElementById( 'nav_mobile' ),
       showLeft = document.getElementById( 'hamburger' )

@@ -215,32 +215,22 @@ body{
 
 //menu slide
 .cbp-spmenu {
-	background: #47a3da;
+	background: @kickdudes;
 	position: fixed;
+  li.active{
+    a{ color: @kickdudes-dark !important; }
+  }
+  li.dropdown.open a{
+    background-color: @kickdudes;
+    border-color: @kickdudes !important;
+  }
+  .dropdown-menu{
+    background-color: @kickdudes !important;
+  }
 }
-
-.cbp-spmenu h3 {
-	color: #afdefa;
-	font-size: 1.9em;
-	padding: 20px;
-	margin: 0;
-	font-weight: 300;
-	background: #0d77b6;
-}
-
 .cbp-spmenu a {
 	display: block;
 	color: #fff;
-	font-size: 1.1em;
-	font-weight: 300;
-}
-.cbp-spmenu a:hover {
-	background: #258ecd;
-}
-
-.cbp-spmenu a:active {
-	background: #afdefa;
-	color: #47a3da;
 }
 .cbp-spmenu-vertical {
 	width: 240px;
@@ -248,44 +238,21 @@ body{
 	top: 0;
 	z-index: 1000;
 }
-
 .cbp-spmenu-vertical a {
-	border-bottom: 1px solid #258ecd;
+	border-bottom: 1px solid @kickdudes-dark;
 	padding: 1em;
-}
-
-.cbp-spmenu-horizontal {
-	width: 100%;
-	height: 150px;
-	left: 0;
-	z-index: 1000;
-	overflow: hidden;
 }
 .cbp-spmenu-left {
 	left: -240px;
 }
-
-.cbp-spmenu-right {
-	right: -240px;
-}
-
 .cbp-spmenu-left.cbp-spmenu-open {
 	left: 0px;
-}
-
-.cbp-spmenu-right.cbp-spmenu-open {
-	right: 0px;
 }
 .cbp-spmenu-push {
 	overflow-x: hidden;
 	position: relative;
 	left: 0;
 }
-
-.cbp-spmenu-push-toright {
-	left: 240px;
-}
-
 .cbp-spmenu-push-toleft {
 	left: -240px;
 }
@@ -315,11 +282,12 @@ body{
   }
   h1{
     color: #fff;
-    font-size: 3.125rem;
+    font-size: 4rem;
     text-indent: 60px;
     position: relative;
     margin-bottom: 25px;
     display: none;
+    line-height: 1.5em;
     &:before{
       position: absolute;
       display: inline-block;
@@ -342,7 +310,7 @@ body{
   margin-top: 30px;
   .clearfix();
   a{
-    font-size: 1.375rem;
+    font-size: 2.375rem;
     text-transform: uppercase;
     margin-right: 10px;
     background-color: rgba(0,0,0,.8);
@@ -478,7 +446,7 @@ body#register{
       margin-bottom: 0;
       a{
         font-family: kick_font;
-        font-size: 1.375rem;
+        font-size: 2.375rem;
         color: @gray-lighter;
         border: 0;
         margin-right: 0;

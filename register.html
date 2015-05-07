@@ -19,18 +19,20 @@
   <script src='https://www.google.com/recaptcha/api.js'></script>
   <script src="js/validate.js" type="text/javascript" ></script>
   <script src="js/tab.js" type="text/javascript" ></script>
-  <script src="js/snap.js" type="text/javascript" ></script>
+  <script src="js/modernizr.custom.js" type="text/javascript" ></script>
+  <script src="js/classie.js" type="text/javascript" ></script>
   <script src="js/regis.js" type="text/javascript" ></script>
   <script src="js/kickdudes.js" type="text/javascript" ></script>
 
 </head>
-<body id="register">
+<body id="register" class="cbp-spmenu-push">
   <header>
       <nav class="navbar navbar-fixed-top" role="navigation">
         <div class="container">
           <a href="index.html" id="logo" ></a>
-            <ul class="nav navbar-nav navbar-right" role="menu">
-              <li><a id="about_m" class="page-scroll" href="#about" >about</a></li>
+          <span id="hamburger"><span></span></span>
+            <ul id="main_navbar" class="nav navbar-nav navbar-right" role="menu">
+              <li><a id="about_m" class="page-scroll" href="/" >about</a></li>
               <li><a id="feature_m" class="page-scroll" href="#feature" >features</a></li>
               <li><a id="contact_m" class="page-scroll" href="#contact" >contact</a></li>
               <li class="dropdown">
@@ -41,6 +43,7 @@
                 </ul>
               </li>
             </ul>
+
         </div>
       </nav>
   </header>
