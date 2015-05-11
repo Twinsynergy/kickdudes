@@ -41,7 +41,7 @@
     						<small>สนามพระราม 9</small>
     					</span>
               <span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
+            <ul class="dropdown-menu dropdown-up" role="menu">
               <li><a href="#"><i class="mdi mdi-account"></i>My profile</a></li>
               <li><a href="#"><i class="mdi mdi-close"></i>Log out</a></li>
             </ul>
@@ -51,8 +51,23 @@
           <ul class="nav navbar-nav">
             <li class="dropdown"><a href="javascript:void(0);" class="btn-icon-toggle dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="mdi mdi-bell"></i><span class="badge">4</span></a>
               <ul class="dropdown-menu dropdown-menu-raduis" role="menu">
-                <li><a href="#">hamp</a></li>
-                <li><a href="#">Lorem ipsum dolor </a></li>
+                <li class="dropdown-header"><h4>Messages</h4></li>
+                <li><a href="javascript:void(0);" class="alert alert-callout alert-info">
+    							<img class="pull-right img-circle dropdown-avatar" src="images/avatar1.jpg" alt="">
+    							<strong>Alex Anistor</strong><br>
+    							<small>Testing functionality...</small>
+                </a></li>
+                <li><a href="#" class="alert alert-callout">
+                  <img class="pull-right img-circle dropdown-avatar" src="images/avatar1.jpg" alt="">
+    							<strong>Alex Anistor</strong><br>
+    							<small>Testing functionality...</small>
+                </a></li>
+                <li><a href="#" class="alert alert-callout">
+                  <img class="pull-right img-circle dropdown-avatar" src="images/avatar1.jpg" alt="">
+    							<strong>Alex Anistor</strong><br>
+    							<small>Testing functionality...</small>
+                </a></li>
+                <li><a href="#">View all messages <i class="mdi mdi-arrow-right-bold pull-right"></i></a></li>
               </ul>
             </li>
           </ul>
@@ -69,6 +84,9 @@
             <div class="card">
               <div class="card-body no-padding">
                 <div class="alert alert-callout alert-info">
+                  <h4>
+                    รายได้รวมทั้งหมด
+                  </h4>
                   <p class="integer">
                     <strong class="text-xl counter">30,000</strong><span>บาท</span>
                   </p>
@@ -80,9 +98,12 @@
           <div class="col-sm-6 col-md-3">
             <div class="card">
               <div class="card-body no-padding">
-                <div class="alert">
+                <div class="alert alert-callout">
+                  <h4>
+                    รายการโอนเงิน
+                  </h4>
                   <p class="integer">
-                    <strong class="text-xl counter">200</strong><span>คน</span>
+                    <strong class="text-xl counter">200</strong><span>รายการ</span>
                   </p>
                 </div>
               </div>
@@ -92,9 +113,12 @@
           <div class="col-sm-6 col-md-3">
             <div class="card">
               <div class="card-body no-padding">
-                <div class="alert alert-callout">
+                <div class="alert alert-callout alert-warning">
+                  <h4>
+                    รอการตรวจสอบ
+                  </h4>
                     <p class="integer">
-                      <strong class="text-xl counter">20</strong><span>คน</span>
+                      <strong class="text-xl counter">20</strong><span>รายการ</span>
                     </p>
                 </div>
               </div>
@@ -103,9 +127,12 @@
           <div class="col-sm-6 col-md-3">
             <div class="card">
               <div class="card-body no-padding">
-                <div class="alert">
+                <div class="alert alert-callout">
+                  <h4>
+                    ทำรายการเสร็จสิ้น
+                  </h4>
                   <p class="integer">
-                    <strong class="text-xl counter">20</strong><span>คน</span>
+                    <strong class="text-xl counter">20</strong><span>รายการ</span>
                   </p>
                 </div>
               </div>
@@ -120,7 +147,44 @@
 							  <header>ประวัติการทำรายการ</header>
   						</div>
               <div class="card-body">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam explicabo assumenda ullam perferendis ab voluptate odit amet, iure quo accusantium, possimus aperiam ipsa tenetur dolorum quae magnam eos fuga blanditiis.
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <td>วันที่</td>
+                      <td>ช่วงเวลา</td>
+                      <td>ชื่อสนาม</td>
+                      <td>ผู้เช่าสนาม</td>
+                      <td>เงินค่าสนาม</td>
+                      <td>สถานะ</td>
+                    </tr>
+                  </thead>
+                  <tbody class="table-hover">
+                    <tr>
+                      <td>12/01/58</td>
+                      <td>10:00 - 11:00</td>
+                      <td>สนามที่ 1 : ฟุตซอลเทียม</td>
+                      <td>Tesser Phutthasen</td>
+                      <td>1,300 บาท</td>
+                      <td>ชำระแล้ว</td>
+                    </tr>
+                    <tr>
+                      <td>12/01/58</td>
+                      <td>10:00 - 11:00</td>
+                      <td>สนามที่ 1 : ฟุตซอลเทียม</td>
+                      <td>Tesser Phutthasen</td>
+                      <td>1,300 บาท</td>
+                      <td>ชำระแล้ว</td>
+                    </tr>
+                    <tr>
+                      <td>12/01/58</td>
+                      <td>10:00 - 11:00</td>
+                      <td>สนามที่ 1 : ฟุตซอลเทียม</td>
+                      <td>Tesser Phutthasen</td>
+                      <td>1,300 บาท</td>
+                      <td>ชำระแล้ว</td>
+                    </tr>
+                  </tbbody>
+                </table>
               </div>
             </div>
           </div>
