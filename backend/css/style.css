@@ -13123,6 +13123,12 @@ a {
 a:hover {
   color: #00a89e;
 }
+.text-xl {
+  font-size: 180%;
+}
+.integer span {
+  margin: 0 5px;
+}
 .btn-submit {
   background-color: #00a89e;
   color: #fff;
