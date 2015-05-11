@@ -7,6 +7,116 @@
 @font_color: #313534;
 
 /*Mixins*/
+.bdr-block(@bdr: 4px){
+	.border-top-radius(@bdr);
+	.border-bottom-radius(@bdr);
+}
+
+/*Key frames*/
+@-webkit-keyframes
+ripple {  100% {
+.opacity(0);
+-webkit-transform: scale(1.5);
+}
+}
+@-moz-keyframes
+ripple {  100% {
+  .opacity(0);
+-moz-transform: scale(1.5);
+}
+}
+@-o-keyframes
+ripple {  100% {
+  .opacity(0);
+-o-transform: scale(1.5);
+}
+}
+@keyframes
+ripple {  100% {
+  .opacity(0);
+transform: scale(1.5);
+}
+}
+@-webkit-keyframes slide-down {
+  from {
+    -webkit-transform: translate(0, -20px);
+    -ms-transform: translate(0, -20px);
+    -o-transform: translate(0, -20px);
+    transform: translate(0, -20px);
+    .opacity(0);
+  }
+  to {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+    .opacity(1);
+  }
+}
+@-moz-keyframes slide-down {
+  from {
+    -webkit-transform: translate(0, -20px);
+    -ms-transform: translate(0, -20px);
+    -o-transform: translate(0, -20px);
+    transform: translate(0, -20px);
+    .opacity(0);
+  }
+  to {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+    .opacity(1);
+  }
+}
+@-o-keyframes slide-down {
+  from {
+    -webkit-transform: translate(0, -20px);
+    -ms-transform: translate(0, -20px);
+    -o-transform: translate(0, -20px);
+    transform: translate(0, -20px);
+    .opacity(0);
+  }
+  to {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+    .opacity(1);
+  }
+}
+@-ms-keyframes slide-down {
+  from {
+    -webkit-transform: translate(0, -20px);
+    -ms-transform: translate(0, -20px);
+    -o-transform: translate(0, -20px);
+    transform: translate(0, -20px);
+    .opacity(0);
+  }
+  to {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+    .opacity(1);
+  }
+}
+@keyframes slide-down {
+  from {
+    -webkit-transform: translate(0, -20px);
+    -ms-transform: translate(0, -20px);
+    -o-transform: translate(0, -20px);
+    transform: translate(0, -20px);
+    .opacity(0);
+  }
+  to {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+    .opacity(1);
+  }
+}
 
 /*Links and type*/
 a{
@@ -42,29 +152,24 @@ a{
   -o-animation: ripple 1s linear;
   animation: ripple 1s linear;
 }
-@-webkit-keyframes
-ripple {  100% {
-.opacity(0);
--webkit-transform: scale(1.5);
-}
-}
-@-moz-keyframes
-ripple {  100% {
-  .opacity(0);
--moz-transform: scale(1.5);
-}
-}
-@-o-keyframes
-ripple {  100% {
-  .opacity(0);
--o-transform: scale(1.5);
-}
-}
-@keyframes
-ripple {  100% {
-  .opacity(0);
-transform: scale(1.5);
-}
+.btn-icon-toggle{
+  color: @gray-light;
+  padding: 0;
+  width: 36px;
+  border-radius: 999px !important;
+  font-weight: 500;
+  background-color: transparent;
+  text-align: center;
+  border: 1px transparent solid;
+  &:hover,
+  &:active{
+    background-color: @grayLight;
+    color: @gray-light;
+  }
+  &:active{
+    border-color: @green;
+    color: #fff;
+  }
 }
 
 /*From element*/
@@ -111,6 +216,19 @@ body{
 }
 
 /*Dashboard*/
+.dropdown-menu{
+  border-color: rgba(255, 255, 255, 0.9);
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+}
+.dropdown-menu.dropdown-menu-raduis{
+  .bdr-block !important;
+}
+.dropdown.open >{
+  .dropdown-menu{
+    .animation(slide-down 0.3s ease-out);
+  }
+}
 .header-fixed{
   #header{ position: fixed; }
 }
@@ -118,8 +236,13 @@ body{
   #menubar{
     width: 240px;
   }
-  #wraper{
-    padding-left: 240px;
+  #main-menu{
+    .title{ .opacity(1); visibility: inherit; }
+  }
+}
+.menubar-visible{
+  #menubar{
+    width: 240px;
   }
   #main-menu{
     .title{ .opacity(1); visibility: inherit; }
@@ -129,20 +252,20 @@ body{
   left: 0;
   right: 0;
   height: 64px;
-  z-index: 1005;
+  z-index: 1001;
   background: #fff;
   color: rgba(49, 53, 52, 0.6);
-  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
 }
 .headerbar{
   position: relative;
-  min-height: 50px;
+  min-height: 64px;
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
   .clearfix();
   .headerbar-left{
     display: inline-table;
     height: 64px;
-    margin-left: 30px;
+    padding-left: 30px;
   }
   .brand-holder{
     display: table-cell;
@@ -156,22 +279,15 @@ body{
   }
 }
 .headerbar-left{
+  float: left;
   .menu-toggle{
     float: left;
-    color: @font_color;
     position: relative;
     display: block;
-    width: 36px;
     height: 36px;
-    border-radius: 999px;
-    font-weight: bold;
     font-size: 23px;
     margin-left: 20px;
     text-align: center;
-    &:hover,
-    &:active{
-      background-color: @grayLight;
-    }
   }
   i.mdi{
     line-height: 36px;
@@ -204,12 +320,34 @@ body{
   }
   .dropdown-menu{
     width: 100%;
-    border-color: rgba(255, 255, 255, 0.9);
-    -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
   }
   i.mdi{ margin-right: 5px; }
   i.mdi-close{ color: @brand-danger; }
+}
+.header-notification{
+  display: inline-block;
+  height: 64px;
+  float: right;
+  padding: 14px 10px;
+  a{
+    width: 36px;
+    padding: 0 !important;
+  }
+  i.mdi{
+    line-height: 34px;
+    font-size: 22px;
+  }
+  .badge{
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    background-color: @brand-danger;
+    font-size: 10px;
+  }
+  .dropdown-menu{
+    left: -120px;
+    top: 0;
+  }
 }
 
 #wraper{
@@ -236,6 +374,7 @@ body{
   bottom: 0;
   width: 64px;
   background-color: @bg_main-menu;
+  overflow: hidden;
 }
 
 .card{
@@ -287,7 +426,11 @@ body{
     margin-bottom: 20px;
     list-style: none;
     .clearfix();
-    &.active{
+    &:hover{
+      .gui-icon{ background-color: rgba(255, 255, 255, 0.12); color: #fff; }
+    }
+    &.active,
+    &.active:hover{
       .gui-icon{
         background-color: #fff;
         color: @green;
@@ -296,6 +439,7 @@ body{
         color: #fff;
       }
     }
+
   }
   .gui-icon{
     display: block;

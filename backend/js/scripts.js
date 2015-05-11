@@ -20,7 +20,10 @@ $(function(){
     });
 
   $('.menu-toggle').click(function(){
-    $('body').toggleClass('menubar-pin');
+    $('body').toggleClass('menubar-pin menubar-visible');
+  });
+  $('#menubar').hover(function(){
+    $('body').toggleClass('menubar-visible')
   });
 
 });
