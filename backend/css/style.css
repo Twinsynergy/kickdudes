@@ -13116,6 +13116,18 @@ body {
   }
 }
 /*Links and type*/
+@font-face {
+  font-family: kick_font;
+  src: url('../fonts/kick.eot');
+  src: url('../fonts/kick.eot?') format('embedded-opentype'), url('../fonts/kick.woff') format('woff'), url('../fonts/kick.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+h1,
+h2,
+h3 {
+  font-family: kick_font;
+}
 a {
   text-decoration: none;
   color: #00a89e;
@@ -13125,6 +13137,7 @@ a:hover {
 }
 .text-xl {
   font-size: 180%;
+  font-family: kick_font;
 }
 .integer span {
   margin: 0 5px;
@@ -13442,8 +13455,9 @@ body {
   display: inline-block;
   padding: 11px 24px;
   vertical-align: middle;
-  line-height: 17px;
-  font-size: 20px;
+  line-height: 1.5em;
+  font-size: 26px;
+  font-family: kick_font;
 }
 .card-body {
   padding: 24px;
@@ -13464,6 +13478,7 @@ body {
   margin-left: 60px;
   margin-top: 10px;
   color: #777777;
+  font-family: kick_font;
   opacity: 0;
   filter: alpha(opacity=0);
   visibility: hidden;
