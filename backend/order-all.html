@@ -5,7 +5,7 @@
   <meta name="description" content="Kickdudes">
   <meta name="author" content="Twinsynergy.co.th">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dashboard</title>
+  <title>Order all</title>
   <link rel="stylesheet" href="css/style.css">
 
   <!--[if lt IE 9]>
@@ -80,70 +80,8 @@
   <section id="wraper">
     <div id="content">
       <section id="section-body" class="container-fluid">
-
         <div class="row">
-          <div class="col-md-3 col-sm-6">
-            <div class="card">
-              <div class="card-body no-padding">
-                <div class="alert alert-callout alert-info">
-                  <h4>
-                    รายได้รวมทั้งหมด
-                  </h4>
-                  <p class="integer">
-                    <strong class="text-xl counter">30,000</strong><span>บาท</span>
-                  </p>
-                </div>
-
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-3">
-            <div class="card">
-              <div class="card-body no-padding">
-                <div class="alert alert-callout alert-waiting">
-                  <h4>
-                    รอการโอนเงิน
-                  </h4>
-                  <p class="integer">
-                    <strong class="text-xl counter">200</strong><span>รายการ</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="clearfix visible-sm-block"></div>
-          <div class="col-sm-6 col-md-3">
-            <div class="card">
-              <div class="card-body no-padding">
-                <div class="alert alert-callout alert-verify">
-                  <h4>
-                    รอการตรวจสอบ
-                  </h4>
-                    <p class="integer">
-                      <strong class="text-xl counter">20</strong><span>รายการ</span>
-                    </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-3">
-            <div class="card">
-              <div class="card-body no-padding">
-                <div class="alert alert-callout alert-success">
-                  <h4>
-                    ทำรายการเสร็จสิ้น
-                  </h4>
-                  <p class="integer">
-                    <strong class="text-xl counter">20</strong><span>รายการ</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> <!--End row-->
-
-        <div class="row">
-          <div class="col-md-9">
+          <div class="col-md-12">
             <div class="card">
               <div class="card-head">
 							  <header>ประวัติการทำรายการ</header>
@@ -153,7 +91,9 @@
                 <table class="table table-hover">
                   <thead>
                     <tr>
+                      <td>id</td>
                       <td>วันที่</td>
+                      <td>ช่วงเวลา</td>
                       <td>ชื่อสนาม</td>
                       <td>ผู้เช่าสนาม</td>
                       <td>เงินค่าสนาม</td>
@@ -162,7 +102,9 @@
                   </thead>
                   <tbody>
                     <tr>
+                      <td>100001</td>
                       <td>12/01/58</td>
+                      <td>10:00 - 11:00</td>
                       <td>สนามที่ 1 : ฟุตซอลเทียม</td>
                       <td>Tesser Phutthasen</td>
                       <td>1,300 บาท</td>
@@ -173,7 +115,9 @@
                         </a></td>
                     </tr>
                     <tr>
+                      <td>100001</td>
                       <td>12/01/58</td>
+                      <td>10:00 - 11:00</td>
                       <td>สนามที่ 1 : ฟุตซอลเทียม</td>
                       <td>Tesser Phutthasen</td>
                       <td>1,300 บาท</td>
@@ -184,7 +128,9 @@
                         </a></td>
                     </tr>
                     <tr>
+                      <td>100001</td>
                       <td>12/01/58</td>
+                      <td>10:00 - 11:00</td>
                       <td>สนามที่ 1 : ฟุตซอลเทียม</td>
                       <td>Tesser Phutthasen</td>
                       <td>1,300 บาท</td>
@@ -195,7 +141,9 @@
                         </a></td>
                     </tr>
                     <tr>
+                      <td>100001</td>
                       <td>12/01/58</td>
+                      <td>10:00 - 11:00</td>
                       <td>สนามที่ 1 : ฟุตซอลเทียม</td>
                       <td>Tesser Phutthasen</td>
                       <td>1,300 บาท</td>
@@ -209,70 +157,6 @@
                 </table>
                 </div>
               </div><!--End card-body-->
-              <div class="card-actionbar">
-                <div class="card-actionbar-row">
-                  <a href="order-all.html" class="btn btn-flat ripplelink">
-                    ดูทั้งหมด
-                  </a>
-                </div>
-              </div><!--End card actionbar-->
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card">
-              <div class="card-head">
-							  <header>ผู้ติดต่อเช่าสนาม</header>
-  						</div>
-              <div class="card-body no-padding">
-                <ul class="list-unstyled list-inline">
-                  <li class="tile">
-                    <div class="tile-content">
-  										<div class="tile-icon">
-  											<img src="images/avatar9.jpg" alt="">
-  										</div>
-  										<div class="tile-name">
-                        <p class="name">Ann Laurens</p>
-                        <p class="detail">
-                          ทำการจองสนามที่ 1
-                        </p>
-                      </div>
-  									</div>
-                  </li>
-                  <li class="tile">
-                    <div class="tile-content">
-  										<div class="tile-icon">
-  											<img src="images/avatar9.jpg" alt="">
-  										</div>
-  										<div class="tile-name">
-                        <p class="name">Ann Laurens</p>
-                        <p class="detail">
-                          ทำการจองสนามที่ 3
-                        </p>
-                      </div>
-  									</div>
-                  </li>
-                  <li class="tile">
-                    <div class="tile-content">
-  										<div class="tile-icon">
-  											<img src="images/avatar9.jpg" alt="">
-  										</div>
-  										<div class="tile-name">
-                        <p class="name">Ann Laurens</p>
-                        <p class="detail">
-                          ทำการจองสนามที่ 2
-                        </p>
-                      </div>
-  									</div>
-                  </li>
-                </ul>
-              </div><!--End card-body-->
-              <div class="card-actionbar">
-                <div class="card-actionbar-row">
-                  <a href="order-all.html" class="btn btn-flat ripplelink">
-                    ดูทั้งหมด
-                  </a>
-                </div>
-              </div><!--End card actionbar-->
             </div>
           </div>
         </div> <!--End row-->
@@ -281,7 +165,7 @@
     </div>
     <nav id="menubar">
       <ul id="main-menu">
-        <li class="active">
+        <li class="">
           <a href="dashboard.html">
             <span class="gui-icon">
               <i class="mdi mdi-home"></i>
@@ -297,8 +181,8 @@
             <span class="title">fieds</span>
           </a>
         </li>
-        <li>
-          <a href="order-all.html">
+        <li class="active">
+          <a href="javascript:void(0)">
             <span class="gui-icon">
               <i class="mdi mdi-run"></i>
             </span>

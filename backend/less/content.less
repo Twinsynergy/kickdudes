@@ -219,16 +219,16 @@ a{
   }
 }
 .text-xl{ font-size: 180%; font-family: kick_font; }
+.link-more{
+  font-size: 14px;
+  text-transform: uppercase;
+}
 .integer{
   span{ margin: 0 5px; }
 }
-.btn-submit{
-  background-color: @green;
-  color: #fff;
-  &:hover{ color: #fff; }
-}
 .no-padding{ padding: 0 !important; }
 .ripplelink{
+	position: relative;
   overflow: hidden;
 }
 .ink {
@@ -247,6 +247,21 @@ a{
   -ms-animation: ripple 1s linear;
   -o-animation: ripple 1s linear;
   animation: ripple 1s linear;
+}
+.btn{
+	&:hover,
+	&:focus,
+	&:active{
+		color: @green;
+	}
+}
+.btn:active, .btn.active{
+	.box-shadow(none);
+}
+.btn-submit{
+  background-color: @green;
+  color: #fff;
+  &:hover{ color: #fff; }
 }
 .btn-icon-toggle{
   color: @gray-light;
@@ -267,6 +282,27 @@ a{
     color: #fff;
   }
 }
+.btn-flat{
+	&:hover{
+		background-color: @gray-lighter;
+		color: inherit;
+	}
+	.ink{
+		background-color: @gray;
+	}
+}
+.label{
+	font-size: 90%;
+}
+.label-success{
+	background-color: @brand-success;
+}
+.label-verify{
+	background-color: @brand-info;
+}
+.label-waiting{
+	background-color: @brand-warning;
+}
 
 /*From element*/
 form{
@@ -278,6 +314,16 @@ form{
   textarea {
     resize: none;
   }
+}
+
+/*Table*/
+thead{
+    font-weight: bold;
+}
+table{
+	.actions{
+		a{ font-size: 20px; padding: 0; }
+	}
 }
 
 /*Style*/
@@ -531,6 +577,51 @@ body{
     font-size: 90%;
   }
 }
+.card-actionbar{
+	position: relative;
+	padding-bottom: 8px;
+	.clearfix();
+}
+.card-actionbar-row{
+	padding: 6px 16px;
+	text-align: right;
+}
+.tile{
+	position: relative;
+  display: table;
+  width: 100%;
+  min-height: 48px;
+	border-bottom: 1px solid @gray-lighter;
+	&:last-child{
+		border-bottom: none;
+	}
+	.tile-content{
+		display: table-cell;
+  	padding-left: 16px;
+		> div{
+			display: table-cell;
+  		vertical-align: middle;
+		}
+		img{
+			width: 40px;
+			height: 40px;
+			border-radius: 40px;
+		}
+		p{ margin: 0; }
+	}
+	.tile-icon{
+		min-width: 56px;
+		width: 56px;
+		padding: 8px 0;
+	}
+	.tile-name{
+		width: 100%;
+		.detail{
+			font-size: 14px;
+			color: @gray-light;
+		}
+	}
+}
 
 #menubar{
   padding-top: 20px;
@@ -614,8 +705,18 @@ body{
     background-color: @brand-primary;
   }
 }
-.alert-callout.alert-warning{
+.alert-callout.alert-verify{
+  &:before{
+    background-color: @brand-info;
+  }
+}
+.alert-callout.alert-waiting{
   &:before{
     background-color: @brand-warning;
+  }
+}
+.alert-callout.alert-success{
+  &:before{
+    background-color: @brand-success;
   }
 }
