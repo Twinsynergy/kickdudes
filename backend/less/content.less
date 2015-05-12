@@ -319,6 +319,7 @@ form{
 /*Table*/
 thead{
     font-weight: bold;
+		text-transform: uppercase;
 }
 table{
 	.actions{
@@ -723,4 +724,15 @@ body{
   &:before{
     background-color: @brand-success;
   }
+}
+
+.pagination{
+	> li > a{
+		color: @green;
+	}
+	.active > a{
+		background-color: @green;
+		border-color: @green;
+		&:hover{ background-color: @green; border-color: @green; }
+	}
 }
