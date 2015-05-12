@@ -30,6 +30,26 @@ $(function(){
     delay: 10,
     time: 1000
   });
-  
-  $('[data-toggle="tooltip"]').tooltip()
+
+  $('[data-toggle="tooltip"]').tooltip();
+
+  /*Form*/
+  // $('tbody.rowlink').rowlink();
+
+  /*Field*/
+  $('.add-cover a').bind('click', function() {
+    fadeOut();
+  });
+  function fadeOut(){
+    setTimeout(function(){
+      $('.add-cover').fadeOut();
+    }, 1000);
+  }
+
+  // var Row = $('#fields-form .time-wraper .row');
+  // var TimeWrapper = $('#fields-form .time-wraper');
+  // $('.add-time-group a').click(function(){
+  //   $(TimeWraper)append(Row);
+  // });
+
 });

@@ -315,6 +315,11 @@ form{
     resize: none;
   }
 }
+textarea:focus,
+input:focus,
+button:focus{
+    outline: 0 !important;
+}
 
 /*Table*/
 thead{
@@ -734,5 +739,76 @@ body{
 		background-color: @green;
 		border-color: @green;
 		&:hover{ background-color: @green; border-color: @green; }
+	}
+}
+
+/*Fields*/
+.add-field{
+	position: relative;
+	min-height: 600px;
+	.add-cover{
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		line-height: 600px;
+		text-align: center;
+		background-color: #fff;
+		z-index: 2;
+		.ripplelink{
+			overflow: visible;
+		}
+		i.mdi{
+			background-color: @gray-lighter;
+			.bdr-block(50%);
+			padding: 15px;
+			font-size: 30px;
+			margin-bottom: 10px;
+		}
+	}
+}
+#fields-form{
+	input{
+		padding-left: 0;
+		padding-right: 0;
+		border-bottom: 2px solid @grayLight;
+	}
+	.input-group-addon{
+		color: @gray-light;
+		background-color: transparent;
+		border: none;
+	}
+	.fileinput{
+		.thumbnail{
+			border: none;
+			> img{
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+	.btn-submit{
+		background-color: transparent;
+		color: @green;
+		text-transform: uppercase;
+		width: 100%;
+		text-align: center;
+		font-size: 18px;
+		&:hover,
+		&:active
+		&:focus{
+			color: @green;
+		}
+	}
+	.time-wraper{
+		.row{
+			position: relative;
+		}
+		.add-time-group{
+			position: absolute;
+			right: 0;
+			top: 20%;
+		}
 	}
 }
