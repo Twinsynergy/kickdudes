@@ -13879,22 +13879,49 @@ a:hover {
   -o-animation: ripple 1s linear;
   animation: ripple 1s linear;
 }
+.btn {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  cursor: pointer;
+}
 .btn:hover,
 .btn:focus,
 .btn:active {
-  color: #00a89e;
+  color: #313534;
+}
+.btn i.mdi {
+  margin-right: 5px;
 }
 .btn:active,
 .btn.active {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.btn-submit {
+.btn-default {
+  border: none;
+  color: #fff;
   background-color: #00a89e;
+}
+.btn-default:hover,
+.btn-default:focus {
+  background-color: #008178;
   color: #fff;
 }
-.btn-submit:hover {
-  color: #fff;
+.btn-delete {
+  background-color: #d9534f;
+}
+.btn-delete:hover,
+.btn-delete:focus {
+  background-color: #be2f2b;
+}
+.btn-edit {
+  background-color: #f0ad4e;
+}
+.btn-edit:hover,
+.btn-edit:focus {
+  background-color: #de9226;
 }
 .btn-icon-toggle {
   color: #777777;
@@ -13950,6 +13977,33 @@ textarea:focus,
 input:focus,
 button:focus {
   outline: 0 !important;
+}
+.form-group .bar {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.form-group .bar:before,
+.form-group .bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #00a89e;
+  -webkit-transition: 0.2s ease all;
+  -o-transition: 0.2s ease all;
+  transition: 0.2s ease all;
+}
+.form-group .bar:before {
+  left: 50%;
+}
+.form-group .bar:after {
+  right: 50%;
+}
+.form-group input:focus ~ .bar:before,
+.form-group input:focus ~ .bar:after {
+  width: 50%;
 }
 /*Table*/
 thead {
@@ -14250,6 +14304,18 @@ body {
   font-size: 26px;
   font-family: kick_font;
 }
+.card-head .tools {
+  padding-right: 16px;
+  float: right;
+}
+.card-head i {
+  line-height: 34px;
+  font-size: 20px;
+  margin-right: 0 !important;
+}
+.card-head i.mdi-close {
+  color: #d9534f;
+}
 .card-body {
   padding: 24px;
   position: relative;
@@ -14445,7 +14511,7 @@ body {
 /*Fields*/
 .add-field {
   position: relative;
-  min-height: 600px;
+  min-height: 580px;
 }
 .add-field .add-cover {
   position: absolute;
@@ -14453,7 +14519,7 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  line-height: 600px;
+  line-height: 580px;
   text-align: center;
   background-color: #fff;
   z-index: 2;
@@ -14474,6 +14540,15 @@ body {
 #fields-form input {
   padding-left: 0;
   padding-right: 0;
+  border-bottom: 2px solid #ededed;
+}
+#fields-form h4 {
+  color: #555555;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  font-size: 100%;
+}
+#fields-form .group-file {
   border-bottom: 2px solid #ededed;
 }
 #fields-form .input-group-addon {
@@ -14503,10 +14578,84 @@ body {
 #fields-form .time-wraper .row {
   position: relative;
 }
-#fields-form .time-wraper .add-time-group {
+#fields-form .time-wraper .action-time-group {
   position: absolute;
   right: 0;
   top: 20%;
+}
+#fields-form .time-wraper .action-time-group i.mdi {
+  overflow: inherit;
+}
+#fields-form .time-wraper .action-time-group i.mdi .ink {
+  background-color: #555555;
+}
+#fields-form .time-wraper .action-time-group i.mdi-minus-circle {
+  color: #d9534f;
+}
+.football-card img {
+  width: 100%;
+  height: auto;
+}
+.football-card h4 {
+  color: #555555;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  font-size: 100%;
+  margin-top: 0;
+}
+.football-card .card-body {
+  padding-top: 0;
+}
+.football-card .football-group {
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ededed;
+  padding: 6px 0;
+}
+.football-card .football-group strong {
+  font-weight: normal;
+  font-family: kick_font;
+}
+.football-card .time-wraper {
+  padding: 0;
+  border-bottom: none;
+}
+.football-card .time-wraper .row {
+  margin-bottom: 15px;
+}
+.football-card .time-wraper .start-time {
+  color: #5cb85c;
+}
+.football-card .time-wraper .end-time {
+  color: #d9534f;
+}
+.football-card .time-wraper .price {
+  color: #5bc0de;
+}
+.football-card .col-time {
+  border-bottom: 2px solid #ededed;
+  padding-bottom: 10px;
+  width: 100%;
+  display: inline-block;
+}
+#delete_not {
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  -webkit-transition: opacity 1s ease-in;
+  -o-transition: opacity 1s ease-in;
+  transition: opacity 1s ease-in;
+}
+#delete_not .modal-sm {
+  margin: 0 auto;
+}
+#delete_not:target {
+  display: table;
+  opacity: 1;
+  pointer-events: auto;
+}
+#delete_not > div {
+  display: table-cell;
+  vertical-align: middle;
 }
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
