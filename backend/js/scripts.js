@@ -66,6 +66,18 @@ $(function(){
     }, 1000);
   }
 
+  /*Alert*/
+  setTimeout(function() {
+        $("#toast-container").fadeOut(400, function(){
+          $(this).remove();
+        })
+    }, 5000);
+  $('#toast-container').click(function() {
+    $(this).fadeOut(400, function() {
+      $(this).remove();
+    });;
+  });
+
   /*Validate
   * ff == football fields
   */

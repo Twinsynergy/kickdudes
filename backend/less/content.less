@@ -342,6 +342,9 @@ a{
 .label-waiting{
 	background-color: @brand-warning;
 }
+.alert{
+  position: relative;
+}
 
 /*From element*/
 form{
@@ -966,5 +969,20 @@ body{
   visibility: inherit;
   > div{
     .opacity(1);
+  }
+}
+
+#toast-container{
+  position: fixed;
+  z-index: 2000;
+  top: 88px;
+  right: 0;
+  width: 100%;
+  > div{
+    margin: 0 auto;
+    padding: 12px 24px;
+    max-width: 300px;
+    .opacity(1);
+    cursor: pointer;
   }
 }

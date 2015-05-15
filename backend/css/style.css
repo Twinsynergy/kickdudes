@@ -13976,6 +13976,9 @@ a:hover {
 .label-waiting {
   background-color: #f0ad4e;
 }
+.alert {
+  position: relative;
+}
 /*From element*/
 form input[type="submit"] {
   border-bottom: 0 !important;
@@ -14706,6 +14709,21 @@ body {
 #delete_not:target > div {
   opacity: 1;
   filter: alpha(opacity=100);
+}
+#toast-container {
+  position: fixed;
+  z-index: 2000;
+  top: 88px;
+  right: 0;
+  width: 100%;
+}
+#toast-container > div {
+  margin: 0 auto;
+  padding: 12px 24px;
+  max-width: 300px;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  cursor: pointer;
 }
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
