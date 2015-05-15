@@ -232,12 +232,12 @@ a{
 .no-padding{ padding: 0 !important; }
 .ripplelink{
 	position: relative;
-  overflow: hidden;
 }
+.ripplelink-hidden{ overflow: hidden; }
 .ink {
   display: block;
   position: absolute;
-  background: @grayLight;
+  background: @gray;
   border-radius: 100%;
   -webkit-transform: scale(0);
   -moz-transform: scale(0);
@@ -245,11 +245,11 @@ a{
   transform: scale(0);
 }
 .animate {
-  -webkit-animation: ripple 1s linear;
-  -moz-animation: ripple 1s linear;
-  -ms-animation: ripple 1s linear;
-  -o-animation: ripple 1s linear;
-  animation: ripple 1s linear;
+  -webkit-animation: ripple 0.8s linear;
+  -moz-animation: ripple 0.8s linear;
+  -ms-animation: ripple 0.8s linear;
+  -o-animation: ripple 0.8s linear;
+  animation: ripple 0.8s linear;
 }
 .btn{
 	.bdr-block(0);
@@ -316,6 +316,20 @@ a{
 		background-color: @gray;
 	}
 }
+.btn-submit{
+    background-color: transparent;
+    color: @green;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    &:hover,
+    &:active
+    &:focus{
+      color: @font_color;
+      background-color: @gray-lighter;
+    }
+  }
 .label{
 	font-size: 90%;
 }
@@ -331,19 +345,44 @@ a{
 
 /*From element*/
 form{
+  input[type="submit"]{ border-bottom: 0 !important; }
   .form-control{
     box-shadow: none;
     border: none;
+    .bdr-block(0);
     &:focus{ border-color: transparent; box-shadow: none; }
   }
   textarea {
     resize: none;
+  }
+  .form-group{ position: relative; }
+  .help-block{
+    display: inline-block;
+    position: absolute;
+    bottom: -17px;
+    left: 0;
+    font-size: 12px;
+    margin: 0;
+  }
+  .error{
+    margin-bottom: 15px;
+    .help-block{ color: @brand-danger; }
+    input{
+      border-bottom-color: @brand-danger !important;
+    }
+    .bar:before,
+    .bar:after{ background-color: @brand-danger; }
   }
 }
 textarea:focus,
 input:focus,
 button:focus{
     outline: 0 !important;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }
 .form-group{
 	.bar 	{ position:relative; display:block; width: 100%; }
@@ -821,10 +860,11 @@ body{
 			padding: 15px;
 			font-size: 30px;
 			margin-bottom: 10px;
+      margin-right: 0;
 		}
 	}
 }
-#fields-form{
+#football-form{
 	input{
 		padding-left: 0;
 		padding-right: 0;
@@ -852,19 +892,6 @@ body{
 			}
 		}
 	}
-	.btn-submit{
-		background-color: transparent;
-		color: @green;
-		text-transform: uppercase;
-		width: 100%;
-		text-align: center;
-		font-size: 18px;
-		&:hover,
-		&:active
-		&:focus{
-			color: @green;
-		}
-	}
 	.time-wraper{
 		.row{
 			position: relative;
@@ -882,6 +909,9 @@ body{
 			}
 		}
 	}
+  .time-group.error{
+    .help-block{ left: 15px; }
+  }
 }
 .football-card{
 	img{ .size(100%,auto); }
@@ -921,15 +951,20 @@ body{
 	background: rgba(0,0,0,0.8);
 	width: 100%;
 	height: 100%;
-	.transition(opacity 1s ease-in);
 	.modal-sm{ margin: 0 auto; }
+  display: table;
+  visibility: hidden;
+  > div {
+    display: table-cell;
+    vertical-align: middle;
+    .opacity(0);
+    .transition(opacity .4s ease-in);
+  }
 }
 #delete_not:target {
-	display: table;
-	opacity: 1;
 	pointer-events: auto;
-}
-#delete_not > div {
-	display: table-cell;
-	vertical-align: middle;
+  visibility: inherit;
+  > div{
+    .opacity(1);
+  }
 }
