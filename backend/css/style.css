@@ -13874,7 +13874,7 @@ a:hover {
   -o-transform: scale(0);
   transform: scale(0);
 }
-.animate {
+.animate_ink {
   -webkit-animation: ripple 0.8s linear;
   -moz-animation: ripple 0.8s linear;
   -ms-animation: ripple 0.8s linear;
@@ -14721,9 +14721,13 @@ body {
   margin: 0 auto;
   padding: 12px 24px;
   max-width: 300px;
-  opacity: 1;
-  filter: alpha(opacity=100);
+  opacity: 0;
+  filter: alpha(opacity=0);
   cursor: pointer;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {

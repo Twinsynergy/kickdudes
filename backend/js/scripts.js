@@ -7,7 +7,7 @@ $(function(){
       }
 
       ink = $(this).find(".ink");
-      ink.removeClass("animate");
+      ink.removeClass("animate_ink");
 
       if(!ink.height() && !ink.width()){
         d = Math.max($(this).outerWidth(), $(this).outerHeight());
@@ -17,7 +17,7 @@ $(function(){
       x = e.pageX - $(this).offset().left - ink.width()/2;
       y = e.pageY - $(this).offset().top - ink.height()/2;
 
-      ink.css({top: y+'px', left: x+'px'}).addClass("animate");
+      ink.css({top: y+'px', left: x+'px'}).addClass("animate_ink");
     });
 
   $('.menu-toggle').click(function(){
@@ -68,12 +68,12 @@ $(function(){
 
   /*Alert*/
   setTimeout(function() {
-        $("#toast-container").fadeOut(400, function(){
+        $("#toast-container").slideUp(400, function(){
           $(this).remove();
         })
-    }, 5000);
+    }, 3000);
   $('#toast-container').click(function() {
-    $(this).fadeOut(400, function() {
+    $(this).slideUp(400, function() {
       $(this).remove();
     });;
   });
@@ -125,6 +125,5 @@ $(function(){
     }
   });
   
-
 
 });
