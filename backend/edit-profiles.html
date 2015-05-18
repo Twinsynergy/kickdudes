@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Kickdudes">
+  <meta name="author" content="Twinsynergy.co.th">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Edit profiles</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script src="js/jquery.js" type="text/javascript" ></script>
+  <script src="js/bootstrap/bootstrap.js" type="text/javascript" ></script>
+
+  <!--Addition-->
+  <script src="js/bootstrap/tooltip.js" type="text/javascript" ></script>
+  <script src="js/bootstrap/tab.js" type="text/javascript" ></script>
+  <script src="js/bootstrap/jasny-bootstrap.js" type="text/javascript" ></script>
+  <script src="js/waypoints.js" type="text/javascript" ></script>
+  <script src="js/counter.js" type="text/javascript" ></script>
+  <script src="js/validate.js" type="text/javascript" ></script>
+  <script src="js/scripts.js" type="text/javascript" ></script>
+
+</head>
+<body class="header-fixed">
+  <header id="header">
+    <div class="headerbar">
+      <div class="headerbar-left">
+        <div class="brand-holder">
+          <img src="images/logo-green.png" alt="logo">
+          <a href="javascript:void(0);" class="btn-icon-toggle menu-toggle">
+            <i class="mdi mdi-menu"></i>
+          </a>
+        </div>
+      </div>
+
+        <ul class="headerbar-right nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropdown-toggle ripplelink ripplelink-hidden" data-toggle="dropdown" role="button" aria-expanded="false">
+              <img src="images/avatar1.jpg" alt="">
+              <span class="profile-info">
+    						Daniel Johnson
+    						<small>สนามพระราม 9</small>
+    					</span>
+              <span class="caret"></span></a>
+            <ul class="dropdown-menu dropdown-up" role="menu">
+              <li><a href="#"><i class="mdi mdi-account"></i>My profile</a></li>
+              <li><a href="#"><i class="mdi mdi-close"></i>Log out</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="header-notification hidden-xs">
+          <ul class="nav navbar-nav">
+            <li class="dropdown"><a href="javascript:void(0);" class="btn-icon-toggle dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="mdi mdi-bell"></i><span class="badge">4</span></a>
+              <ul class="dropdown-menu dropdown-menu-raduis" role="menu">
+                <li class="dropdown-header"><h4>Messages</h4></li>
+                <li><a href="javascript:void(0);" class="alert alert-callout alert-waiting">
+    							<img class="pull-right img-circle dropdown-avatar" src="images/avatar1.jpg" alt="">
+    							<strong>Alex Anistor</strong><br>
+    							<small>จองสนามเข้ามา</small>
+                </a></li>
+                <li><a href="#" class="alert alert-callout alert-verify">
+                  <img class="pull-right img-circle dropdown-avatar" src="images/avatar1.jpg" alt="">
+    							<strong>Alex Anistor</strong><br>
+    							<small>รอการตรวจสอบ</small>
+                </a></li>
+                <li><a href="#" class="alert alert-callout alert-success">
+                  <img class="pull-right img-circle dropdown-avatar" src="images/avatar1.jpg" alt="">
+    							<strong>Alex Anistor</strong><br>
+    							<small>ชำระเงินแล้ว</small>
+                </a></li>
+                <li><a href="#">View all messages <i class="mdi mdi-arrow-right-bold pull-right"></i></a></li>
+                <li><a href="#">Mask as read <i class="mdi mdi-arrow-right-bold pull-right"></i></a></li>
+              </ul>
+            </li>
+          </ul>
+
+        </div>
+    </div>
+  </header>
+  <section id="wraper">
+    <div id="content">
+      <section id="section-body" class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-head style-primary">
+							  <header><i class="mdi mdi-pencil"></i>แก้ไขข้อมูลเจ้าของสนาม
+                </header>
+  						</div>
+              <!--Start form-->
+              <form id="profiles-form" action="#">
+                <div class="card-body style-primary form-inverse">
+                  <div class="row">
+                    <div class="form-group col-md-6">
+                      <input type="text" class="form-control input-lg" placeholder="ชื่อ" />
+                      <span class="bar"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                      <input type="text" class="form-control input-lg" placeholder="นามสกุล" />
+                      <span class="bar"></span>
+                    </div>
+                  </div><!--End row-->
+                  <div class="row">
+                    <div class="form-group col-md-6">
+                      <input type="text" class="form-control input-lg" placeholder="ที่อยู่" />
+                      <span class="bar"></span>
+                    </div>
+                    <div class="form-group col-md-3">
+                      <input type="text" class="form-control input-lg" placeholder="เขต" />
+                      <span class="bar"></span>
+                    </div>
+                    <div class="form-group col-md-3">
+                      <input type="text" class="form-control input-lg" placeholder="จังหวัด" />
+                      <span class="bar"></span>
+                    </div>
+                  </div><!--End row-->
+                  <div class="row">
+                    <div class="form-group col-md-3">
+                      <input type="number" class="form-control input-lg" placeholder="รหัสไปรษณี" />
+                      <span class="bar"></span>
+                    </div>
+                    <div class="form-group col-md-3">
+                      <input type="number" class="form-control input-lg" placeholder="เบอร์โทรติดต่อ" />
+                      <span class="bar"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                      <input type="email" class="form-control input-lg" placeholder="อีเมล" />
+                    <span class="bar"></span>
+                    </div>
+                  </div><!--End row-->
+                </div><!--End card-body-->
+                  
+                <!--Start Tab form-->
+                <div role="tabpanel">
+                  <div class="card-head style-primary">
+                      <!-- Nav tabs -->
+                      <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#field-info" aria-controls="field-info" role="tab" data-toggle="tab">ข้อมูลสนาม</a></li>
+                        <li role="presentation"><a href="#field-facility" aria-controls="field-facility" role="tab" data-toggle="tab">สิ่งอำนวยความสะดวกในสนาม</a></li>
+                        <li role="presentation"><a href="#payment" aria-controls="payment" role="tab" data-toggle="tab">ข้อมูลบัตรเครดิต</a></li>
+                      </ul>
+                  </div>
+                  <div class="card-body">
+                    <!-- Tab panes -->
+                      <div class="tab-content">
+                        
+                        <div role="tabpanel" class="tab-pane active" id="field-info">
+                          <div class="row">
+                            <div class="form-group col-md-4">
+                              <input type="text" class="form-control">
+                              <span class="bar"></span>
+                              <label for="">ชื่อสนาม</label>
+                            </div>                                   
+                          </div><!--End row-->
+                          <div class="row">
+                            <div class="form-group col-md-6">
+                              <input type="text" class="form-control" />
+                              <span class="bar"></span>
+                              <label for="">ที่อยู่</label>
+                            </div>
+                            <div class="form-group col-md-3">
+                              <input type="text" class="form-control" />
+                              <span class="bar"></span>
+                              <label for="">เขต</label>
+                            </div>
+                            <div class="form-group col-md-3">
+                              <input type="text" class="form-control" />
+                              <span class="bar"></span>
+                              <label for="">จังหวัด</label>
+                            </div>                                  
+                          </div><!--End row-->
+                          <div class="row">
+                            <div class="form-group col-md-3">
+                              <input type="number" class="form-control" />
+                              <span class="bar"></span>
+                              <label for="">รหัสไปรษณี</label>
+                            </div>
+                            <div class="form-group col-md-3">
+                              <input type="number" class="form-control" />
+                              <span class="bar"></span>
+                              <label for="">เบอร์โทรติดต่อ</label>
+                            </div>
+                            <div class="form-group col-md-6">
+                              <input type="email" class="form-control" />
+                              <span class="bar"></span>
+                              <label for="">อีเมล</label>
+                              <p class="help-block">adc@example.com</p>
+                            </div>
+                          </div><!--End row-->
+                          <div class="row">
+
+                            <div class="form-group col-md-3">
+                              <input type="number" class="form-control" placeholder="latitude" />
+                              <span class="bar"></span>
+                              <label for="">ตำแหน่งของสนาม</label>
+                              <p class="help-block">-95.712891</p>
+                            </div>
+                            <div class="form-group col-md-3">
+                              <input type="number" class="form-control" placeholder="longitude" />
+                              <span class="bar"></span>
+                              <p class="help-block">37.090240</p>
+                            </div>
+                          </div><!--End row-->
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="field-facility">
+                          <div class="row">
+                            <div class="checkbox col-md-6">
+                              <div class="checkbox-group">
+                                  <input type="checkbox" id="checkiz1">
+                                  <label for="checkiz1">
+                                      <span class="check"></span>
+                                      <span class="box"></span>
+                                       ห้องอาบน้ำ
+                                   </label>
+                              </div> <!--End checkbox group-->
+                              <div class="checkbox-group">
+                                  <input type="checkbox" id="checkiz2">
+                                  <label for="checkiz2">
+                                      <span class="check"></span>
+                                      <span class="box"></span>
+                                       ห้องน้ำ
+                                   </label>
+                              </div> <!--End checkbox group-->
+                              <div class="checkbox-group">
+                                  <input type="checkbox" id="checkiz3">
+                                  <label for="checkiz3">
+                                      <span class="check"></span>
+                                      <span class="box"></span>
+                                       อินเตอร์เน็ต
+                                   </label>
+                              </div> <!--End checkbox group-->
+
+                              <a href="javascript:void(0)" id="add_facility" class="btn btn-default btn-success">
+                                <i class="mdi mdi-plus"></i>เพิ่มข้อมูล
+                              </a>
+                            </div>
+                              
+                          </div>
+                        </div><!--End field-facility-->
+                        <div role="tabpanel" class="tab-pane" id="payment">
+                          <img src="images/payment.png" alt="payment" id="payment-icon" />
+                          <div class="row">
+                            <div class="form-group col-md-4">
+                              <input type="text" data-mask="9999-9999-9999-9999" class="form-control">
+                              <span class="bar"></span>
+                              <label for="">Credit Card number</label>
+                            </div>
+                            <div class="form-group col-md-4">
+                              <input type="text" class="form-control">
+                              <span class="bar"></span>
+                              <label for="">Card holder</label>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-4">
+                              <div class="row">
+                                <div class="form-group col-md-6">
+                                  <input type="text" placeholder="month" class="form-control" data-mask="99">
+                                  <span class="bar"></span>
+                                  <label for="">Expiry</label>
+                                  <p class="help-block">ตัวอย่าง: 02, 10</p>
+                                </div>
+                                <div class="form-group col-md-6">
+                                  <input type="text" placeholder="year" class="form-control" data-mask="9999">
+                                  <span class="bar"></span>
+                                  <p class="help-block">ตัวอย่าง: 1997, 2015</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-group col-md-2">
+                              <input type="text" placeholder="cvn/cvv" data-mask="999" class="form-control">
+                              <span class="bar"></span>
+                              <label for="">security code</label>
+                            </div>
+                            <div class="form-group col-md-1 payment-cvc"><img src="images/icon-cvc.png" alt=""></div>
+                          </div>
+                        </div><!--End payment-->
+                      </div>
+                  </div>
+                </div>
+                <!--End Tab form-->
+                  <div class="card-actionbar">
+                    <div class="card-actionbar-row">
+                      <a class="btn btn-flat" href="#">ยกเลิก</a>
+                      <button type="button" class="btn btn-default">ตกลง</button>
+                    </div><!--end .card-actionbar-row -->
+                  </div>
+                </div><!--End card-body-->
+              
+              </form>
+              <!--End form-->
+            </div>
+          </div>
+        </div> <!--End row-->
+
+      </section>
+    </div>
+    <nav id="menubar">
+      <ul id="main-menu">
+        <li class="">
+          <a href="dashboard.html">
+            <span class="gui-icon">
+              <i class="mdi mdi-home"></i>
+            </span>
+            <span class="title">dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="fields.html">
+            <span class="gui-icon">
+              <i class="mdi mdi-tshirt-crew"></i>
+            </span>
+            <span class="title">fieds</span>
+          </a>
+        </li>
+        <li class="active">
+          <a href="history.html">
+            <span class="gui-icon">
+              <i class="mdi mdi-run"></i>
+            </span>
+            <span class="title">history</span>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+            <span class="gui-icon">
+              <i class="mdi mdi-settings"></i>
+            </span>
+            <span class="title">settings</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </section>
+</body>
+</html>

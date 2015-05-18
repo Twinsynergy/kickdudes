@@ -55,6 +55,13 @@ $(function(){
       $(this).parent().remove();
       x--;
   })
+  /*add_facility*/
+  var num = $('#profiles-form .checkbox-group').size();
+  $('#add_facility').click(function(e) {
+    e.preventDefault();
+    num++;
+    $(this).before('<div class="checkbox-group animated fadeIn" style="opacity: 0;"><input type="checkbox" id="checkiz'+num+'"><label for="checkiz'+num+'"><span class="check"></span><span class="box"></span><div class="form-group"><input type="text" class="form-control" id="text-facility-'+num+'" name="text-facility-'+num+'" /><span class="bar"></span></div></label></div>');
+  });
 
   /*Field*/
   $('.add-cover a').bind('click', function() {
@@ -83,7 +90,6 @@ $(function(){
   */
   var errorText = "กรอกข้อมูล";
   var numText = "ใส่ได้เฉพาะตัวเลข"
-
   $('#football-form').validate({
     errorClass: "help-block",
     errorElement: "span",
@@ -124,6 +130,22 @@ $(function(){
         $(element).parent('div').removeClass('error');
     }
   });
-  
+  $('#profiles-form').validate({
+    errorClass: "help-block",
+    errorElement: "span",
+    rule:{
+      
+    },
+    messages:{
+
+    },
+    highlight: function(element) {
+        $(element).parent('div').addClass('error');
+    },
+    unhighlight: function(element) {
+        $(element).parent('div').removeClass('error');
+    }
+  });
+
 
 });
