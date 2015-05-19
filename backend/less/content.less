@@ -9,6 +9,7 @@
 @brand-danger-dark: #BE2F2B;
 @brand-warning-dark: #DE9226;
 @brand-success-dark: #369836;
+@purple: #9c27b0;
 
 /*Mixins*/
 .bdr-block(@bdr: 4px){
@@ -223,6 +224,8 @@ a{
   }
 }
 .text-xl{ font-size: 180%; font-family: kick_font; }
+.text-light{ color: @gray-light; }
+.text-accent{ color: @purple; font-weight: bold; font-size: 20px; }
 .link-more{
   font-size: 14px;
   text-transform: uppercase;
@@ -340,6 +343,7 @@ a{
   }
 .label{
 	font-size: 90%;
+  .bdr-block(0);
 }
 .label-success{
 	background-color: @brand-success;
@@ -376,6 +380,7 @@ form{
   .form-group{ 
     position: relative; 
     padding-top: 16px;
+    margin-bottom: 20px;
   }
   .input-group-addon{
     color: @gray-light;
@@ -390,14 +395,21 @@ form{
     font-size: 12px;
     margin: 0;
   }
+  .error-block{
+    left: 15px;
+  }
+  &#football-form{
+    .error-block{
+      left: 0;
+    }
+  }
   .error{
-    margin-bottom: 15px;
-    .help-block{ color: @brand-danger; }
+    .error-block{ color: @brand-danger; }
     input{
       border-bottom-color: @brand-danger !important;
     }
     .bar:before,
-    .bar:after{ background-color: @brand-danger; }
+    .bar:after{ background: @brand-danger !important; }
   }
 }
 textarea:focus,
@@ -767,6 +779,9 @@ body{
   -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
 }
+.card-gray{
+  .card-head{ background-color: @gray-lighter; }
+}
 .card-head{
 	 position: relative;
 	 line-height: 52px;
@@ -878,27 +893,60 @@ body{
     margin-bottom: 20px;
     list-style: none;
     .clearfix();
-    &:hover{
-      .gui-icon{ background-color: rgba(255, 255, 255, 0.12); color: #fff; }
-    }
     &.active,
     &.active:hover{
-      .gui-icon{
-        background-color: #fff;
-        color: @green;
-      }
       .title{
         color: #fff;
       }
     }
-
+    a{
+      .clearfix();
+      .gui-icon{ background: transparent url(../images/icon-menu-sprite.png) 0 0 no-repeat; }
+      &.dashboard{
+        .gui-icon{ background-position: 0 0; }
+      }
+      &.dashboard:hover{
+        .gui-icon{ background-position: -45px 0; }
+      }
+      &.fields{
+        .gui-icon{ background-position: 0 -45px; }
+      }
+      &.fields:hover{
+        .gui-icon{ background-position: -45px -45px; }
+      }
+      &.history{
+        .gui-icon{ background-position: 0 -90px; }
+      }
+      &.history:hover{
+        .gui-icon{ background-position: -45px -90px; }
+      }
+      &.profile{
+        .gui-icon{ background-position: 0 -135px; }
+      }
+      &.profile:hover{
+        .gui-icon{ background-position: -45px -135px; }
+      }
+    }
+    &.active{
+      a.dashboard{
+        .gui-icon{ background-position: -90px 0; }
+      }
+      a.fields{
+        .gui-icon{ background-position: -90px -45px; }
+      }
+      a.history{
+        .gui-icon{ background-position: -90px -90px; }
+      }
+      a.profile{
+        .gui-icon{ background-position: -90px -135px; }
+      }
+    }
   }
   .gui-icon{
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
     overflow: hidden;
-    border-radius: 999px;
     text-align: center;
     position: absolute;
     left: 10px;
@@ -1140,7 +1188,7 @@ body{
   .payment-cvc{ padding: 0; }
 }
 
-#profiles-form{
+#profile-form{
   .checkbox-group{
     margin-bottom: 10px;
     .form-group{
@@ -1150,4 +1198,17 @@ body{
     .form-control{ padding-top: 0; }
   }
   #add_facility{ margin-top: 20px; }
+}
+
+/*Invoice*/
+.card-invoice{
+  #logoInvoice{ float: left; margin-right: 20px }
+  h1{ 
+    margin-top: 0;
+    margin-bottom: 15px; 
+  }
+  .label{ padding: 10px 5px; font-size: 100%; }
+  h2{ font-size: 40px; }
+  dl{ margin: 0; }
+
 }

@@ -41,7 +41,7 @@ $(function(){
   var Wrapper = $('#football-form .time-wraper');
   var AddButton = $("#football-form .insert-time");
   var RemoveButton = $('#football-form .remove-time');
-  var Row = '<div class="row time-row time-minus-row"><div class="time-group col-xs-4 col-sm-4 col-md-4"><input type="text" id="timestart_ff" name="timestart_ff" data-mask="99:99" placeholder="เวลาเริ่ม" class="form-control"></div><div class="time-group col-xs-4 col-sm-4 col-md-4"><input type="text" id="timeend_ff" name="timeend_ff" data-mask="99:99" placeholder="เวลาสิ้นสุด" class="form-control"></div><div class="time-group col-xs-4 col-sm-4 col-md-4"><input type="number" placeholder="ราคา" id="price_ff" name="price_ff" class="form-control"></div><a href="javascript:void(0)" class="action-time-group remove-time"><i class="mdi mdi-minus-circle"></i></a></div>'
+  var Row = '<div class="row time-row time-minus-row"><div class="time-group col-xs-4 col-sm-4 col-md-4"><input type="text" id="timestart_ff" name="timestart_ff" data-mask="99:99" placeholder="เวลาเริ่ม" class="form-control inputRequired"></div><div class="time-group col-xs-4 col-sm-4 col-md-4"><input type="text" id="timeend_ff" name="timeend_ff" data-mask="99:99" placeholder="เวลาสิ้นสุด" class="form-control inputRequired"></div><div class="time-group col-xs-4 col-sm-4 col-md-4"><input type="number" placeholder="ราคา" id="price_ff" name="price_ff" class="form-control inputRequired"></div><a href="javascript:void(0)" class="action-time-group remove-time"><i class="mdi mdi-minus-circle"></i></a></div>'
   var x = 1; //initlal text box count
   $(AddButton).click(function(e){ //on add input button click
       e.preventDefault();
@@ -88,39 +88,56 @@ $(function(){
   /*Validate
   * ff == football fields
   */
-  var errorText = "กรอกข้อมูล";
-  var numText = "ใส่ได้เฉพาะตัวเลข"
-  $('#football-form').validate({
-    errorClass: "help-block",
+  var errorText = "ต้องกรอกข้อมูล";
+  var numText = "ใส่ได้แค่ตัวเลข";
+  var emailText = "ใส่อีเมลให้ถูกต้อง"
+  // alias required to cRequired with new message
+  $.validator.addMethod("cRequired", $.validator.methods.required,
+   errorText);
+  $.validator.addMethod("cDigits", $.validator.methods.digits,
+   numText);
+  $.validator.addMethod("cEmail", $.validator.methods.email,
+   emailText);
+  //--------------------------------------------------------------
+  $.validator.addClassRules({
+    inputRequired:{
+      cRequired: true,
+    },
+    inputNum:{
+      cDigits: true,
+    },
+    inputEmail:{
+      cEmail: true
+    }
+  });
+  // Add method validate longitude and latitude
+  $.validator.addMethod("geoLatLog", function(value, element) {
+    return this.optional(element) || /^(-?([1-8]?[1-9]|[1-9]0)\.{1}\d{1,6}),{1}(-?([1]?[1-7][1-9]|[1]?[1-8][0]|[1-9]?[0-9])\.{1}\d{1,6})/.test(value);
+  }, "Latitude and Longitude are not correctly typed");
+  //--------------------------------------------------------------
+  $('form').validate({
+    errorClass: "error-block help-block",
     errorElement: "span",
     rules:{
-      name_ff: "required",
-      detail_ff: "required",
-      weight_ff: "required",
-      timestart_ff: "required",
-      timeend_ff: "required",
       team_ff:{
-        required: true,
-        number: true
+        rangelength: [1, 2],
       },
-      price_ff:{
-        required: true,
+      latitudeFootball:{
+        geoLatLog: true
+      },
+      longitudeFootball:{
         number: true
-      } 
+      }
     },
     messages:{
-      name_ff: errorText,
-      detail_ff: errorText,
-      weight_ff: errorText,
-      timestart_ff: errorText,
-      timeend_ff: errorText,
       team_ff:{
-        required: errorText,
-        number: numText
+        rangelength: "ใส่ได้สองหลัก"
       },
-      price_ff:{
-        required: errorText,
-        number: numText
+      latitudeFootball:{
+        number: "ใส่ได้แค่ตัวเลข"
+      },
+      longitudeFootball:{
+        number: "ใส่ได้แค่ตัวเลข"
       }
     },
     highlight: function(element) {
@@ -130,22 +147,5 @@ $(function(){
         $(element).parent('div').removeClass('error');
     }
   });
-  $('#profiles-form').validate({
-    errorClass: "help-block",
-    errorElement: "span",
-    rule:{
-      
-    },
-    messages:{
-
-    },
-    highlight: function(element) {
-        $(element).parent('div').addClass('error');
-    },
-    unhighlight: function(element) {
-        $(element).parent('div').removeClass('error');
-    }
-  });
-
 
 });

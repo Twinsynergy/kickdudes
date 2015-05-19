@@ -5,7 +5,7 @@
   <meta name="description" content="Kickdudes">
   <meta name="author" content="Twinsynergy.co.th">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>History</title>
+  <title>Invoice</title>
   <link rel="stylesheet" href="css/style.css">
 
   <!--[if lt IE 9]>
@@ -15,9 +15,7 @@
   <script src="js/bootstrap/bootstrap.js" type="text/javascript" ></script>
 
   <!--Addition-->
-  <script src="js/bootstrap/tooltip.js" type="text/javascript" ></script>
-  <script src="js/waypoints.js" type="text/javascript" ></script>
-  <script src="js/counter.js" type="text/javascript" ></script>
+  <script src="js/bootstrap/jasny-bootstrap.js" type="text/javascript" ></script>
   <script src="js/scripts.js" type="text/javascript" ></script>
 
 </head>
@@ -82,94 +80,105 @@
       <section id="section-body" class="container-fluid">
         <div class="row">
           <div class="col-md-12">
-            <div class="card">
+            <div class="card card-gray card-invoice">
               <div class="card-head">
-							  <header>ประวัติการทำรายการ</header>
-  						</div>
+
+              </div><!--End card head-->
               <div class="card-body">
-                <div class="table-responsive">
-                <table class="table table-hover table-striped">
-                  <thead>
-                    <tr>
-                      <td>id</td>
-                      <td>วันที่</td>
-                      <td>ช่วงเวลา</td>
-                      <td>ชื่อสนาม</td>
-                      <td>ผู้เช่าสนาม</td>
-                      <td>เงินค่าสนาม</td>
-                      <td>สถานะ</td>
-                      <td>&nbsp;</td>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>100001</td>
-                      <td>12/01/58</td>
-                      <td>10:00 - 11:00</td>
-                      <td>สนามที่ 1 : ฟุตซอลเทียม</td>
-                      <td>Tesser Phutthasen</td>
-                      <td>1,300 บาท</td>
-                      <td><span class="label label-waiting">รอการโอน</span></td>
-                      <td class="actions">
-                        <a href="invoice.html" class="btn" data-toggle="tooltip" data-placement="top" title="ดูเพิ่มเติม">
-                          <i class="mdi mdi-eye"></i>
-                        </a></td>
-                    </tr>
-                    <tr>
-                      <td>100001</td>
-                      <td>12/01/58</td>
-                      <td>10:00 - 11:00</td>
-                      <td>สนามที่ 1 : ฟุตซอลเทียม</td>
-                      <td>Tesser Phutthasen</td>
-                      <td>1,300 บาท</td>
-                      <td><span class="label label-danger">ยกเลิกการจอง</span></td>
-                      <td class="actions">
-                        <a href="invoice.html" class="btn" data-toggle="tooltip" data-placement="top" title="ดูเพิ่มเติม">
-                          <i class="mdi mdi-eye"></i>
-                        </a></td>
-                    </tr>
-                    <tr>
-                      <td>100001</td>
-                      <td>12/01/58</td>
-                      <td>10:00 - 11:00</td>
-                      <td>สนามที่ 1 : ฟุตซอลเทียม</td>
-                      <td>Tesser Phutthasen</td>
-                      <td>1,300 บาท</td>
-                      <td><span class="label label-success">ชำระแล้ว</span></td>
-                      <td class="actions">
-                        <a href="invoice.html" class="btn" data-toggle="tooltip" data-placement="top" title="ดูเพิ่มเติม">
-                          <i class="mdi mdi-eye"></i>
-                        </a></td>
-                    </tr>
-                    <tr>
-                      <td>100001</td>
-                      <td>12/01/58</td>
-                      <td>10:00 - 11:00</td>
-                      <td>สนามที่ 1 : ฟุตซอลเทียม</td>
-                      <td>Tesser Phutthasen</td>
-                      <td>1,300 บาท</td>
-                      <td><span class="label label-verify">รอการตรวจสอบ</span></td>
-                      <td class="actions">
-                        <a href="invoice.html" class="btn" data-toggle="tooltip" data-placement="top" title="ดูเพิ่มเติม">
-                          <i class="mdi mdi-eye"></i>
-                        </a></td>
-                    </tr>
-                  </tbbody>
-                </table>
+                <!--Invoice header-->
+                <div class="row">
+                  <div class="col-md-8 clearfix">
+                    <img id="logoInvoice" src="images/logo-invoice.png" alt="logo" />
+                    <ul class="list-unstyled">
+                      <li><h1 id="nameInvoice" class="text-light">สนามฟุตบอลธาราวาดี</h1></li>
+                      <li><span class="label label-success">สถานะ: ชำระแล้ว</span></li>
+                    </ul>
+                  </div>
+                  <div class="col-md-4 text-right">
+                    <h2 class="text-light">Invoice</h2> 
+                  </div>
                 </div>
-                <div class="card-body-pagination">
-                  <ul class="pagination">
-                      <li class="disabled"><a href="#">&laquo;</a></li>
-                      <li class="active"><a href="#">1</a></li>
-                      <li><a href="#">2</a></li>
-                      <li><a href="#">3</a></li>
-                      <li><a href="#">4</a></li>
-                      <li><a href="#">5</a></li>
-                      <li><a href="#">&raquo;</a></li>
-                  </ul>
+                <br />
+                <!--Invoice description-->
+                <div class="row">
+                  <div class="col-md-4">
+                    <h4 class="text-light">Prepared by</h4>
+                    <p>
+                    <strong>สนามธาราวดี</strong>
+                    <address>
+                      1 ซ.พัฒนาการ 35, สวนหลวง, กรุงเทพ 10250
+                    </address>
+                    </p>
+                    <p>โทร: 02-321-6666</p>
+                  </div>
+                  <div class="col-md-4">
+                    <h4 class="text-light">Prepared for</h4>
+                    <p>
+                    <strong>คุณอานนท์ กิจเลิศผล</strong>
+                    </p>
+                    <p>โทร: 02-321-6666</p>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="well">
+                      <dl class="dl-horizontal">
+                        <dt>หมายเลขทำรายการ:</dt>
+                        <dd>#122345678</dd>
+                        <dt>วันที่ทำรายการ:</dt>
+                        <dd>12/05/2558</dd>
+                      </dl>
+                    </div>
+                  </div>
                 </div>
-              </div><!--End card-body-->
-            </div>
+                <br />
+                <!--Invoice product-->
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="table-responsive">
+                      <table class="table table-hover">
+                        <thead>
+                          <th class="col-md-1"></th>
+                          <th class="col-md-9">รายละเอียดการทำรายการ</th>
+                          <th class="col-md-2">ราคา</th>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>สนามหญ้าเทียม ขนาด 12 คน | ช่วงเวลา 18:00-20:00 น.</td>
+                            <td>1,8000 บาท</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>สนามหญ้าจริง ขนาด 24 คน | ช่วงเวลา 21:00-00:00 น.</td>
+                            <td>1,8000 บาท</td>
+                          </tr>
+                          <tr>
+                            <td colspan="1"></td>
+                            <td class="text-right text-accent">รวมสุทธิ:</td>
+                            <td class="text-accent"><strong>5,3000 บาท</strong></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <!--Change status-->
+                <div class="row">
+                  <div class="col-md-3">
+                    <form action="#">
+                      <div class="form-group">
+                        <select class="form-control">
+                          <option>เลือกสถานะ...</option>
+                          <option>ชำระเงินแล้ว</option>
+                          <option>ยกเลิก</option>
+                        </select>
+                      </div>  
+                    </form>
+                  </div>
+                </div>
+                
+              </div>
+            </div> <!--End card-->
           </div>
         </div> <!--End row-->
 

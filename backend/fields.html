@@ -306,18 +306,18 @@
                   </div>
 
                   <div class="form-group">
-                    <input type="text" id="name_ff" name="name_ff" placeholder="ชื่อสนาม" class="form-control">
+                    <input type="text" id="name_ff" name="name_ff" placeholder="ชื่อสนาม" class="form-control inputRequired">
                     <span class="bar"></span>
                   </div>
 
                   <div class="form-group">
-                    <input type="text" id="detail_ff" name="detail_ff" placeholder="รายละเอียดสนามสั้นๆ" class="form-control">
+                    <input type="text" id="detail_ff" name="detail_ff" placeholder="รายละเอียดสนามสั้นๆ" class="form-control inputRequired">
                     <span class="bar"></span>
                   </div>
 
                   <div class="form-group">
                     <div class="input-group">
-                      <input type="number" id="team_ff" name="team_ff" placeholder="จำนวนผู้เล่นที่สามารถรับได้" class="form-control">
+                      <input type="number" id="team_ff" name="team_ff" placeholder="จำนวนผู้เล่นที่สามารถรับได้" class="form-control inputRequired inputNum">
                       <div class="input-group-addon">คน</div>
                     </div>
                   </div>
@@ -327,17 +327,17 @@
 
                     <div class="row time-row">
                       <div class="time-group col-xs-4 col-sm-4 col-md-4">
-                        <input type="text" id="timestart_ff" name="timestart_ff" data-mask="99:99" placeholder="เวลาเริ่ม" class="form-control">
+                        <input type="text" id="timestart_ff" name="timestart_ff" data-mask="99:99" placeholder="เวลาเริ่ม" class="form-control inputRequired">
                         <span class="bar"></span>
                       </div>
 
                       <div class="time-group col-xs-4 col-sm-4 col-md-4">
-                        <input type="text" id="timeend_ff" name="timeend_ff" data-mask="99:99" placeholder="เวลาสิ้นสุด" class="form-control">
+                        <input type="text" id="timeend_ff" name="timeend_ff" data-mask="99:99" placeholder="เวลาสิ้นสุด" class="form-control inputRequired">
                         <span class="bar"></span>
                       </div>
 
                       <div class="time-group col-xs-4 col-sm-4 col-md-4">
-                        <input type="number" id="price_ff" name="price_ff" placeholder="ราคา" class="form-control">
+                        <input type="number" id="price_ff" name="price_ff" placeholder="ราคา" class="form-control inputRequired inputNum">
                         <span class="bar"></span>
                       </div>
                       <div class="action-time-group">
@@ -348,8 +348,9 @@
                   </div><!--End time-wraper-->
 
                   <div class="form-group">
-                    <input type="number" id="weight_ff" name="weight_ff" data-mask="9" placeholder="ลำดับสนาม" class="form-control">
+                    <input type="number" id="weight_ff" name="weight_ff" data-mask="9" placeholder="ลำดับสนาม" class="form-control inputRequired inputNum">
                     <span class="bar"></span>
+                    <p class="help-block">ใส่เฉพาะเลข 1-9</p>
                   </div>
 
                   <input type="submit" class="btn btn-submit" value="สร้างสนาม" />
@@ -372,35 +373,31 @@
     <nav id="menubar">
       <ul id="main-menu">
         <li class="">
-          <a href="dashboard.html">
+          <a href="dashboard.html" class="dashboard">
             <span class="gui-icon">
-              <i class="mdi mdi-home"></i>
             </span>
             <span class="title">dashboard</span>
           </a>
         </li>
         <li class="active">
-          <a href="fields.html">
+          <a href="fields.html" class="fields">
             <span class="gui-icon">
-              <i class="mdi mdi-tshirt-crew"></i>
             </span>
-            <span class="title">fieds</span>
+            <span class="title">fields</span>
           </a>
         </li>
         <li class="">
-          <a href="history.html">
+          <a href="history.html" class="history">
             <span class="gui-icon">
-              <i class="mdi mdi-run"></i>
             </span>
             <span class="title">history</span>
           </a>
         </li>
         <li>
-          <a href="javascript:void(0)">
+          <a href="profile.html" class="profile">
             <span class="gui-icon">
-              <i class="mdi mdi-settings"></i>
             </span>
-            <span class="title">profiles</span>
+            <span class="title">profile</span>
           </a>
         </li>
       </ul>

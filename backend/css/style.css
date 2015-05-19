@@ -13848,6 +13848,14 @@ a:hover {
   font-size: 180%;
   font-family: kick_font;
 }
+.text-light {
+  color: #777777;
+}
+.text-accent {
+  color: #9c27b0;
+  font-weight: bold;
+  font-size: 20px;
+}
 .link-more {
   font-size: 14px;
   text-transform: uppercase;
@@ -13973,6 +13981,10 @@ a:hover {
 }
 .label {
   font-size: 90%;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 .label-success {
   background-color: #5cb85c;
@@ -14015,6 +14027,7 @@ form textarea {
 form .form-group {
   position: relative;
   padding-top: 16px;
+  margin-bottom: 20px;
 }
 form .input-group-addon {
   color: #777777;
@@ -14029,10 +14042,13 @@ form .help-block {
   font-size: 12px;
   margin: 0;
 }
-form .error {
-  margin-bottom: 15px;
+form .error-block {
+  left: 15px;
 }
-form .error .help-block {
+form#football-form .error-block {
+  left: 0;
+}
+form .error .error-block {
   color: #d9534f;
 }
 form .error input {
@@ -14040,7 +14056,7 @@ form .error input {
 }
 form .error .bar:before,
 form .error .bar:after {
-  background-color: #d9534f;
+  background: #d9534f !important;
 }
 textarea:focus,
 input:focus,
@@ -14460,6 +14476,9 @@ body {
   -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
 }
+.card-gray .card-head {
+  background-color: #eeeeee;
+}
 .card-head {
   position: relative;
   line-height: 52px;
@@ -14614,25 +14633,70 @@ body {
 #main-menu li:after {
   clear: both;
 }
-#main-menu li:hover .gui-icon {
-  background-color: rgba(255, 255, 255, 0.12);
-  color: #fff;
-}
-#main-menu li.active .gui-icon,
-#main-menu li.active:hover .gui-icon {
-  background-color: #fff;
-  color: #00a89e;
-}
 #main-menu li.active .title,
 #main-menu li.active:hover .title {
   color: #fff;
 }
+#main-menu li a:before,
+#main-menu li a:after {
+  content: " ";
+  display: table;
+}
+#main-menu li a:after {
+  clear: both;
+}
+#main-menu li a:before,
+#main-menu li a:after {
+  content: " ";
+  display: table;
+}
+#main-menu li a:after {
+  clear: both;
+}
+#main-menu li a .gui-icon {
+  background: transparent url(../images/icon-menu-sprite.png) 0 0 no-repeat;
+}
+#main-menu li a.dashboard .gui-icon {
+  background-position: 0 0;
+}
+#main-menu li a.dashboard:hover .gui-icon {
+  background-position: -45px 0;
+}
+#main-menu li a.fields .gui-icon {
+  background-position: 0 -45px;
+}
+#main-menu li a.fields:hover .gui-icon {
+  background-position: -45px -45px;
+}
+#main-menu li a.history .gui-icon {
+  background-position: 0 -90px;
+}
+#main-menu li a.history:hover .gui-icon {
+  background-position: -45px -90px;
+}
+#main-menu li a.profile .gui-icon {
+  background-position: 0 -135px;
+}
+#main-menu li a.profile:hover .gui-icon {
+  background-position: -45px -135px;
+}
+#main-menu li.active a.dashboard .gui-icon {
+  background-position: -90px 0;
+}
+#main-menu li.active a.fields .gui-icon {
+  background-position: -90px -45px;
+}
+#main-menu li.active a.history .gui-icon {
+  background-position: -90px -90px;
+}
+#main-menu li.active a.profile .gui-icon {
+  background-position: -90px -135px;
+}
 #main-menu .gui-icon {
   display: block;
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   overflow: hidden;
-  border-radius: 999px;
   text-align: center;
   position: absolute;
   left: 10px;
@@ -14881,18 +14945,37 @@ body {
 .tab-content .payment-cvc {
   padding: 0;
 }
-#profiles-form .checkbox-group {
+#profile-form .checkbox-group {
   margin-bottom: 10px;
 }
-#profiles-form .checkbox-group .form-group {
+#profile-form .checkbox-group .form-group {
   margin: 0;
   padding: 0;
 }
-#profiles-form .checkbox-group .form-control {
+#profile-form .checkbox-group .form-control {
   padding-top: 0;
 }
-#profiles-form #add_facility {
+#profile-form #add_facility {
   margin-top: 20px;
+}
+/*Invoice*/
+.card-invoice #logoInvoice {
+  float: left;
+  margin-right: 20px;
+}
+.card-invoice h1 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+.card-invoice .label {
+  padding: 10px 5px;
+  font-size: 100%;
+}
+.card-invoice h2 {
+  font-size: 40px;
+}
+.card-invoice dl {
+  margin: 0;
 }
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
