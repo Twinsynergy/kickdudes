@@ -371,7 +371,7 @@ form{
     border-bottom: 2px solid @grayLight;
     padding-left: 0;
     padding-right: 0;
-    .bdr-block(0);
+    .bdr-block(0) !important;
     &:focus{ border-color: transparent; box-shadow: none; }
   }
   textarea {
@@ -451,7 +451,10 @@ input[type=number]::-webkit-outer-spin-button {
 	.bar:after {
 	  right:50%;
 	}
-	input:focus ~ .bar:before, input:focus ~ .bar:after {
+	input:focus ~ .bar:before, 
+  input:focus ~ .bar:after,
+  select:focus ~ .bar:before,
+  select:focus ~ .bar:after {
 	  width:50%;
 	}
 }
@@ -1207,8 +1210,11 @@ body{
     margin-top: 0;
     margin-bottom: 15px; 
   }
-  .label{ padding: 10px 5px; font-size: 100%; }
+  .label{ padding: 5px; font-size: 100%; }
   h2{ font-size: 40px; }
   dl{ margin: 0; }
 
+}
+#invoice-status{
+  .form-group{ padding-top: 0; margin-bottom: 0; }
 }

@@ -14012,10 +14012,10 @@ form .form-control {
   border-bottom: 2px solid #ededed;
   padding-left: 0;
   padding-right: 0;
-  border-top-right-radius: 0;
-  border-top-left-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-right-radius: 0 !important;
+  border-top-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
 }
 form .form-control:focus {
   border-color: transparent;
@@ -14104,7 +14104,9 @@ input[type=number]::-webkit-outer-spin-button {
   right: 50%;
 }
 .form-group input:focus ~ .bar:before,
-.form-group input:focus ~ .bar:after {
+.form-group input:focus ~ .bar:after,
+.form-group select:focus ~ .bar:before,
+.form-group select:focus ~ .bar:after {
   width: 50%;
 }
 .form-inverse .form-group .form-control {
@@ -14968,7 +14970,7 @@ body {
   margin-bottom: 15px;
 }
 .card-invoice .label {
-  padding: 10px 5px;
+  padding: 5px;
   font-size: 100%;
 }
 .card-invoice h2 {
@@ -14976,6 +14978,10 @@ body {
 }
 .card-invoice dl {
   margin: 0;
+}
+#invoice-status .form-group {
+  padding-top: 0;
+  margin-bottom: 0;
 }
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
@@ -15025,6 +15031,9 @@ body {
   }
 }
 @media (max-width: 480px) {
+  .nav-tabs > li {
+    float: none;
+  }
   .header-fixed #header {
     position: relative;
   }
