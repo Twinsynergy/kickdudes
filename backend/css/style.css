@@ -15010,9 +15010,6 @@ body {
 .geoMap li {
   margin-bottom: 15px;
 }
-.geoMap li .form-group {
-  padding-top: 0;
-}
 .geoMap #resetGeo {
   color: #d9534f;
 }
