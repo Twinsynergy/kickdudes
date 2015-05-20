@@ -13843,6 +13843,7 @@ a {
 }
 a:hover {
   color: #00a89e;
+  text-decoration: none;
 }
 .text-xl {
   font-size: 180%;
