@@ -35,6 +35,11 @@ $(function(){
 
   //tooltip bootstrap
   $('[data-toggle="tooltip"]').tooltip();
+  //tab bootstrap
+  $("a[data-tab-destination]").on('click', function() {
+    var tab = $(this).attr('data-tab-destination');
+    $("#"+tab).click();
+  });
 
   /*Form*/
   var MaxFields = 10;

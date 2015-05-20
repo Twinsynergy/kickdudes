@@ -78,7 +78,6 @@
               </ul>
             </li>
           </ul>
-
         </div>
     </div>
   </header>
@@ -220,9 +219,9 @@
                   <div class="card-head style-primary">
                       <!-- Nav tabs -->
                       <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active"><a href="#field-info" aria-controls="field-info" role="tab" data-toggle="tab">ข้อมูลสนาม</a></li>
-                        <li role="presentation"><a href="#field-facility" aria-controls="field-facility" role="tab" data-toggle="tab">สิ่งอำนวยความสะดวกในสนาม</a></li>
-                        <li role="presentation"><a href="#payment" aria-controls="payment" role="tab" data-toggle="tab">ข้อมูลบัตรเครดิต</a></li>
+                        <li role="presentation" class="active"><a id="tab-1" href="#field-info" aria-controls="field-info" role="tab" data-toggle="tab">ข้อมูลสนาม</a></li>
+                        <li role="presentation"><a id="tab-2" href="#field-facility" aria-controls="field-facility" role="tab" data-toggle="tab">สิ่งอำนวยความสะดวกในสนาม</a></li>
+                        <li role="presentation"><a id="tab-3" href="#payment" aria-controls="payment" role="tab" data-toggle="tab">ข้อมูลบัตรเครดิต</a></li>
                       </ul>
                   </div>
                   <div class="card-body">
@@ -388,7 +387,14 @@
                               </ol>
                             </div>
                           </div><!--End row-->
-                        </div>
+                          <div class="card-actionbar">
+                            <div class="card-actionbar-row">
+                              
+                              <a data-tab-destination="tab-2" class="btn btn-default btn-accent">ต่อไป</a>
+                            </div>
+                          </div><!--End card-actionbar -->
+                        </div><!--End field-info-->
+
                         <div role="tabpanel" class="tab-pane" id="field-facility">
                           <div class="row">
                             <div class="checkbox col-md-6">
@@ -420,9 +426,15 @@
                               <a href="javascript:void(0)" id="add_facility" class="btn btn-default btn-success">
                                 <i class="mdi mdi-plus"></i>เพิ่มข้อมูล
                               </a>
-                            </div>
-                              
+                            </div> 
                           </div>
+                          <div class="card-actionbar">
+                            <div class="card-actionbar-row">
+                              <a data-tab-destination="tab-1" class="btn btn-flat" >ถอยกลับ</a>
+                              <a data-tab-destination="tab-3" class="btn btn-default btn-accent">ต่อไป</a>
+                            </div>
+                          </div><!--End card-actionbar -->
+
                         </div><!--End field-facility-->
                         <div role="tabpanel" class="tab-pane" id="payment">
                           <img src="images/payment.png" alt="payment" id="payment-icon" />
@@ -459,21 +471,22 @@
                               <span class="bar"></span>
                               <label for="">security code</label>
                             </div>
-                            <div class="form-group col-sm-2 col-md-1 payment-cvc"><img src="images/icon-cvc.png" alt=""></div>
+                            <div class="form-group col-sm-2 col-md-1 payment-cvc"><img src="images/icon-cvc.png" alt="#"></div>
                           </div>
+                          <div class="card-actionbar">
+                            <div class="card-actionbar-row">
+                              <a class="btn btn-flat" href="profile.html">ยกเลิก</a>
+                              <input type="submit" class="btn btn-default" value="บันทึก" />
+                            </div>
+                          </div><!--End card-actionbar -->
+
                         </div><!--End payment-->
                       </div>
                   </div>
                 </div>
                 <!--End Tab form-->
-                  <div class="card-actionbar">
-                    <div class="card-actionbar-row">
-                      <a class="btn btn-flat" href="profile.html">ยกเลิก</a>
-                      <input type="submit" class="btn btn-default" value="ตกลง" />
-                    </div><!--end .card-actionbar-row -->
-                  </div>
+                  
                 </div><!--End card-body-->
-              
               </form>
               <!--End form-->
             </div>
