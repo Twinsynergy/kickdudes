@@ -14002,6 +14002,26 @@ a:hover {
   background-color: #00a89e;
   color: #fff;
 }
+.counter-reset {
+  counter-reset: li;
+  /* Initiate a counter */
+  list-style: none;
+  /* Remove default numbering */
+  *list-style: decimal;
+  /* Keep using default numbering for IE6/7 */
+}
+.counter-reset li {
+  position: relative;
+}
+.counter-reset li:before {
+  position: absolute;
+  content: counter(li) ".";
+  counter-increment: li;
+  font-family: kick_font;
+  left: -1.2em;
+  top: 0;
+  font-size: 22px;
+}
 /*From element*/
 form input[type="submit"] {
   border-bottom: 0 !important;
@@ -14982,6 +15002,26 @@ body {
 #invoice-status .form-group {
   padding-top: 0;
   margin-bottom: 0;
+}
+/*find lat&log on google map*/
+.geoMap h3 {
+  margin-bottom: 25px;
+}
+.geoMap .form-group {
+  padding-top: 0;
+}
+.geoMap li {
+  margin-bottom: 15px;
+}
+.geoMap #resetGeo {
+  color: #d9534f;
+}
+.geoMap .map_canvas {
+  width: 100%;
+  height: 450px;
+}
+.geoMap #disabledTextInput {
+  padding-bottom: 0;
 }
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {

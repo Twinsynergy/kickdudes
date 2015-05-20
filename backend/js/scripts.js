@@ -125,12 +125,6 @@ $(function(){
       team_ff:{
         rangelength: [1, 2],
       },
-      latitudeFootball:{
-        geoLatLog: true
-      },
-      longitudeFootball:{
-        number: true
-      },
       provinceProfile:{
         valueNotEquals: "default"
       }
@@ -138,12 +132,6 @@ $(function(){
     messages:{
       team_ff:{
         rangelength: "ใส่ได้สองหลัก"
-      },
-      latitudeFootball:{
-        number: "ใส่ได้แค่ตัวเลข"
-      },
-      longitudeFootball:{
-        number: "ใส่ได้แค่ตัวเลข"
       },
       provinceProfile:{
         valueNotEquals: "ต้องเลือกข้อมูล"
@@ -156,5 +144,27 @@ $(function(){
         $(element).parent('div').removeClass('error');
     }
   });
+
+  // Find latitude and longitude by masker on google map
+  $("#geocomplete").geocomplete({
+    map: ".map_canvas",
+    details: "form ",
+    markerOptions: {
+      draggable: true
+    }  
+  });
+  $("#geocomplete").bind("geocode:dragged", function(event, latLng){
+    $("input[name=latitudeFootball]").val(latLng.lat());
+    $("input[name=longitudeFootball]").val(latLng.lng());
+    $("#resetGeo").show();
+  });
+  $("#resetGeo").click(function(){
+    $("#geocomplete").geocomplete("resetMarker");
+    $("#resetGeo").hide();
+    return false;
+  });
+  $("#findGeo").click(function(){
+    $("#geocomplete").trigger("geocode");
+  }).click();
 
 });
