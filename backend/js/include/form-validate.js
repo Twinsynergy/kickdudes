@@ -1,47 +1,6 @@
 $(function(){
-    //click circle fade
-    var ink, d, x, y;
-    $(".ripplelink").click(function(e){
-      if($(this).find(".ink").length === 0){
-        $(this).prepend("<span class='ink'></span>");
-      }
 
-      ink = $(this).find(".ink");
-      ink.removeClass("animate_ink");
-
-      if(!ink.height() && !ink.width()){
-        d = Math.max($(this).outerWidth(), $(this).outerHeight());
-        ink.css({height: d, width: d});
-      }
-
-      x = e.pageX - $(this).offset().left - ink.width()/2;
-      y = e.pageY - $(this).offset().top - ink.height()/2;
-
-      ink.css({top: y+'px', left: x+'px'}).addClass("animate_ink");
-    });
-
-  $('.menu-toggle').click(function(){
-    $('body').toggleClass('menubar-pin menubar-visible');
-  });
-  $('#menubar').hover(function(){
-    $('body').toggleClass('menubar-visible')
-  });
-
-  //counter nubmer animate
-  $('.counter').counterUp({
-    delay: 10,
-    time: 1000
-  });
-
-  //tooltip bootstrap
-  $('[data-toggle="tooltip"]').tooltip();
-  //tab bootstrap
-  $("a[data-tab-destination]").on('click', function() {
-    var tab = $(this).attr('data-tab-destination');
-    $("#"+tab).click();
-  });
-
-  /*Form*/
+  /*Form field page*/
   var MaxFields = 10;
   var Wrapper = $('#football-form .time-wraper');
   var AddButton = $("#football-form .insert-time");
@@ -60,34 +19,12 @@ $(function(){
       $(this).parent().remove();
       x--;
   })
-  /*add_facility*/
-  var num = $('#profiles-form .checkbox-group').size();
+  /*Edit profile page add_facility*/
+  var num = $('#profile-form .checkbox-group').size();
   $('#add_facility').click(function(e) {
     e.preventDefault();
     num++;
     $(this).before('<div class="checkbox-group animated fadeIn" style="opacity: 0;"><input type="checkbox" id="checkiz'+num+'"><label for="checkiz'+num+'"><span class="check"></span><span class="box"></span><div class="form-group"><input type="text" class="form-control" id="text-facility-'+num+'" name="text-facility-'+num+'" /><span class="bar"></span></div></label></div>');
-  });
-
-  /*Field*/
-  $('.add-cover a').bind('click', function() {
-    fadeOut();
-  });
-  function fadeOut(){
-    setTimeout(function(){
-      $('.add-cover').fadeOut();
-    }, 1000);
-  }
-
-  /*Alert*/
-  setTimeout(function() {
-        $("#toast-container").slideUp(400, function(){
-          $(this).remove();
-        })
-    }, 3000);
-  $('#toast-container').click(function() {
-    $(this).slideUp(400, function() {
-      $(this).remove();
-    });;
   });
 
   /*Validate
@@ -149,27 +86,5 @@ $(function(){
         $(element).parent('div').removeClass('error');
     }
   });
-
-  // Find latitude and longitude by masker on google map
-  $("#geocomplete").geocomplete({
-    map: ".map_canvas",
-    details: "form ",
-    markerOptions: {
-      draggable: true
-    }  
-  });
-  $("#geocomplete").bind("geocode:dragged", function(event, latLng){
-    $("input[name=latitudeFootball]").val(latLng.lat());
-    $("input[name=longitudeFootball]").val(latLng.lng());
-    $("#resetGeo").show();
-  });
-  $("#resetGeo").click(function(){
-    $("#geocomplete").geocomplete("resetMarker");
-    $("#resetGeo").hide();
-    return false;
-  });
-  $("#findGeo").click(function(){
-    $("#geocomplete").trigger("geocode");
-  }).click();
 
 });

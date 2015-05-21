@@ -597,18 +597,16 @@ body{
   transform: translate(-50%, -50%);
   form{
     padding: 40px;
-    background-color: @bg_login;
+    background-color: #727373;
   }
-  .form-control{
-    margin-bottom: 15px;
-    border-radius: 0;
-    height: 45px;
+  label{ 
+    color: rgba(255, 255, 255, 0.5); 
+    left: 0; 
   }
-  input[type="text"]{
-    background-color: #EFEFEF;
-  }
+  .form-control:focus ~ label{ color: #fff; }
   a{ color: #fff; }
-  .forgot_pass{ text-align: right; }
+  .forgot_pass{ text-align: right; margin-top: 10px; }
+  .btn{ margin: 10px 0; }
 }
 
 /*Dashboard*/
