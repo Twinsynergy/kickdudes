@@ -15116,16 +15116,30 @@ body {
   text-decoration: none;
 }
 .hbox {
-  display: table;
-  table-layout: fixed;
   float: left;
+  overflow: hidden;
+}
+.hbox:before,
+.hbox:after {
+  content: " ";
+  display: table;
+}
+.hbox:after {
+  clear: both;
+}
+.hbox:before,
+.hbox:after {
+  content: " ";
+  display: table;
+}
+.hbox:after {
+  clear: both;
 }
 .hbox:hover {
   background-color: #eeeeee;
 }
 .hbox-column {
-  display: table-cell;
-  vertical-align: top;
+  float: left;
 }
 .hbox-column a {
   color: #313534;

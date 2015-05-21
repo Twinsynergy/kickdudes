@@ -1322,14 +1322,13 @@ body{
   }
 }
 .hbox{
-  display: table;
-  table-layout: fixed;
   float: left;
+  .clearfix();
+  overflow: hidden;
   &:hover{ background-color: @gray-lighter; }
 }
 .hbox-column{
-  display: table-cell;
-  vertical-align: top;
+  float: left;
   a{ color: @font_color; }
   img{ width: 80px; margin-right: 12px; .bdr-block(50%); }
   h3{ margin-top: 0; }
