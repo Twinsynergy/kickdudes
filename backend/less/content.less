@@ -11,6 +11,7 @@
 @brand-success-dark: #369836;
 @purple: #9C27B0;
 @purple-dark: #681A7F;
+@white-50: rgba(255, 255, 255, 0.5);
 
 /*Mixins*/
 .bdr-block(@bdr: 4px){
@@ -369,6 +370,20 @@ a{
 .style-primary{
   background-color: @green;
   color: #fff;
+  .tools{
+    .btn-icon-toggle:hover{
+      background-color: @white-50;
+    }
+    i{ 
+      color: #fff;
+      &:hover,
+      &:active,
+      &:visited{ color: #fff; } 
+    }
+  }
+  .ripplelink{
+    .ink{ background-color: @white-50; }
+  }
 }
 .counter-reset{
   counter-reset: li; /* Initiate a counter */
@@ -489,20 +504,20 @@ input[type=number]::-webkit-outer-spin-button {
     .form-control{
       background-color: transparent;
       color: @gray-lighter;
-      border-bottom-color: rgba(255, 255, 255, 0.5);
+      border-bottom-color: @white-50;
       &::-webkit-input-placeholder { /* WebKit browsers */
-          color: rgba(255, 255, 255, 0.5);
+          color: @white-50;
       }
       &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-         color: rgba(255, 255, 255, 0.5);
+         color: @white-50;
          opacity:  1;
       }
       &::-moz-placeholder { /* Mozilla Firefox 19+ */
-         color: rgba(255, 255, 255, 0.5);
+         color: @white-50;
          opacity:  1;
       }
       &:-ms-input-placeholder { /* Internet Explorer 10+ */
-         color: rgba(255, 255, 255, 0.5);
+         color: @white-50;
       }
     }
     .bar:before, .bar:after{
@@ -600,7 +615,7 @@ body{
     background-color: #727373;
   }
   label{ 
-    color: rgba(255, 255, 255, 0.5); 
+    color: @white-50; 
     left: 0; 
   }
   .form-control:focus ~ label{ color: #fff; }
@@ -904,6 +919,9 @@ body{
 		}
 	}
 }
+.name{
+  a{ color: @font_color; }
+}
 
 #menubar{
   padding-top: 20px;
@@ -1190,7 +1208,7 @@ body{
 .nav-tabs{
   border-bottom: 0;
   a{
-    color: rgba(255, 255, 255, 0.5);
+    color: @white-50;
     text-transform: uppercase;
     margin: 0 !important;
     .bdr-block(0) !important;
@@ -1273,7 +1291,7 @@ body{
 /*Profiles page*/
 .card-profile{
   p{
-    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 2px solid @white-50;
     padding: 10px 0;
   }
   .tile-content{ 
@@ -1284,4 +1302,85 @@ body{
   .credit-card{
     .tile-icon{ width: 140px; text-align: right; padding-right: 15px; }
   }
+}
+
+/*Search customer*/
+.list-results{
+  margin-bottom: 24px;
+  margin-top: 1px;
+  border-left: 1px solid @grayLight;
+  .clearfix();
+  > div{
+    padding: 20px 10px;
+    margin-top: -1px;
+    border-top: 1px solid @grayLight;
+    border-right: 1px solid @grayLight;
+    border-bottom: 1px solid @grayLight;
+    background: inherit;
+    color: inherit;
+    text-decoration: none;
+  }
+}
+.hbox{
+  display: table;
+  table-layout: fixed;
+  float: left;
+  &:hover{ background-color: @gray-lighter; }
+}
+.hbox-column{
+  display: table-cell;
+  vertical-align: top;
+  a{ color: @font_color; }
+  img{ width: 80px; margin-right: 12px; .bdr-block(50%); }
+  h3{ margin-top: 0; }
+  p{
+    font-size: 12px;
+    color: @gray-light;
+    i{ margin-right: 5px; }
+  }
+}
+.navbar-search{
+  position: relative;
+  width: 0;
+  overflow: hidden;
+  .transition(width .25s );
+  .box-shadow(0 1px 3px 0 rgba(0, 0, 0, 0.33));
+  .form-group{
+    position: absolute;
+    top: 0;
+    right: 36px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+  input{
+    height: 36px;
+    width: 214px;
+    padding: 10px;
+    border: none;
+    background-color: #fff;
+  }
+  button[type="submit"]{
+    .bdr-block(0) !important;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    i{ color: @font_color; }
+    &:hover{
+      background-color: #fff !important;
+      i{ color: @font_color !important; }
+    }
+  }
+  a.btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+#openSearch{ margin-top: 5px; }
+.navbar-search.expanded{
+  width: 250px;
+  height: 36px;
+  margin-top: 14px;
 }
