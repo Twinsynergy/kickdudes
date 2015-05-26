@@ -19,12 +19,15 @@
   <script src="js/scrolling-nav.js"></script>
   <script src="js/scrollspy.js"></script>
   <script src="js/validate.js" type="text/javascript" ></script>
-  <script src="js/validate-home.js" type="text/javascript" ></script>
   <script src="js/magic/magic.js" type="text/javascript" ></script>
   <script src="js/magic/tween.js" type="text/javascript" ></script>
   <script src="js/magic/plugins/animation.gsap.min.js" type="text/javascript"></script>
-  <script src="js/magic/plugins/debug.addIndicators.min.js" type="text/javascript"></script>
-  <script>
+  <script src="js/modernizr.custom.js" type="text/javascript" ></script>
+  <script src="js/classie.js" type="text/javascript" ></script>
+  <script src="js/home.js" type="text/javascript" ></script>
+  <script src="js/kickdudes.js" type="text/javascript" ></script>
+<!-- <script src="js/magic/plugins/debug.addIndicators.min.js" type="text/javascript"></script>
+ -->  <script>
   var controller = new ScrollMagic.Controller();
   //jQuery to collapse the navbar on scroll
   $(window).scroll(function() {
@@ -37,17 +40,15 @@
   </script>
 
 </head>
-<body id="home" data-spy="scroll" data-target=".navbar-fixed-top" >
+<body id="home" class="cbp-spmenu-push" data-spy="scroll" data-target=".navbar-fixed-top" >
   <header>
-
       <nav class="navbar navbar-fixed-top" role="navigation">
         <div class="container">
           <a href="index.html" id="logo" ></a>
-
-            <ul class="nav navbar-nav navbar-right" role="menu">
-              <li><a id="about_m" class="page-scroll" href="#about" >about</a></li>
+          <span id="hamburger"><span></span></span>
+            <ul id="main_navbar" class="nav navbar-nav navbar-right" role="menu">
+              <li><a id="about_m" class="page-scroll" href="/" >about</a></li>
               <li><a id="feature_m" class="page-scroll" href="#feature" >features</a></li>
-              <li><a id="feature_m" class="page-scroll" href="#why" >why</a></li>
               <li><a id="contact_m" class="page-scroll" href="#contact" >contact</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Languages <span class="caret"></span></a>
@@ -57,6 +58,7 @@
                 </ul>
               </li>
             </ul>
+
         </div>
       </nav>
   </header>
@@ -64,18 +66,22 @@
     <div class="container">
       <div class="row">
         <div class="intro col-md-12">
+          <a href="index.html" id="logo_top"></a>
           <div class="row">
-            <section id="title_about" class="col-md-8">
-              <h1 class="animated fadeInDown">Welcome to the world of Kickdudes</h1>
+            <section id="title_about" class="col-sm-8 col-md-8">
+              <h1 class="animated fadeInDown">คอมมูนิตี้ของคนรักฟุตบอล</h1>
+              <h1 class="animated fadeInDown">ค้นหาสนามฟุตบอลใกล้ตัว</h1>
+              <h1 class="animated fadeInDown">ค้นหาเพื่อนร่วมทีม</h1>
+              <h1 class="animated fadeInDown">สร้างทีมฟุตบอลของเราเอง</h1>
               <p>
-                Kickdudes is a private space where you can share each moment only with that special someone.
-Create, share, and remember all your moments with each other. Get started now!
+                Kickdudes เป็นแอปพลิเคชั่นที่จะช่วยให้คนที่รักในการเล่นฟุตบอล สามารถค้นหาสนามฟุตบอลใกล้ตัวได้ตลอดเวลา และค้นหาเพื่อนมาร่วมทีมได้ง่ายๆ มาร่วมเป็นส่วนหนึ่งกับพวกเราได้แล้ว
               </p>
               <p class="app_store">
-                <a href="#"><img src="images/app_store_icon.png" alt="app store" /></a>
+                <a href="#" class="btn btn-blank"><i class="mdi mdi-apple"></i>App store</a>
+                <a href="#" class="btn btn-blank disabled"><i class="mdi mdi-google-play"></i>Google store</a>
               </p>
             </section>
-            <section id="iphone" class="col-md-4">
+            <section id="iphone" class="col-sm-4 col-md-4">
               <img src="images/iphone.png" alt="iphone">
             </section>
             <section class="col-md-12 text-c">
@@ -90,27 +96,51 @@ Create, share, and remember all your moments with each other. Get started now!
   <section id="feature" class="vertical_align_wrap">
     <div class="container">
       <div id="animate_feature" class="content row">
-        <h2>the world best soccer player community app.</h2>
+        <h2>ฟีเจอร์เด่นที่ทำให้การเล่นฟุตบอลง่ายและสนุกขึ้น</h2>
           <ul class="feature_list list-inline">
-            <li class="animated col-md-4">
-              <img src="images/icon_feature_001.png" alt="look around" />
-              <h3>look around</h3>
+            <li class="animated col-sm-6 col-md-4">
+              <img src="images/features/fi1.png" alt="ค้นหาสนามฟุตบอลใกล้ๆ ตัวคุณ" />
+              <h3>ค้นหาสนามฟุตบอลใกล้ๆ ตัวคุณ</h3>
               <p>
-                หาเพื่อนใหม่ที่อยู่ใกล้ตัวคุณได้แบบง่ายๆ ด้วยฟั่งชั่นดูรอบๆ ในพื้นที่รอบตัวคุณ
+                สามารถค้นหาสนามฟุตบอลบริเวณรอบๆ ตัวเราได้ตลอดเวลา ไม่ว่าจะอยู่ที่ไหนก็ตาม
               </p>
             </li>
-            <li class="animated col-md-4">
-              <img src="images/icon_feature_002.png" alt="same lifestyle" />
-              <h3>same lifestyle</h3>
+            <li class="animated col-sm-6 col-md-4">
+              <img src="images/features/fi2.png" alt="ค้นหาเพื่อนและทีมใหม่ๆ" />
+              <h3>ค้นหาเพื่อนและทีมใหม่ๆ</h3>
               <p>
-                หาเพื่อนใหม่ที่อยู่ใกล้ตัวคุณได้แบบง่ายๆ ด้วยฟั่งชั่นดูรอบๆ ในพื้นที่รอบตัวคุณ
+                สร้างความท้าทายในตัวคุณด้วยการพบเจอกับเพื่อนใหม่ๆ และทีมใหม่ๆ ได้ตลอดเวลา
               </p>
             </li>
-            <li class="animated col-md-4">
-              <img src="images/icon_feature_003.png" alt="add status" />
-              <h3>add status</h3>
+            <div class="clearfix visible-sm-block"></div>
+            <li class="animated col-sm-6 col-md-4">
+              <img src="images/features/fi3.png" alt="ล่าเหรียญรางวัล" />
+              <h3>ล่าเหรียญรางวัล</h3>
               <p>
-                หาเพื่อนใหม่ที่อยู่ใกล้ตัวคุณได้แบบง่ายๆ ด้วยฟั่งชั่นดูรอบๆ ในพื้นที่รอบตัวคุณ
+                เล่นฟุตบอลดี เล่นสม่ำเสมอ รับเหรียญรางวัลไปเลยเพื่อนำไปแลกของต่างๆ
+              </p>
+            </li>
+            <div class="clearfix visible-md-block"></div>
+            <li class="animated col-sm-6 col-md-4">
+              <img src="images/features/fi4.png" alt="สร้างทีมฟุตบอล" />
+              <h3>สร้างทีมฟุตบอล</h3>
+              <p>
+                สามารถสร้างทีมฟุตบอลของเราเพื่อไปแข่งขันกับทีมอื่นๆ  และเชิญคนอื่นมาร่วมทีมได้
+              </p>
+            </li>
+            <div class="clearfix visible-sm-block"></div>
+            <li class="animated col-sm-6 col-md-4">
+              <img src="images/features/fi5.png" alt="เพิ่มทักษะต่างๆ ให้กับตัวคุณ" />
+              <h3>เพิ่มทักษะต่างๆ ให้กับตัวคุณ</h3>
+              <p>
+                มีสเตตัสเป็นของตนเอง เช่น ตำแหน่งที่เล่น เท้าที่ถนัด การยิงไกล  การเลี้ยง เป็นต้น เพื่อบ่งบองความเป็นตัวตนในการเล่นฟุตบอล
+              </p>
+            </li>
+            <li class="animated col-sm-6 col-md-4" >
+              <img src="images/features/fi6.png" alt="สนทนากับเพื่อนๆ ได้ตลอดเวลา" />
+              <h3>สนทนากับเพื่อนๆ ได้ตลอดเวลา</h3>
+              <p>
+                  สนทนาแลกเปลี่ยนความคิดเห็น หรือแนะนำเทคนิคต่างๆ ให้กับเพื่อนๆ ได้
               </p>
             </li>
           </ul>
@@ -119,45 +149,26 @@ Create, share, and remember all your moments with each other. Get started now!
         //feature
         new ScrollMagic.Scene({triggerElement: "#feature"})
           .setClassToggle(".animated", "fadeInUp")
-          .addIndicators()
+          // .addIndicators()
           .addTo(controller);
       </script>
     </div>
   </section><!--#feature-->
 
-  <section id="why" class="vertical_align_wrap" >
-    <div class="container">
-      <div id="animate_why" class="row">
-        <div class="people_opa col-md-12">
-          <h2>Why us?</h2>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam vitae voluptatibus illum a, nulla laborum, ad consectetur sit tempore modi, autem labore accusantium sint asperiores odio iste quaerat nemo repellat.
-        </div>
-      </div>
-      <script>
-        //why
-        // build tween
-	      var tween = TweenMax.to("#animate_why", 1, {className: "+=fish"});
-        new ScrollMagic.Scene({triggerElement: "#why"})
-          .setTween(tween)
-          .addIndicators()
-          .addTo(controller);
-      </script>
-    </div>
-  </section><!--#why-->
 
-  <section id="signup">
+  <section id="signup" class="vertical_align_wrap">
     <div class="container">
-      <p>
-        Interested in Kickdudes for your application?
-        <a href="register.html" class="animated btn btn-danger btn-lg">sign up now!!!</a>
-      </p>
+      <h2>
+        พร้อมหรือยัง? ที่จะมาเข้าร่วมสังคมฟุตบอลกับพวกเรา
+      </h2>
+      <a href="register.html" class="animated btn btn-danger btn-lg">สมัครเลย ฟรี!!!</a>
+      <a href="#" class="btn btn-blank"><i class="mdi  mdi-map-marker"></i>หรือค้นหาสนามใกล้ตัวคุณ</a>
       <script>
         //sigup
         // build tween
-	      var tween = TweenMax.to(".animated", 1, {className: "+=shake"});
-        new ScrollMagic.Scene({triggerElement: "#signup"})
-          .setTween(tween)
-          .addIndicators()
+	      new ScrollMagic.Scene({triggerElement: "#signup"})
+          .setClassToggle(".animated", "shake")
+          // .addIndicators()
           .addTo(controller);
       </script>
     </div>
@@ -166,17 +177,16 @@ Create, share, and remember all your moments with each other. Get started now!
   <section id="contact" class="vertical_align_wrap">
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-sm-6 col-md-6">
           <div id="adddress">
-            <h2>contact us</h2>
+            <h2>ติดต่อเรา Kickdudes</h2>
             <p>
-              TWIN SYNERGY CO., LTD. 230 SOI PHATTHANAKARN 29, PHATTHAKARN RD., SUAN LUANG, BANGKOK 10250
+              หากคุณมีข้อสงสัย หรือแนะนำติชม ติดต่อเรามาได้ตลอด
             </p>
-            <p>TEL: 090-669-8968</p>
             <p><img src="images/icon_contact.png" alt="contact"></p>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-sm-6 col-md-6">
         <script src='https://www.google.com/recaptcha/api.js'></script>
 
             <form id="contact-form" class="animated" action="#">
@@ -191,7 +201,7 @@ Create, share, and remember all your moments with each other. Get started now!
               </div>
               <div class="form-group">
                 <div class="g-recaptcha" data-sitekey="6LfxDQUTAAAAAFFxkCInbU6wpib1DDNixhWXEA_6"></div>
-                <input class="btn btn-success" type="submit" value="ส่งข้อความ">
+                <input class="btn btn-success btn-lg" type="submit" value="ส่งข้อความ">
               </div>
             </form>
         </div>
@@ -200,8 +210,8 @@ Create, share, and remember all your moments with each other. Get started now!
     <script>
       //contact
       new ScrollMagic.Scene({triggerElement: "#contact"})
-        .setClassToggle("#contact-form", "lightSpeedIn")
-        .addIndicators()
+        .setClassToggle("#contact-form", "fadeInUp")
+        // .addIndicators()
         .addTo(controller);
     </script>
   </section><!--#contact-->
@@ -211,16 +221,16 @@ Create, share, and remember all your moments with each other. Get started now!
       <div class="row">
         <h2>keep in touch with us</h2>
 
-        <ul class="col-md-12 list-inline">
-          <li class="icon-social">
+        <ul class="list-inline">
+          <li class="col-xs-4 col-sm-4 col-md-2 col-md-offset-3 icon-social">
             <img src="images/icon_tw.png" alt="twitter">
             <p>@kickdudes</p>
           </li>
-          <li class="icon-social">
+          <li class="col-xs-4 col-sm-4 col-md-2 icon-social">
             <img src="images/icon_ig.png" alt="instrang">
             <p>@kickdudes</p>
           </li>
-          <li class="icon-social">
+          <li class="col-xs-4 col-sm-4 col-md-2 icon-social">
             <img src="images/icon_fb.png" alt="facebook">
             <p>@kickdudes</p>
           </li>
