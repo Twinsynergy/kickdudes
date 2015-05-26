@@ -14570,6 +14570,10 @@ body {
   filter: alpha(opacity=50);
   font-size: 90%;
 }
+.card-body .card-icon {
+  font-size: 34px;
+  margin-top: 24px;
+}
 .card-body-pagination {
   width: 100%;
   text-align: center;
@@ -14790,20 +14794,32 @@ body {
   bottom: -1px;
   background: #d9534f;
 }
+.alert.alert-callout .card-icon {
+  color: #d9534f;
+}
 .alert-callout.alert-info:before {
   background-color: #337ab7;
 }
-.alert-callout.alert-info a {
+.alert-callout.alert-info .card-icon {
   color: #337ab7;
 }
 .alert-callout.alert-verify:before {
   background-color: #5bc0de;
 }
+.alert-callout.alert-verify .card-icon {
+  color: #5bc0de;
+}
 .alert-callout.alert-waiting:before {
   background-color: #f0ad4e;
 }
+.alert-callout.alert-waiting .card-icon {
+  color: #f0ad4e;
+}
 .alert-callout.alert-success:before {
   background-color: #5cb85c;
+}
+.alert-callout.alert-success .card-icon {
+  color: #5cb85c;
 }
 .pagination > li > a {
   color: #00a89e;

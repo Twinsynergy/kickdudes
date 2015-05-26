@@ -862,6 +862,7 @@ body{
     .opacity(.5);
     font-size: 90%;
   }
+  .card-icon{ font-size: 34px; margin-top: 24px; }
 }
 .card-body-pagination{
 	width: 100%;
@@ -1032,27 +1033,32 @@ body{
     bottom: -1px;
     background: @brand-danger;
   }
+  .card-icon{ color: @brand-danger; }
 }
 .alert-callout.alert-info{
   &:before{
     background-color: @brand-primary;
   }
-  a{ color: @brand-primary; }
+  .card-icon{ color: @brand-primary; }
+
 }
 .alert-callout.alert-verify{
   &:before{
     background-color: @brand-info;
   }
+  .card-icon{ color: @brand-info; }
 }
 .alert-callout.alert-waiting{
   &:before{
     background-color: @brand-warning;
   }
+  .card-icon{ color: @brand-warning; }
 }
 .alert-callout.alert-success{
   &:before{
     background-color: @brand-success;
   }
+  .card-icon{ color: @brand-success; }
 }
 
 .pagination{
