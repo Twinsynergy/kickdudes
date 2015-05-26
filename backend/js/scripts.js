@@ -40,7 +40,7 @@ $(function(){
         $("#toast-container").slideUp(400, function(){
           $(this).remove();
         })
-    }, 3000);
+    }, 4000);
   $('#toast-container').click(function() {
     $(this).slideUp(400, function() {
       $(this).remove();
