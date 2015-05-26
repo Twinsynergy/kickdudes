@@ -53,9 +53,6 @@ $(function(){
     }
   });
   // Add method validate longitude and latitude
-  $.validator.addMethod("geoLatLog", function(value, element) {
-    return this.optional(element) || /^(-?([1-8]?[1-9]|[1-9]0)\.{1}\d{1,6}),{1}(-?([1]?[1-7][1-9]|[1]?[1-8][0]|[1-9]?[0-9])\.{1}\d{1,6})/.test(value);
-  }, "Latitude and Longitude are not correctly typed");
   $.validator.addMethod("valueNotEquals", function(value, element, arg){
     return arg != value;
   }, "Value must not equal arg.");

@@ -39,6 +39,9 @@ $(function() {
         email: true
       },
       password_player: "required",
+      repassword_player: {
+        equalTo: "#password_player"
+      },
       phone_player: {
         required: true,
         number: true
@@ -52,6 +55,9 @@ $(function() {
         email: "กรอกอีมลไม่ถูกต้อง"
       },
       password_player: "ต้องกรอกข้อมูล",
+      repassword_player: {
+        equalTo: "รหัสผ่านไม่เหมือนกัน"
+      },
       phone_player: {
         required: "ต้องกรอกข้อมูล",
         number: "ใส่ได้เฉพาะตัวเลข"
@@ -79,7 +85,6 @@ $(function() {
       },
       name_field: "required",
       phone_field: "required",
-      // file_field: "required"
     },
     messages: {
       name_holder: "ต้องกรอกข้อมูล",
