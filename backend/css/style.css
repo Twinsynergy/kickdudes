@@ -14793,6 +14793,12 @@ body {
 .alert-callout.alert-info:before {
   background-color: #337ab7;
 }
+.alert-callout.alert-info i {
+  font-size: 30px;
+}
+.alert-callout.alert-info a {
+  color: #337ab7;
+}
 .alert-callout.alert-verify:before {
   background-color: #5bc0de;
 }
