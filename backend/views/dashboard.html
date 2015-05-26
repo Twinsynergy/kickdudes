@@ -86,14 +86,16 @@
             <div class="card">
               <div class="card-body no-padding">
                 <div class="alert alert-callout alert-info">
+                  <div class="pull-right withdrawal">
+                    <a href="#delete_not" title="ถอนเงิน"><span class="label label-danger">ถอนเงิน</span></a>
+                  </div>
                   <h4>
-                    รายได้รวมทั้งหมด
+                    ยอดเงินทั้งหมด
                   </h4>
                   <p class="integer">
                     <strong class="text-xl counter">30,000</strong><span>บาท</span>
                   </p>
                 </div>
-
               </div>
             </div>
           </div>
@@ -308,7 +310,25 @@
       </ul>
     </nav>
   </section>
-
+  <div id="delete_not" class="modal">
+    <div class="modal-dialog">
+      <div class="modal-content modal-sm">
+        <div class="modal-body">
+          <p>ต้องการถอนเงินออกจากระบบใช่หรือไม่?</p>
+        </div>
+        <div class="modal-footer">
+          <a href="#close" class="btn btn-flat" >ยกเลิก</a>
+          <a href="#" class="btn btn-default btn-success">ตกลง</a>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+<div id="toast-container" role="alert">
+  <div class="toast-info alert alert-success animated fadeInDown">
+     เราจะทำการโอนภาย Paypal ของท่าน      
+  </div>
+</div>
+<!--End Alert-->
 <script type="text/javascript">
   //counter nubmer animate
   $('.counter').counterUp({
