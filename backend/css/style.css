@@ -14793,9 +14793,6 @@ body {
 .alert-callout.alert-info:before {
   background-color: #337ab7;
 }
-.alert-callout.alert-info i {
-  font-size: 30px;
-}
 .alert-callout.alert-info a {
   color: #337ab7;
 }
@@ -14978,6 +14975,7 @@ body {
   border-top-left-radius: 0;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
+  text-align: center;
 }
 /*Tab*/
 .nav-tabs {
