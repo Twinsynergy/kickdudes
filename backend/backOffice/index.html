@@ -41,7 +41,7 @@
     					</span>
               <span class="caret"></span></a>
             <ul class="dropdown-menu dropdown-up" role="menu">
-              <li><a href="#"><i class="mdi mdi-account"></i>My profile</a></li>
+              <li><a href="#"><i class="mdi mdi-account"></i>My account</a></li>
               <li><a href="#"><i class="mdi mdi-close"></i>Log out</a></li>
             </ul>
           </li>
@@ -153,12 +153,82 @@
         <div class="row">
           <div class="col-md-12">
             <div class="card">
-              <div class="card-body">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus consectetur, quo amet molestias doloremque excepturi facere cum recusandae commodi inventore, laboriosam modi pariatur neque consequuntur quod at beatae libero iure!
+              <div class="card-head">
+                <header>เจ้าของสนาม</header>
               </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                <table class="table table-hover table-striped">
+                  <thead>
+                    <tr>
+                      <td>วันที่</td>
+                      <td>ชื่อสนาม</td>
+                      <td>ผู้เช่าสนาม</td>
+                      <td>เงินค่าสนาม</td>
+                      <td>สถานะ</td>
+                      <td>&nbsp;</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>12/01/58</td>
+                      <td>สนามที่ 1 : ฟุตซอลเทียม</td>
+                      <td>Tesser Phutthasen</td>
+                      <td>1,300 บาท</td>
+                      <td><span class="label label-waiting">รอการโอน</span></td>
+                      <td class="actions">
+                        <a href="invoice.html" class="btn" data-toggle="tooltip" data-placement="top" title="ดูเพิ่มเติม">
+                          <i class="mdi mdi-eye"></i>
+                        </a></td>
+                    </tr>
+                    <tr>
+                      <td>12/01/58</td>
+                      <td>สนามที่ 1 : ฟุตซอลเทียม</td>
+                      <td>Tesser Phutthasen</td>
+                      <td>1,300 บาท</td>
+                      <td><span class="label label-danger">ยกเลิกการจอง</span></td>
+                      <td class="actions">
+                        <a href="invoice.html" class="btn" data-toggle="tooltip" data-placement="top" title="ดูเพิ่มเติม">
+                          <i class="mdi mdi-eye"></i>
+                        </a></td>
+                    </tr>
+                    <tr>
+                      <td>12/01/58</td>
+                      <td>สนามที่ 1 : ฟุตซอลเทียม</td>
+                      <td>Tesser Phutthasen</td>
+                      <td>1,300 บาท</td>
+                      <td><span class="label label-success">ชำระแล้ว</span></td>
+                      <td class="actions">
+                        <a href="invoice.html" class="btn" data-toggle="tooltip" data-placement="top" title="ดูเพิ่มเติม">
+                          <i class="mdi mdi-eye"></i>
+                        </a></td>
+                    </tr>
+                    <tr>
+                      <td>12/01/58</td>
+                      <td>สนามที่ 1 : ฟุตซอลเทียม</td>
+                      <td>Tesser Phutthasen</td>
+                      <td>1,300 บาท</td>
+                      <td><span class="label label-verify">รอการตรวจสอบ</span></td>
+                      <td class="actions">
+                        <a href="invoice.html" class="btn" data-toggle="tooltip" data-placement="top" title="ดูเพิ่มเติม">
+                          <i class="mdi mdi-eye"></i>
+                        </a></td>
+                    </tr>
+                  </tbbody>
+                </table>
+                </div>
+              </div><!--End card-body-->
+              <div class="card-actionbar">
+                <div class="card-actionbar-row">
+                  <a href="history.html" class="btn btn-flat ripplelink">
+                    ดูทั้งหมด
+                  </a>
+                </div>
+              </div><!--End card actionbar-->
             </div>
           </div>
-        </div>
+        </div><!--End row-->
+
       </section>
     </div>
     <nav id="menubar">
@@ -175,21 +245,14 @@
           <a href="fields.html" class="fields">
             <span class="gui-icon">
             </span>
-            <span class="title">fields</span>
-          </a>
-        </li>
-        <li>
-          <a href="history.html" class="history">
-            <span class="gui-icon">
-            </span>
-            <span class="title">history</span>
+            <span class="title">Holder</span>
           </a>
         </li>
         <li>
           <a href="profile.html" class="profile">
             <span class="gui-icon">
             </span>
-            <span class="title">profile</span>
+            <span class="title">account</span>
           </a>
         </li>
       </ul>

@@ -1,17 +1,21 @@
 $(function(){
 
+  /*input mask*/
+  $(document).ready(function(){
+      $(":input").inputmask();
+  });
+
   /*Form field page*/
   var MaxFields = 10;
   var Wrapper = $('#football-form .time-wraper');
   var AddButton = $("#football-form .insert-time");
   var RemoveButton = $('#football-form .remove-time');
-  var Row = '<div class="row time-row time-minus-row"><div class="time-group col-xs-4 col-sm-4 col-md-4"><input type="text" id="timestart_ff" name="timestart_ff" data-mask="99:99" placeholder="เวลาเริ่ม" class="form-control inputRequired"></div><div class="time-group col-xs-4 col-sm-4 col-md-4"><input type="text" id="timeend_ff" name="timeend_ff" data-mask="99:99" placeholder="เวลาสิ้นสุด" class="form-control inputRequired"></div><div class="time-group col-xs-4 col-sm-4 col-md-4"><input type="number" placeholder="ราคา" id="price_ff" name="price_ff" class="form-control inputRequired"></div><a href="javascript:void(0)" class="action-time-group remove-time"><i class="mdi mdi-minus-circle"></i></a></div>'
   var x = 1; //initlal text box count
   $(AddButton).click(function(e){ //on add input button click
       e.preventDefault();
       if(x < MaxFields){ //max input box allowed
           x++; //text box increment
-          $(Wrapper).append(Row); //add input box
+          $(Wrapper).append('<div class="row time-row time-minus-row"><div class="time-group col-xs-4 col-sm-4 col-md-4"><input type="text" id="timestart_ff'+x+'" name="timestart_ff'+x+'" placeholder="เวลาเริ่ม" class="form-control inputRequired"></div><div class="time-group col-xs-4 col-sm-4 col-md-4"><input type="text" id="timeend_ff'+x+'" name="timeend_ff'+x+'" data-mask="99:99" placeholder="เวลาสิ้นสุด" class="form-control inputRequired"></div><div class="time-group col-xs-4 col-sm-4 col-md-4"><input type="number" placeholder="ราคา" id="price_ff'+x+'" name="price_ff'+x+'" class="form-control inputRequired"></div><a href="javascript:void(0)" class="action-time-group remove-time"><i class="mdi mdi-minus-circle"></i></a></div>'); //add input box
       }
   });
   $(Wrapper).on("click",".remove-time", function(e){ //user click on remove text
