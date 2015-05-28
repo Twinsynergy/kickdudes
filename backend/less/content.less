@@ -452,6 +452,18 @@ form{
     .bar:before,
     .bar:after{ background: @brand-danger !important; }
   }
+  &.form-inline{
+    .form-group{
+      margin-right: 25px;
+    }
+    .btn-group{
+      .clearfix();
+      label{ color: #fff; } 
+    }
+    .btn.active{
+      background-color: @greenDark;
+    }
+  }
 }
 textarea:focus,
 input:focus,
@@ -498,6 +510,9 @@ input[type=number]::-webkit-outer-spin-button {
   select:focus ~ .bar:after {
 	  width:50%;
 	}
+}
+.radio-inline, .checkbox-inline{
+  position: relative !important;    
 }
 .form-inverse{
   .form-group{
@@ -593,6 +608,9 @@ table{
 	.actions{
 		a{ font-size: 20px; padding: 0; }
 	}
+  .icon-table{
+    font-size: 20px;
+  }
 }
 
 /*Style*/
@@ -623,8 +641,6 @@ body{
   .forgot_pass{ text-align: right; margin-top: 10px; }
   .btn{ margin: 10px 0; }
 }
-
-/*Upload File*/
 
 /*Dashboard*/
 .dropdown-menu{
@@ -865,6 +881,9 @@ body{
     font-size: 90%;
   }
   .card-icon{ font-size: 34px; margin-top: 24px; }
+}
+.card-sort{
+  margin-bottom: 25px;
 }
 .card-body-pagination{
 	width: 100%;
@@ -1386,4 +1405,21 @@ body{
   width: 250px;
   height: 36px;
   margin-top: 14px;
+}
+
+//List group
+.card-body.no-padding{
+  .list-group-item{
+    border-left: 0;
+    border-right: 0;
+  }
+  .list-group-item:first-child{   
+    border-top-right-radius: 0;
+    border-top-left-radius: 0; 
+  }
+  .list-group-item:last-child{
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom: none;
+  }
 }

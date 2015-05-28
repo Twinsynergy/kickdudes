@@ -70,7 +70,11 @@ $(function(){
       },
       provinceProfile:{
         valueNotEquals: "default"
-      }
+      },
+      holderPass: "required",
+      holderRepass: {
+        equalTo: "#holderPass"
+      },
     },
     messages:{
       team_ff:{
@@ -78,7 +82,11 @@ $(function(){
       },
       provinceProfile:{
         valueNotEquals: "ต้องเลือกข้อมูล"
-      }
+      },
+      holderPass: "ต้องกรอกข้อมูล",
+      holderRepass: {
+        equalTo: "รหัสผ่านไม่เหมือนกัน"
+      },
     },
     highlight: function(element) {
         $(element).parent('div').addClass('error');
