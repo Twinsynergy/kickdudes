@@ -90,7 +90,7 @@
                 <div class="tools">
                   
                   <a href="#" class="btn-icon-toggle btn"><i class="mdi mdi-pencil"></i></a>
-                  <a href="#delete_not" class="btn-icon-toggle btn" ><i class="mdi mdi-close"></i></a>
+                  <a href="javascript:void(0);" class="btn-icon-toggle btn" data-toggle="modal" data-target=".delete_model" ><i class="mdi mdi-close"></i></a>
                 </div>
               </div>
               <div class="card-body">
@@ -160,7 +160,7 @@
                 <div class="tools">
                   
                   <a href="#" class="btn-icon-toggle btn"><i class="mdi mdi-pencil"></i></a>
-                  <a href="#delete_not" class="btn-icon-toggle btn" ><i class="mdi mdi-close"></i></a>
+                  <a href="javascript:void(0);" class="btn-icon-toggle btn" data-toggle="modal" data-target=".delete_model" ><i class="mdi mdi-close"></i></a>
                 </div>
               </div>
               <div class="card-body">
@@ -232,7 +232,7 @@
                 <div class="tools">
                   
                   <a href="#" class="btn-icon-toggle btn"><i class="mdi mdi-pencil"></i></a>
-                  <a href="#delete_not" class="btn-icon-toggle btn" ><i class="mdi mdi-close"></i></a>
+                  <a href="javascript:void(0);" class="btn-icon-toggle btn" data-toggle="modal" data-target=".delete_model" ><i class="mdi mdi-close"></i></a>
                 </div>
               </div>
               <div class="card-body">
@@ -407,19 +407,20 @@
     </nav>
   </section>
 
-  <div id="delete_not" class="modal">
-    <div class="modal-dialog">
-      <div class="modal-content modal-sm">
-        <div class="modal-body">
-          <p>ต้องการลบสนามใช่หรือไม่?</p>
-        </div>
-        <div class="modal-footer">
-          <a href="#close" class="btn btn-flat" >ยกเลิก</a>
-          <a href="#" class="btn btn-default btn-delete">ลบทิ้ง</a>
-        </div>
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
+<div class="modal fade delete_model" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>ต้องการลบสนามใช่หรือไม่?</p>
+      </div>
+      <div class="modal-footer">
+        <a href="javascript:void(0);" class="btn btn-flat" data-dismiss="modal">ยกเลิก</a>
+        <a href="#" class="btn btn-default btn-delete">ลบทิ้ง</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!--Alert-->
 <div id="toast-container" role="alert">
   <div class="toast-info alert alert-danger animated fadeInDown">

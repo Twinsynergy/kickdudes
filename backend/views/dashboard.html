@@ -86,7 +86,7 @@
               <div class="card-body no-padding">
                 <div class="alert alert-callout alert-info">
                   <div class="pull-right withdrawal">
-                    <a href="#delete_not" title="ถอนเงิน"><span class="label label-danger">ถอนเงิน</span></a>
+                    <a href="javascript:void(0);" data-toggle="modal" data-target=".withdrawal_model" ><span class="label label-danger">ถอนเงิน</span></a>
                   </div>
                   <h4>
                     ยอดเงินทั้งหมด
@@ -309,19 +309,21 @@
       </ul>
     </nav>
   </section>
-  <div id="delete_not" class="modal">
-    <div class="modal-dialog">
-      <div class="modal-content modal-sm">
-        <div class="modal-body">
-          <p>ต้องการถอนเงินออกจากระบบใช่หรือไม่?</p>
-        </div>
-        <div class="modal-footer">
-          <a href="#close" class="btn btn-flat" >ยกเลิก</a>
-          <a href="#" class="btn btn-default btn-success">ตกลง</a>
-        </div>
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
+
+<div class="modal fade withdrawal_model" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>ต้องการถอนเงินใช่หรือไม่?</p>
+      </div>
+      <div class="modal-footer">
+        <a href="javascript:void(0);" class="btn btn-flat" data-dismiss="modal">ยกเลิก</a>
+        <a href="#" class="btn btn-default btn-success">ตกลง</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div id="toast-container" role="alert">
   <div class="toast-info alert alert-success animated fadeInDown">
      เราจะทำการโอนไปยัง Paypal ของท่าน      
