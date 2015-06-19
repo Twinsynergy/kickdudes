@@ -33,10 +33,7 @@ function initialize() {
   if(navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
     var pos = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
-      // console.log(position.coords.latitude,position.coords.longitude);
-      // map.setCenter(pos);
-      
-    // var currentLocation = new google.maps.LatLng(13.7560243, 100.49867929999999);
+ 
     var soccerField = [
       [-33.890542, 151.274856, 'สนาม กรีนฟิลด์ เอฟซี','ซอยมัยลาภ (รามอินทรา 14) ถนน เกษตร-นวมินทร์ เขตประเวศ กรุงเทพมหานคร 10230','02-321-66666'],
       [-33.923036, 151.259052, 'สนาม 55 ฟุตซอลคลับ','ซอยเจริญนคร 55 (ชัยโพธิ์ทอง) ใกล้กับสะพานสาทร สะพานกรุงเทพ ถนน เจริญนคร เขตคลองสาน กรุงเทพมหานคร 10600','02-321-77777'],
@@ -56,7 +53,6 @@ function initialize() {
     var icon = 'images/marker.png';
     for (i = 0; i < soccerField.length; i++)
       {
-          // var p = soccerField[i];
           var latlng = new google.maps.LatLng(soccerField[i][0], soccerField[i][1]);
 
           var marker = new google.maps.Marker({
@@ -126,7 +122,7 @@ function initialize() {
         bounds.extend(latlng);
       }
        
-    map.fitBounds(bounds); 
+    // map.fitBounds(bounds); 
 
     }, function() {
       handleNoGeolocation(true);
