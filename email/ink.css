@@ -541,12 +541,12 @@ table.secondary:active td a {
 }
 
 table.success td {
-  background: #5da423;
-  border-color: #457a1a;
+  background: #50AA8D;
+  border-color: #2F5E4E;
 }
 
 table.success:hover td {
-  background: #457a1a !important;
+  background: #2F5E4E !important;
 }
 
 table.alert td {
