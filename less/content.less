@@ -5,6 +5,10 @@
 @footer: #414141;
 
 /*Mixins*/
+.bdr-block(@bdr: 4px){
+  .border-top-radius(@bdr);
+  .border-bottom-radius(@bdr);
+}
 
 /*Links and type*/
 @font-face {
@@ -133,6 +137,17 @@ body{
   position: relative;
   padding-top: 80px;
   &#home{ padding-top: 0; }
+}
+.scroll-content{
+  max-height: 1100px;
+  overflow-y: scroll;
+  margin: 25px 0;
+  background: transparent url(../images/bg_box.png) 0 0 repeat;
+  padding: 15px;
+  .bdr-block();
+  color: #fff;
+  a{ color: @kickdudes; }
+  h1{ color: #fff !important; }
 }
 
 /*Header*/
