@@ -203,17 +203,30 @@
 <div class="modal fade sent_message_model" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
+      <form id="sent_message" action="#">
       <div class="modal-body">
-        <p>ข้อความที่จะส่ง</p>
-        <form id="sent_message" action="#">
-          <textarea id="textarea_message" class="form-control" rows="3" maxlength="120"></textarea>
-          <div id="textarea_feedback"></div>
-        </form>
+        <p>ข้อความที่จะส่ง:</p>
+        <div class="form-group">
+            <textarea id="textarea_message" class="form-control" rows="3" maxlength="120"></textarea>
+            <div id="textarea_feedback" class="help-block"></div>
+        </div>
+        <p>คนที่เลือก:</p>
+          <div class="form-group">
+            <ul class="list-unstyled list-inline list-user">
+              <li><img src="../images/avatar9.jpg" alt="" class="img-circle"></li>
+              <li><img src="../images/avatar9.jpg" alt="" class="img-circle"></li>
+              <li><img src="../images/avatar9.jpg" alt="" class="img-circle"></li>
+              <li><img src="../images/avatar9.jpg" alt="" class="img-circle"></li>
+              <li><img src="../images/avatar9.jpg" alt="" class="img-circle"></li>
+              <li class="list-count">+20</li>
+            </ul>
+          </div>
       </div>
       <div class="modal-footer">
         <a href="javascript:void(0);" class="btn btn-flat" data-dismiss="modal">ยกเลิก</a>
         <a href="#" class="btn btn-default btn-success">ส่งข้อความ</a>
       </div>
+      </form>
     </div>
   </div>
 </div>

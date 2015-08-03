@@ -14814,6 +14814,23 @@ body {
   border-bottom-left-radius: 0;
   border-bottom: none;
 }
+/*Customer page*/
+#sent_message .list-user img {
+  width: 50px;
+  height: 50px;
+}
+#sent_message .list-user .list-count {
+  width: 50px;
+  height: 50px;
+  background-color: #777777;
+  color: #fff;
+  line-height: 50px;
+  text-align: center;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   .menubar-pin #wraper {
