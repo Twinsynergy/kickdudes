@@ -14717,6 +14717,9 @@ body {
   text-align: right;
   padding-right: 15px;
 }
+#resetpass .form-group label {
+  left: 0;
+}
 /*Search customer*/
 .list-results {
   margin-bottom: 24px;

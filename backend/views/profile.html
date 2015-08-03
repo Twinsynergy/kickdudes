@@ -112,7 +112,8 @@
 							  <header>ข้อมูลเจ้าของสนาม
                 </header>
                 <div class="tools">
-                  <a href="edit-profile.html" class="btn btn-default btn-edit">แก้ไข</a>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target=".resetpass_model" class="btn btn-default btn-accent">แก้ไขรหัสผ่าน</a>
+                  <a href="edit-profile.html" class="btn btn-default btn-edit">แก้ไขข้อมูล</a>
                 </div>
   						</div> <!--End card-head-->
               <div class="card-body card-profile style-primary">
@@ -382,5 +383,37 @@
   </div>
 </div>
 <!--End Alert-->
+<div class="modal fade resetpass_model" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form id="resetpass" action="#">
+      <div class="modal-body">
+        <p>แก้ไขรหัสผ่าน</p>
+        <div class="form-group">
+            <input type="text" name="oldPass" class="form-control inputRequired" />
+            <span class="bar"></span>
+            <label for="">รหัสเก่า</label>
+        </div>
+        <div class="form-group">
+            <input type="text" name="newPass" class="form-control inputRequired" />
+            <span class="bar"></span>
+            <label for="">รหัสใหม่</label>
+            <p class="help-block">ขั้นต่ำ 6 ตัวอักษร</p>
+        </div>
+        <div class="form-group">
+            <input type="text" name="renewPass" class="form-control inputRequired" />
+            <span class="bar"></span>
+            <label for="">ใส่รหัสใหม่อีกครั้ง</label>
+        </div>
+        
+      </div>
+      <div class="modal-footer">
+        <a href="javascript:void(0);" class="btn btn-flat" data-dismiss="modal">ยกเลิก</a>
+        <a href="#" class="btn btn-default btn-success">ตกลง</a>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
 </body>
 </html>
