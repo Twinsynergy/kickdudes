@@ -14740,6 +14740,7 @@ body {
 }
 .list-results .img-circle {
   width: 50px;
+  height: 50px;
 }
 .list-results .avatar {
   text-align: center;
@@ -14815,6 +14816,9 @@ body {
   border-bottom: none;
 }
 /*Customer page*/
+#sent_message p {
+  margin-bottom: 0;
+}
 #sent_message .list-user img {
   width: 50px;
   height: 50px;
