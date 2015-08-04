@@ -370,7 +370,11 @@ a{
 .style-primary{
   background-color: @green;
   color: #fff;
+  a{
+    color: #fff;
+  }
   .tools{
+    .btn-flat:hover,
     .btn-icon-toggle:hover{
       background-color: @white-50;
     }
@@ -1417,6 +1421,25 @@ body{
       line-height: 50px;
       text-align: center;
       .bdr-block(50%);
+    }
+  }
+}
+
+/*Booking*/
+.booking{
+  .month-title{ font-size: 16px; }
+  .list-field{
+    .badge{
+      width: 15px;
+      height: 15px;
+      display: block;
+      padding: 0;
+    }
+  }
+  .nav-tabs{
+    a.active{
+      background-color: rgba(255, 255, 255, 0.35) !important;
+      color: #fff;
     }
   }
 }

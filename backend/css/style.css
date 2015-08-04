@@ -13605,6 +13605,10 @@ a:hover {
   background-color: #00a89e;
   color: #fff;
 }
+.style-primary a {
+  color: #fff;
+}
+.style-primary .tools .btn-flat:hover,
 .style-primary .tools .btn-icon-toggle:hover {
   background-color: rgba(255, 255, 255, 0.5);
 }
@@ -14837,6 +14841,20 @@ body {
   border-top-left-radius: 50%;
   border-bottom-right-radius: 50%;
   border-bottom-left-radius: 50%;
+}
+/*Booking*/
+.booking .month-title {
+  font-size: 16px;
+}
+.booking .list-field .badge {
+  width: 15px;
+  height: 15px;
+  display: block;
+  padding: 0;
+}
+.booking .nav-tabs a.active {
+  background-color: rgba(255, 255, 255, 0.35) !important;
+  color: #fff;
 }
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
