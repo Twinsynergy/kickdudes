@@ -99,20 +99,20 @@
                       <label for="">ช่ือลูกค้า</label>
                     </div>
                     <div class="form-group">
-                      <input type="text" class="form-control inputRequired inputNum">
+                      <input type="text" id="phone_booking" name="phone_booking" class="form-control inputRequired inputNum">
                       <span class="bar"></span>
                       <label for="">เบอร์ติดต่อ</label>
                     </div>
                     <div class="form-group">
                       <div class="input-group">
-                        <input type="text" id="bookingAddDate" name="bookingAddDate" class="form-control inputRequired">
+                        <input type="text" id="bookingDate" name="bookingDate" class="form-control inputRequired">
                         <div class="input-group-addon"><i class="mdi mdi-calendar"></i></div>
                         <span class="bar"></span>
                       </div>
                         <label for="">วันที่จอง</label>
                         <script type="text/javascript">
                             $(function () {
-                                $('#bookingAddDate').datetimepicker({
+                                $('#bookingDate').datetimepicker({
                                   format: 'DD-MM-YYYY'
                                 });
                             });
