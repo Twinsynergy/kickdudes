@@ -13374,6 +13374,7 @@ video#bgvid source {
   margin-bottom: 25px;
   display: none;
   line-height: 1.5em;
+  text-shadow: 1px 1px 3px #969696;
 }
 #about h1:before {
   position: absolute;
@@ -13394,6 +13395,8 @@ video#bgvid source {
 }
 .app_store {
   margin-top: 30px;
+  color: #fff;
+  text-shadow: 1px 1px 3px #969696;
 }
 .app_store:before,
 .app_store:after {
@@ -13416,6 +13419,9 @@ video#bgvid source {
   text-transform: uppercase;
   margin-right: 10px;
   background-color: rgba(0, 0, 0, 0.8);
+}
+.app_store span {
+  font-size: 2rem;
 }
 #logo_top {
   position: absolute;
