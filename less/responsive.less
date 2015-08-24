@@ -39,7 +39,7 @@
 /* Extra small devices (phones, less than 768px) */
 //iphone landscarp
 @media (max-width: @screen-xs-max) {
-  body{
+  html{
     font-size: 14px;
   }
   #main_navbar{ display: none; }
@@ -50,7 +50,9 @@
     margin-top: 25px;
     margin-right: 40px;
   }
-
+  
+  video#bgvid{ display: none; }
+  #magic_arrow{ display: inline-block; }
   #about{
     .row{
       height: auto;
@@ -61,7 +63,7 @@
     }
   }
   #magic_arrow{
-    margin: 20px 0;
+    margin-top: 20px;
   }
   .app_store{ text-align: center; }
   #feature{

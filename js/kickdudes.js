@@ -18,4 +18,10 @@ $(function() {
     $('#magic_arrow').show();
   }, 87000);
 
+  //disable video on mobile
+  var isMobile = window.matchMedia("only screen and (max-width: 760px)");
+  if (isMobile.matches) {
+    $('video#bgvid').remove();
+  }
+
 });

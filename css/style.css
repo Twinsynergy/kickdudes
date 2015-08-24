@@ -13310,14 +13310,18 @@ body#home {
   width: 100%;
   height: 100vh;
 }
+#video .intro {
+  width: 100%;
+}
 #video .intro-content {
+  font-size: 1.2rem;
   height: 100vh;
   text-align: center;
   color: #fff;
-  font-size: ;
 }
 #video .container {
   text-align: center;
+  background-color: #000;
 }
 #video_pattern {
   background-image: url(../images/pattern.png);
@@ -13350,6 +13354,9 @@ video#bgvid {
   display: table-cell;
   vertical-align: middle;
 }
+.intro .intro-title {
+  font-size: 2rem;
+}
 #about {
   background: transparent url(../images/bg_mainpage.jpg) center center no-repeat;
 }
@@ -13358,7 +13365,7 @@ video#bgvid {
 }
 #about h1 {
   color: #fff;
-  font-size: 4rem;
+  font-size: 2.3rem;
   text-indent: 60px;
   position: relative;
   margin-bottom: 25px;
@@ -13402,7 +13409,7 @@ video#bgvid {
   clear: both;
 }
 .app_store a {
-  font-size: 2.375rem;
+  font-size: 1.375rem;
   text-transform: uppercase;
   margin-right: 10px;
   background-color: rgba(0, 0, 0, 0.8);
@@ -13421,8 +13428,9 @@ video#bgvid {
   position: absolute;
   bottom: 100px;
   left: 50%;
+  z-index: 99;
   text-align: center;
-  margin-left: -50px;
+  margin-left: -25px;
   color: #fff;
   width: 49px;
   height: 49px;
@@ -13684,7 +13692,7 @@ body#register h1 {
 }
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 767px) {
-  body {
+  html {
     font-size: 14px;
   }
   #main_navbar {
@@ -13699,6 +13707,12 @@ body#register h1 {
     margin-top: 25px;
     margin-right: 40px;
   }
+  video#bgvid {
+    display: none;
+  }
+  #magic_arrow {
+    display: inline-block;
+  }
   #about .row {
     height: auto;
   }
@@ -13707,7 +13721,7 @@ body#register h1 {
     margin-bottom: 20px;
   }
   #magic_arrow {
-    margin: 20px 0;
+    margin-top: 20px;
   }
   .app_store {
     text-align: center;

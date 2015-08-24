@@ -285,14 +285,18 @@ body{
   position: relative;
   width: 100%;
   height: 100vh;
+  .intro{
+    width: 100%;
+  }
   .intro-content{
+    font-size: 1.2rem;
     height: 100vh;
     text-align: center;
     color: #fff;
-    font-size: ;
   }
   .container{
     text-align: center;
+    background-color: #000;
   }
 }
 #video_pattern{
@@ -326,16 +330,18 @@ video#bgvid{
       display: table-cell;
       vertical-align: middle;
     }
+    .intro-title{
+      font-size: 2rem;
+    }
   }
 #about{
-  background: transparent url(../images/bg_mainpage.jpg) center center no-repeat;
-  // .row{ height: 100vh; } 
+  background: transparent url(../images/bg_mainpage.jpg) center center no-repeat; 
   #title_about{
     padding-top: 130px;
   }
   h1{
     color: #fff;
-    font-size: 4rem;
+    font-size: 2.3rem;
     text-indent: 60px;
     position: relative;
     margin-bottom: 25px;
@@ -363,7 +369,7 @@ video#bgvid{
   margin-top: 30px;
   .clearfix();
   a{
-    font-size: 2.375rem;
+    font-size: 1.375rem;
     text-transform: uppercase;
     margin-right: 10px;
     background-color: rgba(0,0,0,.8);
@@ -383,8 +389,9 @@ video#bgvid{
   position: absolute;
   bottom: 100px;
   left: 50%;
+  z-index: 99;
   text-align: center;
-  margin-left: -50px;
+  margin-left: -25px;
   color: #fff;
   width: 49px;
   height: 49px;
