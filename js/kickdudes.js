@@ -14,5 +14,8 @@ $(function() {
   	classie.toggle( menuLeft, 'cbp-spmenu-open' );
   };
 
+  setTimeout(function(){
+    $('#magic_arrow').show();
+  }, 87000);
 
 });

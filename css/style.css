@@ -13130,9 +13130,12 @@ form em.error {
   }
 }
 /*Miscellaneous*/
+html {
+  font-size: 16px;
+}
 body {
   color: #333333;
-  font-size: 16px;
+  font-size: 1rem;
   background-color: #50aa8d;
   position: relative;
   padding-top: 80px;
@@ -13302,19 +13305,53 @@ body#home {
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-#about {
-  background: transparent url(../images/bg_mainpage.jpg) center center no-repeat;
-}
-#about .row {
+#video {
+  position: relative;
+  width: 100%;
   height: 100vh;
 }
-#about .intro {
+#video .intro-content {
+  height: 100vh;
+  text-align: center;
+  color: #fff;
+  font-size: ;
+}
+#video .container {
+  text-align: center;
+}
+#video_pattern {
+  background-image: url(../images/pattern.png);
+  position: absolute;
+  opacity: 0.8;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+video#bgvid {
+  position: absolute;
+  right: 0;
+  top: 0;
+  min-width: 100%;
+  min-height: 100vh;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  background: url(../images/ss1.png) no-repeat;
+  background-size: cover;
+}
+.intro {
   display: table;
   position: relative;
+  z-index: 2;
 }
-#about .intro .row {
+.intro .intro-content {
   display: table-cell;
   vertical-align: middle;
+}
+#about {
+  background: transparent url(../images/bg_mainpage.jpg) center center no-repeat;
 }
 #about #title_about {
   padding-top: 130px;
@@ -13374,19 +13411,25 @@ body#home {
   position: absolute;
   top: 0;
   left: 15px;
+  z-index: 2;
   display: inline-block;
   width: 191px;
   height: 55px;
   background: transparent url(../images/logo.png) 0 0 no-repeat;
 }
 #magic_arrow {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  text-align: center;
+  margin-left: -50px;
   color: #fff;
   width: 49px;
   height: 49px;
-  display: inline-block;
   font-size: 35px;
   border: 1px solid #fff;
   border-radius: 50%;
+  display: none;
 }
 #magic_arrow .mdi {
   -webkit-animation: zoom 3s infinite;

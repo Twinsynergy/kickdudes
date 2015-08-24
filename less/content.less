@@ -130,9 +130,10 @@ form{
 }
 
 /*Miscellaneous*/
+html{ font-size: 16px; }
 body{
   color: @text-color;
-  font-size: 16px;
+  font-size: 1rem;
   background-color: @kickdudes;
   position: relative;
   padding-top: 80px;
@@ -280,8 +281,22 @@ body{
 	transition: all 0.3s ease;
 }
 
+#video{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  .intro-content{
+    height: 100vh;
+    text-align: center;
+    color: #fff;
+    font-size: ;
+  }
+  .container{
+    text-align: center;
+  }
+}
 #video_pattern{
-  background-image: url(../video/pattern.png);
+  background-image: url(../images/pattern.png);
   position: absolute;
   opacity: 0.8;
   left: 0px;
@@ -290,17 +305,31 @@ body{
   height: 100%;
   z-index: 1;
 }
-#about{
-  background: transparent url(../images/bg_mainpage.jpg) center center no-repeat;
-  .row{ height: 100vh; }
-  .intro{
+video#bgvid{
+  position: absolute;
+  right: 0;
+  top: 0;
+  min-width: 100%;
+  min-height: 100vh;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  background: url(../images/ss1.png) no-repeat;
+  background-size: cover;
+}
+
+.intro{
     display: table;
     position: relative;
-    .row{
+    z-index: 2;
+    .intro-content{
       display: table-cell;
       vertical-align: middle;
     }
   }
+#about{
+  background: transparent url(../images/bg_mainpage.jpg) center center no-repeat;
+  // .row{ height: 100vh; } 
   #title_about{
     padding-top: 130px;
   }
@@ -344,19 +373,25 @@ body{
   position: absolute;
   top: 0;
   left: 15px;
+  z-index: 2;
   display: inline-block;
   width: 191px;
   height: 55px;
   background: transparent url(../images/logo.png) 0 0 no-repeat;
 }
 #magic_arrow{
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  text-align: center;
+  margin-left: -50px;
   color: #fff;
   width: 49px;
   height: 49px;
-  display: inline-block;
   font-size: 35px;
   border: 1px solid #fff;
   border-radius: 50%;
+  display: none;
   .mdi{
     -webkit-animation: zoom 3s infinite; /* Chrome, Safari, Opera */
     animation: zoom 3s infinite;

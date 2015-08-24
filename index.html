@@ -47,7 +47,7 @@
           <a href="index.html" id="logo" ></a>
           <span id="hamburger"><span></span></span>
             <ul id="main_navbar" class="nav navbar-nav navbar-right" role="menu">
-              <li><a id="about_m" class="page-scroll" href="/" >about</a></li>
+              <li><a id="about_m" class="page-scroll" href="#about" >about</a></li>
               <li><a id="feature_m" class="page-scroll" href="#feature" >features</a></li>
               <li><a id="contact_m" class="page-scroll" href="#contact" >contact</a></li>
               <li class="dropdown">
@@ -62,13 +62,20 @@
         </div>
       </nav>
   </header>
-  <section id="about">
-  <div id="video_pattern"></div>
+  <section id="video">
+    <video autoplay poster="images/ss1.png" id="bgvid">
+      <source src="images/KICKDUDES.mp4" type="video/mp4">
+      <source src="images/KICKDUDES.ogg" type="video/ogg">
+      Your browser does not support the video tag.
+    </video>
+    <a href="#about" id="magic_arrow" class="animated fadeIn page-scroll"><span class="mdi mdi-chevron-down"></span></a>
+    
+  </section>
+  <section id="about" class="vertical_align_wrap">
     <div class="container">
       <div class="row">
         <div class="intro col-md-12">
-          <a href="index.html" id="logo_top"></a>
-          <div class="row">
+          <div class="row intro-content">
             <section id="title_about" class="col-sm-8 col-md-8">
               <h1 class="animated fadeInDown">คอมมูนิตี้ของคนรักฟุตบอล</h1>
               <h1 class="animated fadeInDown">ค้นหาสนามฟุตบอลใกล้ตัว</h1>
@@ -85,9 +92,6 @@
             </section>
             <section id="iphone" class="col-sm-4 col-md-4">
               <img src="images/iphone.png" alt="iphone">
-            </section>
-            <section class="col-md-12 text-c">
-              <a href="#feature" id="magic_arrow" class="page-scroll"><span class="mdi mdi-chevron-down" ></span></a>
             </section>
           </div>
         </div>
