@@ -13686,6 +13686,17 @@ body#register h1 {
 .finish_submit .app_store a {
   margin-right: 0;
 }
+/*404 page*/
+body#page404 {
+  background-color: #fff;
+  text-align: center;
+}
+body#page404 img {
+  max-width: 100%;
+}
+body#page404 p {
+  font-size: 1.5rem;
+}
 /* Large devices (large desktops, 1200px and up) */
 /* Medium devices (desktops, 992px and 1200px) */
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -13736,7 +13747,8 @@ body#register h1 {
     font-size: 2rem;
   }
   #magic_arrow {
-    margin-top: 20px;
+    margin-top: 0;
+    bottom: 50px;
   }
   .app_store {
     text-align: center;
