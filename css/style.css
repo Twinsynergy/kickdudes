@@ -13725,9 +13725,15 @@ body#register h1 {
   #about .row {
     height: auto;
   }
+  #about #title_about {
+    padding-top: 0;
+  }
   #about #iphone {
     margin-top: 20px;
     margin-bottom: 20px;
+  }
+  #about h1 {
+    font-size: 2rem;
   }
   #magic_arrow {
     margin-top: 20px;
@@ -13753,6 +13759,18 @@ body#register h1 {
   .signupform {
     padding: 0 15px;
   }
+  .signupform .nav-tabs li a {
+    font-size: 1.5rem;
+  }
+  .signupform .nav-tabs .tab-content {
+    padding: 40px 30px;
+  }
+  .signupform-container .btn {
+    font-size: 1.2rem;
+  }
+  .signupform-start {
+    margin-bottom: 15px;
+  }
 }
 @media (max-width: 480px) {
   .app_store a {
@@ -13767,14 +13785,5 @@ body#register h1 {
   footer .navbar-foot,
   footer .navbar-text {
     width: 100%;
-  }
-  .signupform .nav-tabs li a {
-    font-size: 1.8rem;
-  }
-  .signupform-container .btn {
-    font-size: 1.5rem;
-  }
-  .signupform .tab-content {
-    padding: 40px 30px;
   }
 }
