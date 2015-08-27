@@ -790,11 +790,14 @@ body{
   height: 64px;
   float: right;
   padding: 14px 10px;
+  li{
+    padding-left: 12px;
+  }
   .btn-icon-toggle{
     width: 36px;
     padding: 0;
   }
-  i.mdi-bell{
+  i.mdi{
     line-height: 34px;
     font-size: 22px;
   }
@@ -1475,4 +1478,12 @@ body{
 form.updateStatus{
   label{ font-weight: normal; }
   select{ margin-right: 5px; }
+}
+
+/*Messages*/
+.message-reply{
+  padding-top: 0;
+  hr{ margin-top: 0; }
+  h3{ text-align: right; }
+  small{ display: block; text-align: right; margin-bottom: 15px; }
 }

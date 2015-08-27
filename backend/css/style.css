@@ -14476,11 +14476,14 @@ body {
   float: right;
   padding: 14px 10px;
 }
+.header-notification li {
+  padding-left: 12px;
+}
 .header-notification .btn-icon-toggle {
   width: 36px;
   padding: 0;
 }
-.header-notification i.mdi-bell {
+.header-notification i.mdi {
   line-height: 34px;
   font-size: 22px;
 }
@@ -15275,6 +15278,21 @@ form.updateStatus label {
 }
 form.updateStatus select {
   margin-right: 5px;
+}
+/*Messages*/
+.message-reply {
+  padding-top: 0;
+}
+.message-reply hr {
+  margin-top: 0;
+}
+.message-reply h3 {
+  text-align: right;
+}
+.message-reply small {
+  display: block;
+  text-align: right;
+  margin-bottom: 15px;
 }
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
