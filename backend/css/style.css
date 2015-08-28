@@ -14829,6 +14829,13 @@ body {
 .intercom i.mdi {
   margin: 0;
 }
+.intercom span.badge {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  background-color: #d9534f;
+  font-size: 10px;
+}
 .alert {
   padding: 15px;
   border: 1px solid transparent;
@@ -15403,6 +15410,7 @@ form.updateStatus select {
 }
 .offcanvas-body small {
   color: #777777;
+  font-size: 12px;
 }
 .offcanvas-footer {
   text-align: center;
