@@ -13955,6 +13955,26 @@ a:hover {
   color: #313534;
   background-color: #eeeeee;
 }
+.btn-floating-action {
+  font-size: 17px;
+  color: #fff;
+  background-color: #00a89e;
+  padding: 0;
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+  -webkit-transition: box-shadow 0.15s ease-out;
+  -o-transition: box-shadow 0.15s ease-out;
+  transition: box-shadow 0.15s ease-out;
+}
+.btn-floating-action:hover,
+.btn-floating-action:active,
+.btn-floating-action:visited {
+  color: #fff;
+}
+.btn-floating-action:hover {
+  -webkit-box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.38);
+  box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.38);
+}
 .label {
   font-size: 90%;
   border-top-right-radius: 0;
@@ -14792,6 +14812,23 @@ body {
   font-size: 30px;
   line-height: 40px;
 }
+.intercom {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 99;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+.intercom i.mdi {
+  margin: 0;
+}
 .alert {
   padding: 15px;
   border: 1px solid transparent;
@@ -15195,15 +15232,18 @@ body {
   height: 36px;
   margin-top: 14px;
 }
-.card-body.no-padding .list-group-item {
+.card-body.no-padding .list-group-item,
+.offcanvas-body.no-padding .list-group-item {
   border-left: 0;
   border-right: 0;
 }
-.card-body.no-padding .list-group-item:first-child {
+.card-body.no-padding .list-group-item:first-child,
+.offcanvas-body.no-padding .list-group-item:first-child {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
-.card-body.no-padding .list-group-item:last-child {
+.card-body.no-padding .list-group-item:last-child,
+.offcanvas-body.no-padding .list-group-item:last-child {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
   border-bottom: none;
@@ -15293,6 +15333,79 @@ form.updateStatus select {
   display: block;
   text-align: right;
   margin-bottom: 15px;
+}
+/*offcanvas-help*/
+.offcanvas {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1032;
+}
+.offcanvas-pane {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 320px;
+  background-color: #fff;
+  min-width: 8px;
+  -webkit-transition: transform 0.33s ease-in;
+  -o-transition: transform 0.33s ease-in;
+  transition: transform 0.33s ease-in;
+}
+.offcanvas-pane.active {
+  display: block;
+  -webkit-box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.38);
+  box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.38);
+  -webkit-transition: transform 0.5s cubic-bezier(0.22, 0.99, 0.68, 0.98);
+  -o-transition: transform 0.5s cubic-bezier(0.22, 0.99, 0.68, 0.98);
+  transition: transform 0.5s cubic-bezier(0.22, 0.99, 0.68, 0.98);
+}
+.offcanvas-head {
+  padding: 4px 16px;
+  position: relative;
+}
+.offcanvas-head header {
+  font-size: 20px;
+  color: #00a89e;
+}
+.offcanvas-head .offcanvas-tools {
+  position: absolute;
+  left: 4px;
+  right: 4px;
+  top: 4px;
+}
+.offcanvas-head .offcanvas-tools .btn {
+  text-align: center;
+  height: 36px;
+  line-height: 36px;
+}
+.offcanvas-head .offcanvas-tools i {
+  margin: 0;
+}
+.offcanvas-body {
+  padding: 16px;
+  position: relative;
+}
+.offcanvas-body p {
+  padding: 10px 16px;
+}
+.offcanvas-body .offcanvas-title {
+  padding: 10px 16px;
+}
+.offcanvas-body #send_messages {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+}
+.offcanvas-body li {
+  font-size: 14px;
+}
+.offcanvas-body small {
+  color: #777777;
+}
+.offcanvas-footer {
+  text-align: center;
 }
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {

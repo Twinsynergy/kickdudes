@@ -352,6 +352,20 @@ a{
       background-color: @gray-lighter;
     }
 }
+.btn-floating-action{
+  font-size: 17px;
+  color: #fff;
+  background-color: @green;
+  padding: 0;
+  .box-shadow(0 1px 3px 0 rgba(0, 0, 0, 0.33));
+  .transition(box-shadow 0.15s ease-out);
+  &:hover,
+  &:active,
+  &:visited{ color: #fff; }
+  &:hover{
+    .box-shadow(0 8px 14px 0 rgba(0, 0, 0, 0.38));
+  }
+}
 .label{
 	font-size: 90%;
   .bdr-block(0);
@@ -1045,7 +1059,18 @@ body{
     font-size: 30px;
     line-height: 40px;
   }
-
+}
+.intercom{
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 99;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  .bdr-block(50%);
+  i.mdi{ margin: 0; }
 }
 
 .alert{
@@ -1404,7 +1429,8 @@ body{
 }
 
 //List group
-.card-body.no-padding{
+.card-body.no-padding,
+.offcanvas-body.no-padding{
   .list-group-item{
     border-left: 0;
     border-right: 0;
@@ -1486,4 +1512,65 @@ form.updateStatus{
   hr{ margin-top: 0; }
   h3{ text-align: right; }
   small{ display: block; text-align: right; margin-bottom: 15px; }
+}
+
+/*offcanvas-help*/
+.offcanvas{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1032;
+}
+.offcanvas-pane{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 320px;
+  background-color: #fff;
+  min-width: 8px;
+  .transition(transform 0.33s ease-in);
+  &.active{
+    display: block;
+    .box-shadow(0 8px 14px 0 rgba(0, 0, 0, 0.38));
+    .transition(transform 0.5s cubic-bezier(0.22, 0.99, 0.68, 0.98));
+  }
+}
+.offcanvas-head{
+  padding: 4px 16px;
+  position: relative;
+  header{
+    font-size: 20px;
+    color: @green;
+  }
+  .offcanvas-tools{
+    position: absolute;
+    left: 4px;
+    right: 4px;
+    top: 4px;
+    .btn{
+      text-align: center;
+      height: 36px;
+      line-height: 36px;
+    }
+    i{ margin: 0; }
+  }
+}
+.offcanvas-body{
+  padding: 16px;
+  position: relative;
+  p{ padding: 10px 16px; }
+  .offcanvas-title{
+    padding: 10px 16px;
+  }
+  #send_messages{
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+  }
+  li{ font-size: 14px; }
+  small{ color: @gray-light; }
+}
+.offcanvas-footer{
+  text-align: center;
 }
