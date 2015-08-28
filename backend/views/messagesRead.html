@@ -5,7 +5,7 @@
   <meta name="description" content="Kickdudes">
   <meta name="author" content="Twinsynergy.co.th">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Backoffice</title>
+  <title>Dashboard</title>
   <link rel="stylesheet" href="../css/style.css">
 
   <!--[if lt IE 9]>
@@ -16,7 +16,10 @@
 
   <!--Addition-->
   <script src="../js/bootstrap/tooltip.js" type="text/javascript" ></script>
+  <script src="../js/validate.js" type="text/javascript" ></script>
+  <script src="../js/include/form-validate.js" type="text/javascript" ></script>
   <script src="../js/scripts.js" type="text/javascript" ></script>
+
 </head>
 <body class="header-fixed">
   <header id="header">
@@ -29,17 +32,17 @@
           </a>
         </div>
       </div>
-
         <ul class="headerbar-right nav navbar-nav navbar-right">
           <li class="dropdown">
             <a href="javascript:void(0)" class="dropdown-toggle ripplelink ripplelink-hidden" data-toggle="dropdown" role="button" aria-expanded="false">
-              <img src="../images/icon-nouser.png" alt="">
+              <img src="../images/avatar1.jpg" alt="">
               <span class="profile-info">
-    						Administrator
+    						Daniel Johnson
+    						<small>สนามพระราม 9</small>
     					</span>
               <span class="caret"></span></a>
             <ul class="dropdown-menu dropdown-up" role="menu">
-              <li><a href="account.html"><i class="mdi mdi-account"></i>My account</a></li>
+              <li><a href="profile.html"><i class="mdi mdi-account"></i>My profile</a></li>
               <li><a href="#"><i class="mdi mdi-close"></i>Log out</a></li>
             </ul>
           </li>
@@ -48,45 +51,24 @@
           <ul class="nav navbar-nav">
             <li class="dropdown"><a href="javascript:void(0);" class="btn-icon-toggle dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="mdi mdi-bell"></i><span class="badge">4</span></a>
               <ul class="dropdown-menu dropdown-menu-raduis" role="menu">
-                <li class="dropdown-header"><h4>Last notifications</h4></li>
+                <li class="dropdown-header"><h4>Messages</h4></li>
                 <li><a href="javascript:void(0);" class="alert alert-callout alert-waiting">
     							<img class="pull-right img-circle dropdown-avatar" src="../images/avatar1.jpg" alt="">
     							<strong>Alex Anistor</strong><br>
-    							<small>สมัครเจ้าของสนาม</small>
+    							<small>จองสนามเข้ามา</small>
                 </a></li>
-                <li><a href="#" class="alert alert-callout">
-                  <img class="pull-right img-circle dropdown-avatar" src="../images/icon-nouser.png" alt="">
-    							<strong>Alex Anistor</strong><br>
-    							<small>ขอถอนเงิน</small>
-                </a></li>
-                <li><a href="#" class="alert alert-callout">
-                  <img class="pull-right img-circle dropdown-avatar" src="../images/icon-nouser.png" alt="">
-    							<strong>Alex Anistor</strong><br>
-    							<small>ขอถอนเงิน</small>
-                </a></li>
-                <li><a href="#">Mask as read <i class="mdi mdi-arrow-right-bold pull-right"></i></a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="javascript:void(0);" class="btn-icon-toggle dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="mdi mdi-email"></i><span class="badge">3</span></a>
-              <ul class="dropdown-menu dropdown-menu-raduis" role="menu">
-                <li class="dropdown-header"><h4>Last messages</h4></li>
-                <li><a href="javascript:void(0);" class="alert alert-info">
+                <li><a href="#" class="alert alert-callout alert-verify">
                   <img class="pull-right img-circle dropdown-avatar" src="../images/avatar1.jpg" alt="">
-                  <strong>Alex Anistor</strong><br>
-                  <small>คิดถึงจังเลย</small>
+    							<strong>Alex Anistor</strong><br>
+    							<small>รอการตรวจสอบ</small>
                 </a></li>
-                <li><a href="#" class="alert alert-info">
-                  <img class="pull-right img-circle dropdown-avatar" src="../images/icon-nouser.png" alt="">
-                  <strong>Alex Anistor</strong><br>
-                  <small>รักน่ะครับ</small>
+                <li><a href="#" class="alert alert-callout alert-success">
+                  <img class="pull-right img-circle dropdown-avatar" src="../images/avatar1.jpg" alt="">
+    							<strong>Alex Anistor</strong><br>
+    							<small>ชำระเงินแล้ว</small>
                 </a></li>
-                <li><a href="#" class="alert alert-info">
-                  <img class="pull-right img-circle dropdown-avatar" src="../images/icon-nouser.png" alt="">
-                  <strong>Alex Anistor</strong><br>
-                  <small>ระบบคุณสุดยอดมากครับ</small>
-                </a></li>
-                <li><a href="#">Show all messages <i class="mdi mdi-arrow-right-bold pull-right"></i></a></li>
+                <li><a href="history.html">View all messages <i class="mdi mdi-arrow-right-bold pull-right"></i></a></li>
+                <li><a href="#">Mask as read <i class="mdi mdi-arrow-right-bold pull-right"></i></a></li>
               </ul>
             </li>
           </ul>
@@ -149,13 +131,12 @@
             </div>
           </div> <!--col-sm-12-->
         </div> <!-- /.row -->
-
       </section>
     </div>
     <nav id="menubar">
       <ul id="main-menu">
-        <li>
-          <a href="index.html" class="dashboard">
+        <li class="active">
+          <a href="dashboard.html" class="dashboard">
             <span class="gui-icon">
               
             </span>
@@ -163,43 +144,84 @@
           </a>
         </li>
         <li>
-          <a href="holder.html" class="fields">
+          <a href="fields.html" class="fields">
             <span class="gui-icon">
             </span>
-            <span class="title">holder</span>
+            <span class="title">fields</span>
           </a>
         </li>
         <li>
-          <a href="withdrawal.html" class="dashboard">
+          <a href="history.html" class="history">
             <span class="gui-icon">
             </span>
-            <span class="title">withdrawal</span>
-          </a>
-        </li>
-        <li class="active">
-          <a href="messages.html" class="dashboard">
-            <span class="gui-icon">
-            </span>
-            <span class="title">messsages</span>
+            <span class="title">history</span>
           </a>
         </li>
         <li>
-          <a href="account.html" class="profile">
+          <a href="profile.html" class="profile">
             <span class="gui-icon">
             </span>
-            <span class="title">account</span>
+            <span class="title">profile</span>
           </a>
         </li>
       </ul>
     </nav>
+    <a href="javascript:void(0);" class="intercom btn btn-floating-action">
+      <i class="mdi mdi-help"></i><span class="badge">2</span>
+    </a>
   </section>
-
-<script type="text/javascript">
-  //counter nubmer animate
-  $('.counter').counterUp({
-    delay: 10,
-    time: 1000
-  });
-</script>
+<div class="offcanvas">
+  <div id="offcanvas-help" class="offcanvas-pane">
+    <div class="offcanvas-head">
+      <header>Kickdudes Team</header>
+      <div class="offcanvas-tools">
+        <a href="javascript:void(0);" class="close-intercom btn btn-icon-toggle pull-right">
+          <i class="mdi mdi-close"></i>
+        </a>
+      </div>
+    </div><!--/.offcanvas-head-->
+    <div class="offcanvas-body no-padding">
+      <p>วันนี้ให้เราช่วยอะไรได้บ้างค่ะ หากคุณมีปัญหาหรือข้อแนะนำในการใช้งาน ส่งข้อความมาหาเราได้ที่นี่</p>
+      <h3 class="offcanvas-title">ข้อความ</h3>
+      <ul class="list-group">
+        <li class="list-group-item"><a href="#"><i class="mdi mdi-comment-alert text-danger"></i> Cras justo odio <small class="pull-right">12 weeks ago</small></a></li>
+        <li class="list-group-item"><a href="#">Dapibus ac facilisis in <small class="pull-right">12 weeks ago</small></a></li>
+        <li class="list-group-item"><a href="#">Morbi leo risus <small class="pull-right">12 weeks ago</small></a></li>
+        <li class="list-group-item"><a href="#">Porta ac consectetur ac <small class="pull-right">12 weeks ago</small></a></li>
+        <li class="list-group-item"><a href="#"><i class="mdi mdi-message-alert text-danger"></i>Vestibulum at eros <small class="pull-right">12 weeks ago</small></a></li>
+      </ul>
+    </div>
+    <div class="offcanvas-footer">
+      <a id="send_messages" href="javascript:void(0);" data-toggle="modal" data-target=".messages_model" class="btn btn-default btn-success"><i class="mdi mdi-pencil"></i>เขียนข้อความ</a>
+    </div>
+  </div>
+</div>
+<div class="modal fade messages_model" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">เขียนข้อความ</h4>
+      </div>
+      <form action="#">
+        <div class="modal-body">
+          <div class="form-group">
+            <input type="text" class="form-control inputRequired">
+            <span class="bar"></span>
+            <label for="">หัวข้อ</label>
+          </div>
+          <div class="form-group">
+            <textarea name="#" id="" cols="30" rows="10" class="form-control inputRequired"></textarea>
+            <span class="bar"></span>
+            <label for="">ข้อความ</label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="javascript:void(0);" class="btn btn-flat" data-dismiss="modal">ยกเลิก</a>
+          <input type="submit" class="btn btn-default btn-success" value="ส่งข้อความ" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 </body>
 </html>
