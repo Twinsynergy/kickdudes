@@ -334,7 +334,34 @@
       </ul>
     </div>
     <div class="offcanvas-footer">
-      <a id="send_messages" href="#" class="btn btn-default btn-success"><i class="mdi mdi-pencil"></i>เขียนข้อความ</a>
+      <a id="send_messages" href="javascript:void(0);" data-toggle="modal" data-target=".messages_model" class="btn btn-default btn-success"><i class="mdi mdi-pencil"></i>เขียนข้อความ</a>
+    </div>
+  </div>
+</div>
+<div class="modal fade messages_model" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">เขียนข้อความ</h4>
+      </div>
+      <form action="#">
+        <div class="modal-body">
+          <div class="form-group">
+            <input type="text" class="form-control">
+            <span class="bar"></span>
+            <label for="">หัวข้อ</label>
+          </div>
+          <div class="form-group">
+            <textarea name="#" id="" cols="30" rows="10" class="form-control"></textarea>
+            <span class="bar"></span>
+            <label for="">ข้อความ</label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="javascript:void(0);" class="btn btn-flat" data-dismiss="modal">ยกเลิก</a>
+          <a href="#" class="btn btn-default btn-success"><i class="mdi mdi-send"></i>ส่งข้อความ</a>
+        </div>
+      </form>
     </div>
   </div>
 </div>
