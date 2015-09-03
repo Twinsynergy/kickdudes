@@ -1,4 +1,5 @@
 $(function(){
+
     //click circle fade
     var ink, d, x, y;
     $(".ripplelink").click(function(e){

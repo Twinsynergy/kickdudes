@@ -13580,6 +13580,99 @@ div.fixed-table-scroll-outer {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
+/*!
+ * bootstrap-vertical-tabs - v1.2.1
+ * https://dbtek.github.io/bootstrap-vertical-tabs
+ * 2014-11-07
+ * Copyright (c) 2014 İsmail Demirbilek
+ * License: MIT
+ */
+.tabs-left,
+.tabs-right {
+  border-bottom: none;
+  padding-top: 2px;
+}
+.tabs-left {
+  border-right: 1px solid #dddddd;
+}
+.tabs-right {
+  border-left: 1px solid #dddddd;
+}
+.tabs-left > li,
+.tabs-right > li {
+  float: none;
+  margin-bottom: 2px;
+}
+.tabs-left > li {
+  margin-right: -1px;
+}
+.tabs-right > li {
+  margin-left: -1px;
+}
+.tabs-left > li.active > a,
+.tabs-left > li.active > a:focus,
+.tabs-left > li.active > a:hover {
+  border-bottom-color: #ddd;
+  border-right-color: transparent;
+}
+.tabs-right > li.active > a,
+.tabs-right > li.active > a:focus,
+.tabs-right > li.active > a:hover {
+  border-bottom: 1px solid #ddd;
+  border-left-color: transparent;
+}
+.tabs-left > li > a {
+  border-radius: 4px 0 0 4px;
+  margin-right: 0;
+  display: block;
+}
+.tabs-right > li > a {
+  border-radius: 0 4px 4px 0;
+  margin-right: 0;
+}
+.sideways {
+  margin-top: 50px;
+  border: none;
+  position: relative;
+}
+.sideways > li {
+  height: 20px;
+  width: 120px;
+  margin-bottom: 100px;
+}
+.sideways > li > a {
+  border-bottom: 1px solid #ddd;
+  border-right-color: transparent;
+  text-align: center;
+  border-radius: 4px 4px 0 0;
+}
+.sideways > li.active > a,
+.sideways > li.active > a:focus,
+.sideways > li.active > a:hover {
+  border-bottom-color: transparent;
+  border-right-color: #ddd;
+  border-left-color: #dddddd;
+}
+.sideways.tabs-left {
+  left: -50px;
+}
+.sideways.tabs-right {
+  right: -50px;
+}
+.sideways.tabs-right > li {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.sideways.tabs-left > li {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
 /*Variables*/
 /*Mixins*/
 /*Key frames*/
@@ -15414,6 +15507,49 @@ form.updateStatus select {
 }
 .offcanvas-footer {
   text-align: center;
+}
+/*Line chart*/
+.morris-hover {
+  position: absolute;
+  z-index: 1000;
+}
+.morris-hover.morris-default-style {
+  border-radius: 10px;
+  padding: 6px;
+  color: #666;
+  background: rgba(255, 255, 255, 0.8);
+  border: solid 2px rgba(230, 230, 230, 0.8);
+  font-family: sans-serif;
+  font-size: 12px;
+  text-align: center;
+}
+.morris-hover.morris-default-style .morris-hover-row-label {
+  font-weight: bold;
+  margin: 0.25em 0;
+}
+.morris-hover.morris-default-style .morris-hover-point {
+  white-space: nowrap;
+  margin: 0.1em 0;
+}
+.style-default-light {
+  background-color: #fff;
+}
+.style-default-light .tab-content {
+  padding: 24px 24px 24px 0;
+}
+.style-default-light .list-group {
+  margin-top: 24px;
+}
+.style-default-light .nav-tabs {
+  background-color: #ededed;
+  height: 100%;
+}
+.style-default-light .nav-tabs a {
+  color: #777777;
+}
+.style-default-light .nav-tabs li.active a {
+  background-color: transparent !important;
+  border-right: 2px solid #00a89e !important;
 }
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
