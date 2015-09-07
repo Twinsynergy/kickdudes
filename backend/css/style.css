@@ -14867,17 +14867,29 @@ body {
 #main-menu li a.fields:hover .gui-icon {
   background-position: -45px -45px;
 }
-#main-menu li a.history .gui-icon {
+#main-menu li a.booking .gui-icon {
   background-position: 0 -90px;
 }
-#main-menu li a.history:hover .gui-icon {
+#main-menu li a.booking:hover .gui-icon {
   background-position: -45px -90px;
 }
-#main-menu li a.profile .gui-icon {
+#main-menu li a.customer .gui-icon {
   background-position: 0 -135px;
 }
-#main-menu li a.profile:hover .gui-icon {
+#main-menu li a.customer:hover .gui-icon {
   background-position: -45px -135px;
+}
+#main-menu li a.history .gui-icon {
+  background-position: 0 -180px;
+}
+#main-menu li a.history:hover .gui-icon {
+  background-position: -45px -180px;
+}
+#main-menu li a.profile .gui-icon {
+  background-position: 0 -225px;
+}
+#main-menu li a.profile:hover .gui-icon {
+  background-position: -45px -225px;
 }
 #main-menu li.active a.dashboard .gui-icon {
   background-position: -90px 0;
@@ -14885,11 +14897,17 @@ body {
 #main-menu li.active a.fields .gui-icon {
   background-position: -90px -45px;
 }
-#main-menu li.active a.history .gui-icon {
+#main-menu li.active a.booking .gui-icon {
   background-position: -90px -90px;
 }
-#main-menu li.active a.profile .gui-icon {
+#main-menu li.active a.customer .gui-icon {
   background-position: -90px -135px;
+}
+#main-menu li.active a.history .gui-icon {
+  background-position: -90px -180px;
+}
+#main-menu li.active a.profile .gui-icon {
+  background-position: -90px -225px;
 }
 #main-menu .gui-icon {
   display: block;
