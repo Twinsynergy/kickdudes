@@ -222,7 +222,9 @@ h1,h2,h3,h4{
 a{
   text-decoration: none;
   color: @green;
-  &:hover{
+  &:hover,
+  &:active,
+  &:focus{
     color: @green;
     text-decoration: none;
   }
@@ -1205,7 +1207,7 @@ body{
 			}
 		}
 	}
-	.time-wraper{
+	.time-wrapper{
 		.row{
 			position: relative;
 		}
@@ -1227,7 +1229,6 @@ body{
   }
 }
 .football-card{
-	img{ .size(100%,auto); }
 	h4{
 		color: @gray;
 		.opacity(1);
@@ -1244,20 +1245,24 @@ body{
 			font-family: kick_font;
 		}
 	}
-	.time-wraper{
-		padding: 0;
-		border-bottom: none;
-		.row{ margin-bottom: 15px; }
+  .divide-group{
+    padding: 0;
+    border-bottom: none;
+    .row{ margin-bottom: 15px; }
+    span{
+      border-bottom: 2px solid @grayLight;
+      padding-bottom: 10px;
+      width: 100%;
+      display: inline-block;
+    }
+  }
+	.time-wrapper,
+  .promotion-wrapper{
 		.start-time{ color: @brand-success; }
 		.end-time{ color: @brand-danger; }
 		.price{ color: @brand-info; }
 	}
-	.col-time{
-		border-bottom: 2px solid @grayLight;
-		padding-bottom: 10px;
-		width: 100%;
-		display: inline-block;
-	}
+  del{ color: @gray-light; }
 }
 
 #toast-container{

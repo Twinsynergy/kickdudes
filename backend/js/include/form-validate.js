@@ -7,7 +7,7 @@ $(function(){
 
   /*Form field page*/
   var MaxFields = 10;
-  var Wrapper = $('#football-form .time-wraper');
+  var Wrapper = $('#football-form .time-wrapper');
   var AddButton = $("#football-form .insert-time");
   var RemoveButton = $('#football-form .remove-time');
   var x = 1; //initlal text box count

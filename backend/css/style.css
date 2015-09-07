@@ -13902,7 +13902,9 @@ a {
   text-decoration: none;
   color: #00a89e;
 }
-a:hover {
+a:hover,
+a:active,
+a:focus {
   color: #00a89e;
   text-decoration: none;
 }
@@ -15053,29 +15055,25 @@ body {
   width: 100%;
   height: auto;
 }
-#football-form .time-wraper .row {
+#football-form .time-wrapper .row {
   position: relative;
 }
-#football-form .time-wraper .action-time-group {
+#football-form .time-wrapper .action-time-group {
   position: absolute;
   right: 0;
   top: 20%;
 }
-#football-form .time-wraper .action-time-group i.mdi {
+#football-form .time-wrapper .action-time-group i.mdi {
   overflow: inherit;
 }
-#football-form .time-wraper .action-time-group i.mdi .ink {
+#football-form .time-wrapper .action-time-group i.mdi .ink {
   background-color: #555555;
 }
-#football-form .time-wraper .action-time-group i.mdi-minus-circle {
+#football-form .time-wrapper .action-time-group i.mdi-minus-circle {
   color: #d9534f;
 }
 #football-form .time-group.error .help-block {
   left: 15px;
-}
-.football-card img {
-  width: 100%;
-  height: auto;
 }
 .football-card h4 {
   color: #555555;
@@ -15096,27 +15094,33 @@ body {
   font-weight: normal;
   font-family: kick_font;
 }
-.football-card .time-wraper {
+.football-card .divide-group {
   padding: 0;
   border-bottom: none;
 }
-.football-card .time-wraper .row {
+.football-card .divide-group .row {
   margin-bottom: 15px;
 }
-.football-card .time-wraper .start-time {
-  color: #5cb85c;
-}
-.football-card .time-wraper .end-time {
-  color: #d9534f;
-}
-.football-card .time-wraper .price {
-  color: #5bc0de;
-}
-.football-card .col-time {
+.football-card .divide-group span {
   border-bottom: 2px solid #ededed;
   padding-bottom: 10px;
   width: 100%;
   display: inline-block;
+}
+.football-card .time-wrapper .start-time,
+.football-card .promotion-wrapper .start-time {
+  color: #5cb85c;
+}
+.football-card .time-wrapper .end-time,
+.football-card .promotion-wrapper .end-time {
+  color: #d9534f;
+}
+.football-card .time-wrapper .price,
+.football-card .promotion-wrapper .price {
+  color: #5bc0de;
+}
+.football-card del {
+  color: #777777;
 }
 #toast-container {
   position: fixed;
