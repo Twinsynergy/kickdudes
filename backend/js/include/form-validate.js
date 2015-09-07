@@ -1,26 +1,31 @@
 $(function(){
 
   /*input mask*/
-  $(document).ready(function(){
-      $(":input").inputmask();
+  $("form input.inputmaskTime").inputmask({
+    "mask": "99:99",
+    "placeholder": "hh:mm"
   });
+  
 
   /*Form field page*/
-  var MaxFields = 10;
+  var MaxFields = 9;
   var Wrapper = $('#football-form .time-wrapper');
   var AddButton = $("#football-form .insert-time");
   var RemoveButton = $('#football-form .remove-time');
   var x = 1; //initlal text box count
+  
   $(AddButton).click(function(e){ //on add input button click
       e.preventDefault();
       if(x < MaxFields){ //max input box allowed
           x++; //text box increment
-          $(Wrapper).append('<div class="row time-row time-minus-row"><div class="time-group col-xs-4 col-sm-4 col-md-4"><input type="text" id="timestart_ff'+x+'" name="timestart_ff'+x+'" placeholder="เวลาเริ่ม" class="form-control inputRequired"></div><div class="time-group col-xs-4 col-sm-4 col-md-4"><input type="text" id="timeend_ff'+x+'" name="timeend_ff'+x+'" data-mask="99:99" placeholder="เวลาสิ้นสุด" class="form-control inputRequired"></div><div class="time-group col-xs-4 col-sm-4 col-md-4"><input type="number" placeholder="ราคา" id="price_ff'+x+'" name="price_ff'+x+'" class="form-control inputRequired"></div><a href="javascript:void(0)" class="action-time-group remove-time"><i class="mdi mdi-minus-circle"></i></a></div>'); //add input box
+          $(Wrapper).append('<div class="row time-row"><div class="time-group col-sm-6"><select class="form-control"  name="dateStart_ff_'+x+'" id="dateStart_ff_'+x+'"><option value="defalut" selected>วันเริ่ม</option><option value="monday">วันจันทร์</option><option value="tuesday">วันอังคาร</option><option value="wednesday">วันพุธ</option><option value="thursday">วันพฤหัสบดี</option><option value="friday">วันศุกร์</option><option value="saturday">วันเสาร์</option><option value="sunday">วันอาทิตย์</option></select><span class="bar"></span></div><div class="time-group col-sm-6"><select class="form-control"  name="dateEnd_ff_'+x+'" id="dateEnd_ff_'+x+'"><option value="defalut" selected>วันสิ้นสุด</option><option value="monday">วันจันทร์</option><option value="tuesday">วันอังคาร</option><option value="wednesday">วันพุธ</option><option value="thursday">วันพฤหัสบดี</option><option value="friday">วันศุกร์</option><option value="saturday">วันเสาร์</option><option value="sunday">วันอาทิตย์</option></select><span class="bar"></span></div><div class="time-group col-xs-4 col-sm-4 col-md-4"><input type="text" id="timestart_ff_'+x+'" name="timestart_ff_'+x+'" placeholder="เวลาเริ่ม" class="form-control inputmaskTime inputRequired"><span class="bar"></span></div><div class="time-group col-xs-4 col-sm-4 col-md-4"><input type="text" id="timeend_ff_'+x+'" name="timeend_ff_'+x+'" placeholder="เวลาสิ้นสุด" class="form-control inputmaskTime inputRequired"><span class="bar"></span></div><div class="time-group col-xs-4 col-sm-4 col-md-4"><input type="number" id="price_ff_'+x+'" name="price_ff_'+x+'" placeholder="ราคา" class="form-control inputRequired inputNum"><span class="bar"></span></div><div class="time-group time-increase col-md-offset-8 col-md-4"><a href="#" class="remove-time btn btn-default btn-delete">ลบ</a></div></div>');
       }
   });
   $(Wrapper).on("click",".remove-time", function(e){ //user click on remove text
       e.preventDefault();
-      $(this).parent().remove();
+      $(this).parent().parent().fadeOut('slow', function() {
+        $(this).remove();
+      });
       x--;
   })
   /*Edit profile page add_facility*/

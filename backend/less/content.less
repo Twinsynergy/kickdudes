@@ -1164,14 +1164,14 @@ body{
 /*Fields*/
 .add-field{
 	position: relative;
-	min-height: 580px;
+	min-height: 450px;
 	.add-cover{
 		position: absolute;
 		top: 0;
 		left: 0;
 		height: 100%;
 		width: 100%;
-		line-height: 580px;
+		line-height: 450px;
 		text-align: center;
 		background-color: #fff;
 		z-index: 2;
@@ -1211,10 +1211,8 @@ body{
 		.row{
 			position: relative;
 		}
-		.action-time-group{
-			position: absolute;
-			right: 0;
-			top: 20%;
+    .time-row{ margin-bottom: 20px; }
+		.insert-time{
 			i.mdi{
 				overflow: inherit;
 				.ink{ background-color: @gray; }
@@ -1223,7 +1221,11 @@ body{
 				color: @brand-danger;
 			}
 		}
+    .remove-time{
+      width: 100%;
+    }
 	}
+  .time-increase{ margin-top: 15px; }
   .time-group.error{
     .help-block{ left: 15px; }
   }

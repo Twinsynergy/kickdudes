@@ -15012,7 +15012,7 @@ body {
 /*Fields*/
 .add-field {
   position: relative;
-  min-height: 580px;
+  min-height: 450px;
 }
 .add-field .add-cover {
   position: absolute;
@@ -15020,7 +15020,7 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  line-height: 580px;
+  line-height: 450px;
   text-align: center;
   background-color: #fff;
   z-index: 2;
@@ -15058,19 +15058,23 @@ body {
 #football-form .time-wrapper .row {
   position: relative;
 }
-#football-form .time-wrapper .action-time-group {
-  position: absolute;
-  right: 0;
-  top: 20%;
+#football-form .time-wrapper .time-row {
+  margin-bottom: 20px;
 }
-#football-form .time-wrapper .action-time-group i.mdi {
+#football-form .time-wrapper .insert-time i.mdi {
   overflow: inherit;
 }
-#football-form .time-wrapper .action-time-group i.mdi .ink {
+#football-form .time-wrapper .insert-time i.mdi .ink {
   background-color: #555555;
 }
-#football-form .time-wrapper .action-time-group i.mdi-minus-circle {
+#football-form .time-wrapper .insert-time i.mdi-minus-circle {
   color: #d9534f;
+}
+#football-form .time-wrapper .remove-time {
+  width: 100%;
+}
+#football-form .time-increase {
+  margin-top: 15px;
 }
 #football-form .time-group.error .help-block {
   left: 15px;
