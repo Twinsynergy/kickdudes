@@ -1,12 +1,5 @@
 $(function(){
 
-  /*input mask*/
-  $("form input.inputmaskTime").inputmask({
-    "mask": "99:99",
-    "placeholder": "hh:mm"
-  });
-  
-
   /*Form field page*/
   var MaxFields = 9;
   var Wrapper = $('#football-form .time-wrapper');
@@ -18,7 +11,7 @@ $(function(){
       e.preventDefault();
       if(x < MaxFields){ //max input box allowed
           x++; //text box increment
-          $(Wrapper).append('<div class="row time-row"><div class="time-group col-sm-6"><select class="form-control"  name="dateStart_ff_'+x+'" id="dateStart_ff_'+x+'"><option value="defalut" selected>วันเริ่ม</option><option value="monday">วันจันทร์</option><option value="tuesday">วันอังคาร</option><option value="wednesday">วันพุธ</option><option value="thursday">วันพฤหัสบดี</option><option value="friday">วันศุกร์</option><option value="saturday">วันเสาร์</option><option value="sunday">วันอาทิตย์</option></select><span class="bar"></span></div><div class="time-group col-sm-6"><select class="form-control"  name="dateEnd_ff_'+x+'" id="dateEnd_ff_'+x+'"><option value="defalut" selected>วันสิ้นสุด</option><option value="monday">วันจันทร์</option><option value="tuesday">วันอังคาร</option><option value="wednesday">วันพุธ</option><option value="thursday">วันพฤหัสบดี</option><option value="friday">วันศุกร์</option><option value="saturday">วันเสาร์</option><option value="sunday">วันอาทิตย์</option></select><span class="bar"></span></div><div class="time-group col-xs-4 col-sm-4 col-md-4"><input type="text" id="timestart_ff_'+x+'" name="timestart_ff_'+x+'" placeholder="เวลาเริ่ม" class="form-control inputmaskTime inputRequired"><span class="bar"></span></div><div class="time-group col-xs-4 col-sm-4 col-md-4"><input type="text" id="timeend_ff_'+x+'" name="timeend_ff_'+x+'" placeholder="เวลาสิ้นสุด" class="form-control inputmaskTime inputRequired"><span class="bar"></span></div><div class="time-group col-xs-4 col-sm-4 col-md-4"><input type="number" id="price_ff_'+x+'" name="price_ff_'+x+'" placeholder="ราคา" class="form-control inputRequired inputNum"><span class="bar"></span></div><div class="time-group time-increase col-md-offset-8 col-md-4"><a href="#" class="remove-time btn btn-default btn-delete">ลบ</a></div></div>');
+          $(Wrapper).append('<div class="row time-row"><div class="time-group col-sm-6"><select class="form-control"  name="dateStart_ff_'+x+'" id="dateStart_ff_'+x+'"><option value="defalut" selected>วันเริ่ม</option><option value="monday">วันจันทร์</option><option value="tuesday">วันอังคาร</option><option value="wednesday">วันพุธ</option><option value="thursday">วันพฤหัสบดี</option><option value="friday">วันศุกร์</option><option value="saturday">วันเสาร์</option><option value="sunday">วันอาทิตย์</option></select><span class="bar"></span></div><div class="time-group col-sm-6"><select class="form-control"  name="dateEnd_ff_'+x+'" id="dateEnd_ff_'+x+'"><option value="defalut" selected>วันสิ้นสุด</option><option value="monday">วันจันทร์</option><option value="tuesday">วันอังคาร</option><option value="wednesday">วันพุธ</option><option value="thursday">วันพฤหัสบดี</option><option value="friday">วันศุกร์</option><option value="saturday">วันเสาร์</option><option value="sunday">วันอาทิตย์</option></select><span class="bar"></span></div><div class="time-group col-xs-4 col-sm-4 col-md-4"><input type="text" id="timestart_ff_'+x+'" name="timestart_ff_'+x+'" placeholder="เวลาเริ่ม" class="form-control inputmaskTime inputRequired"><span class="bar"></span></div><div class="time-group col-xs-4 col-sm-4 col-md-4"><input type="text" id="timeend_ff_'+x+'" name="timeend_ff_'+x+'" placeholder="เวลาสิ้นสุด" class="form-control inputmaskTime inputRequired"><span class="bar"></span></div><div class="time-group col-xs-4 col-sm-4 col-md-4"><div class="input-group"><input type="number" id="price_ff_'+x+'" name="price_ff_'+x+'" placeholder="ราคา" class="form-control inputRequired inputNum"><span class="input-group-addon">บาท</span><span class="bar"></span></div></div><div class="time-group time-increase col-md-offset-8 col-md-4"><a href="#" class="remove-time btn btn-default btn-delete">ลบ</a></div></div>');
       }
   });
   $(Wrapper).on("click",".remove-time", function(e){ //user click on remove text
@@ -101,4 +94,9 @@ $(function(){
     }
   });
 
+  /*input mask*/
+  $("form input.inputmaskTime").inputmask({
+    "mask": "99:99",
+    "placeholder": "hh:mm"
+  });
 });

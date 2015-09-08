@@ -14934,6 +14934,7 @@ body {
   height: 48px;
   line-height: 48px;
   text-align: center;
+  background-color: #607D8B;
   border-top-right-radius: 50%;
   border-top-left-radius: 50%;
   border-bottom-right-radius: 50%;
@@ -15187,13 +15188,6 @@ body {
   background-color: #fff !important;
   border: 0;
 }
-.tab-content #payment-icon {
-  margin-bottom: 15px;
-  width: 100px;
-}
-.tab-content .payment-cvc {
-  padding: 0;
-}
 .tab-content .card-actionbar {
   margin-top: 25px;
   padding-bottom: 0;
@@ -15210,6 +15204,20 @@ body {
 }
 #profile-form #add_facility {
   margin-top: 20px;
+}
+#profile-form .fileinput .thumbnail {
+  font-weight: bolder;
+}
+#profile-form .fileinput .thumbnail .table-display {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+#profile-form .fileinput .thumbnail .table-display .table-cell {
+  display: table-cell;
+  vertical-align: middle;
+  background-color: #ededed;
+  color: #555555;
 }
 /*Invoice*/
 .card-invoice #logoInvoice {
@@ -15264,11 +15272,6 @@ body {
 }
 .card-profile .tile-icon {
   text-align: center;
-}
-.card-profile .credit-card .tile-icon {
-  width: 200px;
-  text-align: right;
-  padding-right: 15px;
 }
 #resetpass .form-group label {
   left: 0;

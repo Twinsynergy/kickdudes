@@ -170,6 +170,16 @@
                                   <li class="tile">
                                     <div class="tile-content">
                                       <div class="tile-icon">
+                                        <i class="mdi mdi-clipboard-text"></i>
+                                      </div>
+                                      <div class="tile-text">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="tile">
+                                    <div class="tile-content">
+                                      <div class="tile-icon">
                                         <i class="mdi mdi-map-marker-radius"></i>
                                       </div>
                                       <div class="tile-text">
@@ -203,42 +213,23 @@
                             </div>  
                             <div class="col-md-6">
                               <div class="card-inner">
-                                <h3>ข้อมูล paypal</h3>
-                                <ul class="list-unstyled credit-card">
-                                  <li class="tile">
-                                    <div class="tile-content">
-                                      <div class="tile-icon">
-                                        Firstname :
-                                      </div>
-                                      <div class="tile-text">
-                                        arnon
-                                      </div>
+                                <div class="carousel slide" data-ride="carousel">
+                                  <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                      <img src="../images/soccer-field/soccer-field-1.jpeg" alt="soccer field">
                                     </div>
-                                  </li>
-                                  <li class="tile">
-                                    <div class="tile-content">
-                                      <div class="tile-icon">
-                                        Lastname :
-                                      </div>
-                                      <div class="tile-text">
-                                        kijlerdphon
-                                      </div>
+                                    <div class="item">
+                                      <img src="../images/soccer-field/soccer-field-2.jpg" alt="soccer field">
                                     </div>
-                                  </li>
-                                  <li class="tile">
-                                    <div class="tile-content">
-                                      <div class="tile-icon">
-                                        Paypal account :
-                                      </div>
-                                      <div class="tile-text">
-                                        arnon@twinsynergy.co.th
-                                      </div>
+                                    <div class="item">
+                                      <img src="../images/soccer-field/soccer-field-3.jpg" alt="soccer field">
                                     </div>
-                                  </li>
-                                </ul>
-                                
+                                  </div>
+                                </div> <!-- /.slide -->
                               </div>
-                            </div>    
+                            </div>                 
+                          </div><!--End row-->
+                          <div class="row">
                             <div class="col-md-6">
                               <div class="card-inner">
                                 <h3>สิ่งอำนวยความสะดวก</h3>
@@ -323,12 +314,10 @@
                             </div>
                             <div class="col-md-6">
                               <div class="card-inner">
-                                <h3>แผนที่สนาม</h3>
-                                <div id="map-canvas" style="width: 100%; height: 400px;"></div>
+                                <div id="map-canvas" style="width: 100%; height: 350px"></div>
                               </div>
-                              
-                            </div>                        
-                          </div><!--End row-->
+                            </div>
+                          </div> <!--End row-->
                           
                         </div><!--End field-info-->
 
@@ -419,7 +408,7 @@
     </div>
   </div>
 </div>
-<div class="modal fade messages_model" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal fade messages_model" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -453,8 +442,8 @@
   </div>
 </div>
 <!--End Alert-->
-<div class="modal fade resetpass_model" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog">
+<div class="modal fade resetpass_model" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
     <div class="modal-content">
       <form id="resetpass" action="#">
       <div class="modal-body">

@@ -307,8 +307,12 @@
                       </div>
 
                       <div class="time-group col-xs-4 col-sm-4 col-md-4">
-                        <input type="number" id="price_ff" name="price_ff" placeholder="ราคา" class="form-control inputRequired inputNum">
-                        <span class="bar"></span>
+                        <div class="input-group">
+                          <input type="number" id="price_ff" name="price_ff" placeholder="ราคา" class="form-control inputRequired inputNum">
+                          <span class="input-group-addon">บาท</span>
+                          <span class="bar"></span>
+                        </div>
+                        
                       </div>
                       
                     </div><!--End time-row-->
@@ -459,7 +463,7 @@
 </div>
 
 <div class="modal fade promotionAdd" tabindex="-1" data-keyboard="false" data-backdrop="static" role="dialog" aria-hidden="true">
-  <div class="modal-dialog modal-sm">
+  <div class="modal-dialog">
     <div class="modal-content">
       <form id="booking-form"  action="javascript:void(0)">
       <div class="modal-body">
@@ -474,21 +478,29 @@
           <span class="bar"></span>
           <label for="">ราคาสนามที่ให้เช่า</label>
         </div>
-        <div class="form-group">
-          <div class="input-group">
-            <input type="text" id="promotionDate" name="promotionDate" class="form-control inputRequired">
-            <div class="input-group-addon"><i class="mdi mdi-calendar"></i></div>
-            <span class="bar"></span>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <div class="input-group">
+                <input type="text" id="promotionStartDate" name="promotionStartDate" class="form-control inputRequired promotionDate">
+                <div class="input-group-addon"><i class="mdi mdi-calendar"></i></div>
+                <span class="bar"></span>
+              </div>
+              <label for="">วันที่เริ่มโปรโมชั่น</label>
+            </div>
           </div>
-            <label for="">วันที่ทำโปรโมชั่น</label>
-            <script type="text/javascript">
-                $(function () {
-                    $('#promotionDate').datetimepicker({
-                      format: 'DD-MM-YYYY'
-                    });
-                });
-            </script>
-        </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <div class="input-group">
+                <input type="text" id="promotionEndDate" name="promotionEndDate" class="form-control inputRequired promotionDate">
+                <div class="input-group-addon"><i class="mdi mdi-calendar"></i></div>
+                <span class="bar"></span>
+              </div>
+              <label for="">วันที่จบโปรโมชั่น</label>
+            </div>
+          </div>
+        </div> <!-- /.row -->
+        
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
@@ -509,7 +521,7 @@
               <label for="">ราคาใหม่</label>
             </div>
           </div>
-        </div>
+        </div> <!-- /.row -->
         
       </div>
       <div class="modal-footer">
@@ -542,6 +554,10 @@
       $('.add-cover').fadeOut();
     }, 1000);
   }
+
+  $('.promotionDate').datetimepicker({
+     format: 'DD-MM-YYYY'
+  });
 </script>
 </body>
 </html>

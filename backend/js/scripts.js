@@ -58,6 +58,5 @@ $(function(){
     $('#offcanvas-help').removeClass('active').css('transform','translate(0px, 0px)');
   });
 
-  
 
 });
