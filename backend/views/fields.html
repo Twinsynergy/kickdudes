@@ -465,10 +465,10 @@
 <div class="modal fade promotionAdd" tabindex="-1" data-keyboard="false" data-backdrop="static" role="dialog" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <form id="booking-form"  action="javascript:void(0)">
+      <form id="promotion-form"  action="#">
       <div class="modal-body">
         <div class="form-group">
-          <select class="form-control"  name="id_ff" id="id_ff">
+          <select class="form-control inputRequired"  name="id_ff" id="id_ff">
              <option value="defalut" selected>เลือก</option>
              <option value="id1">จันทร์-ศุกร์ 06:00-17:00</option>
              <option value="id2">จันทร์-ศุกร์ 17:00-05:00</option>
@@ -514,7 +514,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <div class="input-group">
-                <input type="numer" class="form-control" />
+                <input type="number" class="form-control inputRequired inputNum" />
                 <div class="input-group-addon">บาท</div>
               </div>
               <span class="bar"></span>
