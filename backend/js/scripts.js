@@ -50,11 +50,13 @@ $(function(){
 
   var offcanvasbody = $( window ).height() - 80;
 
-  $('.intercom').click(function() {
+  $('.intercom').click(function(e) {
+    e.preventDefault();
     $('#offcanvas-help').addClass('active').css('transform','translate(-320px, 0px)');
     $('.offcanvas-body').css('height',offcanvasbody )
   });
-  $('.close-intercom').click(function() {
+  $('.close-intercom').click(function(e) {
+    e.preventDefault();
     $('#offcanvas-help').removeClass('active').css('transform','translate(0px, 0px)');
   });
 

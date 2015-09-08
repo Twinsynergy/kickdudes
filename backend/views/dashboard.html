@@ -86,19 +86,16 @@
     <div id="content">
       <section id="section-body" class="container-fluid">
 
-        <div class="row">
+        <div class="row hidden">
           <div class="col-md-3 col-sm-6">
             <div class="card">
               <div class="card-body no-padding">
                 <div class="alert alert-callout alert-info">
-                  <div class="pull-right withdrawal">
-                    <a href="javascript:void(0);" data-toggle="modal" data-target=".withdrawal_model" ><span class="label label-danger">ถอนเงิน</span></a>
-                  </div>
                   <h4>
-                    ยอดเงินทั้งหมด
+                    จำนวนลูกค้า
                   </h4>
                   <p class="integer">
-                    <strong class="text-xl counter">30,000</strong><span>บาท</span>
+                    <strong class="text-xl counter">500</strong><span>ราย</span>
                   </p>
                 </div>
               </div>
@@ -109,7 +106,7 @@
               <div class="card-body no-padding">
                 <div class="alert alert-callout alert-waiting">
                   <h4>
-                    รอการโอนเงิน
+                    กก
                   </h4>
                   <p class="integer">
                     <strong class="text-xl counter">200</strong><span>รายการ</span>
@@ -149,7 +146,7 @@
           </div>
         </div> <!--End row-->
         
-        <div class="row">
+        <div class="row hidden">
           <div class="col-md-12">
             <div class="card">
               <div class="card-head">
@@ -464,25 +461,6 @@
         </div>
       </form>
     </div>
-  </div>
-</div>
-<div class="modal fade withdrawal_model" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      <div class="modal-body">
-        <p>ต้องการถอนเงินใช่หรือไม่?</p>
-      </div>
-      <div class="modal-footer">
-        <a href="javascript:void(0);" class="btn btn-flat" data-dismiss="modal">ยกเลิก</a>
-        <a href="#" class="btn btn-default btn-success">ตกลง</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="toast-container" role="alert">
-  <div class="toast-info alert alert-success animated fadeInDown">
-     เราจะทำการโอนไปยัง Paypal ของท่าน      
   </div>
 </div>
 <!--End Alert-->
