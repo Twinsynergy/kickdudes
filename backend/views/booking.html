@@ -233,7 +233,7 @@
 <div class="modal fade bookingAdd" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <form id="booking-form"  action="javascript:void(0)">
+      <form id="booking-form"  action="#">
       <div class="modal-body">
         <div class="form-group">
           <input type="text" id="name_booking" name="name_booking" class="form-control inputRequired">
@@ -241,7 +241,7 @@
           <label for="">ช่ือลูกค้า</label>
         </div>
         <div class="form-group">
-          <input type="text" class="form-control inputRequired inputNum">
+          <input type="number" class="form-control inputRequired inputNum">
           <span class="bar"></span>
           <label for="">เบอร์ติดต่อ</label>
         </div>
@@ -273,14 +273,14 @@
         <div class="row">
           <div class="col-md-4">
             <div class="form-group">
-              <input type="text" id="name_ff" name="name_ff" class="form-control inputRequired" data-inputmask="'mask': '99:99', 'placeholder': 'hh:mm'">
+              <input type="text" id="name_ff" name="name_ff" class="form-control inputRequired inputmaskTime" />
               <span class="bar"></span>
               <label for="">เวลาเริ่มจอง</label>
             </div>
           </div>
           <div class="col-md-4">
             <div class="form-group">
-              <input type="text" class="form-control inputRequired" data-inputmask="'mask': '99:99', 'placeholder': 'hh:mm'">
+              <input type="text" class="form-control inputRequired inputmaskTime" />
               <span class="bar"></span>
               <label for="">เวลาสิ้นสุดการจอง</label>
             </div>
