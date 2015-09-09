@@ -14697,15 +14697,6 @@ body {
   padding: 24px;
   position: relative;
 }
-.card-body h4 {
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-  font-size: 90%;
-}
-.card-body .card-icon {
-  font-size: 34px;
-  margin-top: 24px;
-}
 .card-sort {
   margin-bottom: 25px;
 }
@@ -14954,6 +14945,14 @@ body {
   padding: 15px;
   border: 1px solid transparent;
 }
+.alert .alert-label {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  font-size: 90%;
+}
+.alert .card-icon {
+  font-size: 34px;
+}
 .alert.alert-callout {
   position: relative;
   padding-left: 20px;
@@ -14998,6 +14997,12 @@ body {
 }
 .alert-callout.alert-success .card-icon {
   color: #5cb85c;
+}
+.alert-callout.alert-canceled:before {
+  background-color: #d9534f;
+}
+.alert-callout.alert-canceled .card-icon {
+  color: #d9534f;
 }
 .pagination > li > a {
   color: #00a89e;

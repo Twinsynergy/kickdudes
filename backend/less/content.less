@@ -907,11 +907,6 @@ body{
 .card-body{
   padding: 24px;
   position: relative;
-  h4{
-    .opacity(.5);
-    font-size: 90%;
-  }
-  .card-icon{ font-size: 34px; margin-top: 24px; }
 }
 .card-sort{
   margin-bottom: 25px;
@@ -1105,6 +1100,11 @@ body{
 .alert{
   padding: 15px;
   border: 1px solid transparent;
+  .alert-label{
+    .opacity(.5);
+    font-size: 90%;
+  }
+  .card-icon{ font-size: 34px; }
 }
 .alert.alert-callout{
   position: relative;
@@ -1149,6 +1149,12 @@ body{
     background-color: @brand-success;
   }
   .card-icon{ color: @brand-success; }
+}
+.alert-callout.alert-canceled{
+  &:before{
+    background-color: @brand-danger;
+  }
+  .card-icon{ color: @brand-danger; }
 }
 
 .pagination{

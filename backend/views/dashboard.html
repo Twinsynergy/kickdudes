@@ -86,16 +86,17 @@
     <div id="content">
       <section id="section-body" class="container-fluid">
 
-        <div class="row hidden">
+        <div class="row">
           <div class="col-md-3 col-sm-6">
             <div class="card">
               <div class="card-body no-padding">
                 <div class="alert alert-callout alert-info">
-                  <h4>
-                    จำนวนลูกค้า
-                  </h4>
-                  <p class="integer">
-                    <strong class="text-xl counter">500</strong><span>ราย</span>
+                  <span class="alert-label">จำนวนลูกค้า</span><br />
+                  <span class="integer">
+                    <strong class="text-xl counter">400</strong><span>ราย</span>
+                  </span>
+                  <p class="pull-right card-icon">
+                    <i class="mdi mdi-account-multiple-outline"></i>
                   </p>
                 </div>
               </div>
@@ -105,11 +106,12 @@
             <div class="card">
               <div class="card-body no-padding">
                 <div class="alert alert-callout alert-waiting">
-                  <h4>
-                    กก
-                  </h4>
-                  <p class="integer">
-                    <strong class="text-xl counter">200</strong><span>รายการ</span>
+                  <span class="alert-label">รอการยืนยัน</span><br />
+                  <span class="integer">
+                    <strong class="text-xl counter">20</strong><span>รายการ</span>
+                  </span>
+                  <p class="pull-right card-icon">
+                    <i class="mdi mdi-bell-ring-outline"></i>
                   </p>
                 </div>
               </div>
@@ -119,13 +121,14 @@
           <div class="col-sm-6 col-md-3">
             <div class="card">
               <div class="card-body no-padding">
-                <div class="alert alert-callout alert-verify">
-                  <h4>
-                    รอการตรวจสอบ
-                  </h4>
-                    <p class="integer">
-                      <strong class="text-xl counter">20</strong><span>รายการ</span>
-                    </p>
+                <div class="alert alert-callout alert-success">
+                  <span class="alert-label">ยืนยันแล้ว</span><br />
+                  <span class="integer">
+                    <strong class="text-xl counter">20</strong><span>รายการ</span>
+                  </span>
+                  <p class="pull-right card-icon">
+                    <i class="mdi mdi-checkbox-marked-outline"></i>
+                  </p>
                 </div>
               </div>
             </div>
@@ -133,12 +136,13 @@
           <div class="col-sm-6 col-md-3">
             <div class="card">
               <div class="card-body no-padding">
-                <div class="alert alert-callout alert-success">
-                  <h4>
-                    ทำรายการเสร็จสิ้น
-                  </h4>
-                  <p class="integer">
+                <div class="alert alert-callout alert-canceled">
+                  <span class="alert-label">ยกเลิกการจอง</span><br />
+                  <span class="integer">
                     <strong class="text-xl counter">20</strong><span>รายการ</span>
+                  </span>
+                  <p class="pull-right card-icon">
+                    <i class="mdi mdi-close-box-outline"></i>
                   </p>
                 </div>
               </div>
@@ -146,7 +150,7 @@
           </div>
         </div> <!--End row-->
         
-        <div class="row hidden">
+        <div class="row">
           <div class="col-md-12">
             <div class="card">
               <div class="card-head">
@@ -303,7 +307,7 @@
                       <td>สนามที่ 1 : ฟุตซอลเทียม</td>
                       <td>Tesser Phutthasen</td>
                       <td>1,300 บาท</td>
-                      <td><span class="label label-waiting">รอการโอน</span></td>
+                      <td><span class="label label-waiting">รอการยืนยัน</span></td>
                       <td class="actions">
                         <a href="invoice.html" class="btn" data-toggle="tooltip" data-placement="top" title="ดูเพิ่มเติม">
                           <i class="mdi mdi-eye"></i>
@@ -325,7 +329,7 @@
                       <td>สนามที่ 1 : ฟุตซอลเทียม</td>
                       <td>Tesser Phutthasen</td>
                       <td>1,300 บาท</td>
-                      <td><span class="label label-success">ชำระแล้ว</span></td>
+                      <td><span class="label label-success">ยืนยันแล้ว</span></td>
                       <td class="actions">
                         <a href="invoice.html" class="btn" data-toggle="tooltip" data-placement="top" title="ดูเพิ่มเติม">
                           <i class="mdi mdi-eye"></i>
@@ -336,7 +340,7 @@
                       <td>สนามที่ 1 : ฟุตซอลเทียม</td>
                       <td>Tesser Phutthasen</td>
                       <td>1,300 บาท</td>
-                      <td><span class="label label-verify">รอการตรวจสอบ</span></td>
+                      <td><span class="label label-waiting">รอการยืนยัน</span></td>
                       <td class="actions">
                         <a href="invoice.html" class="btn" data-toggle="tooltip" data-placement="top" title="ดูเพิ่มเติม">
                           <i class="mdi mdi-eye"></i>
