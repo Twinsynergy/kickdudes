@@ -1288,6 +1288,24 @@ body{
 	}
   del{ color: @gray-light; }
 }
+#SubFieldForm{
+  .form-group{
+    label{ left: 0; }
+  }
+  .tab-content{
+    .time-list{ .clearfix(); }
+    .price-group{
+      float: right;
+      width: 100px;
+      input{ padding-top: 0; height: 22px; }
+    }
+    .input-group{ 
+      float: right; width: 100px; 
+      .form-control{ height: 22px; padding-top: 0; }
+    }
+    .input-group-addon{ padding: 0; vertical-align: top; }
+  }
+}
 
 #toast-container{
   position: fixed;

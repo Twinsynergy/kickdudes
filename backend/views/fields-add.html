@@ -87,146 +87,178 @@
                 </div>
               </div>
               <div class="card-body">
-                <form action="#">
-                  <div class="football-group divide-group">
+                <form id="SubFieldForm" action="#">
                     <div class="row">
                       <div class="col-md-6">
-                        <strong>ชื่อสนาม :</strong>
-                        <span>สนามหญ้าเทียม 7 คน</span>
+                        <div class="form-group">
+                          <input type="text" id="nameSubField" name="nameSubField" class="form-control inputRequired" />
+                          <span class="bar"></span>
+                          <label for="">ชื่อสนาม</label>
+                        </div>
                       </div>
                       <div class="col-md-6">
-                        <strong>ขนาดสนาม :</strong>
-                        <span> 7 คน</span>
+                        <div class="form-group">
+                          <select name="sizeSubField" id="sizeSubField" class="form-control inputRequired">
+                            <option value="deafult">เลือกขนาดสนาม</option>
+                            <option value="5p">5 คน</option>
+                            <option value="7p">7 คน</option>
+                            <option value="9p">9 คน</option>
+                            <option value="11p">11 คน</option>
+                          </select>
+                          <span class="bar"></span>
+                          <label for="">ขนาดสนาม</label>
+                        </div>
                       </div>
                     </div>
-                    
+                  <div class="form-group">
+                    <input type="text" id="detailSubField" name="detailSubField" class="form-control inputRequired" />
+                    <span class="bar"></span>
+                    <label for="">รายละเอียดสนาม</label>
+                  </div>
+                  <div class="time-wrapper">
+                    <h4>ราคาเช่าสนาม :</h4>
+                    <ul class="nav nav-tabs">
+                      <li class="active"><a href="#monday" data-toggle="tab" aria-expanded="true">จันทร์</a></li>
+                      <li class=""><a href="#tuesday" data-toggle="tab" aria-expanded="false">อังคาร</a></li>
+                      <li class=""><a href="#wednesday" data-toggle="tab" aria-expanded="false">พุธ</a></li>
+                      <li class=""><a href="#thursday" data-toggle="tab" aria-expanded="false">พฤหัสบดี</a></li>
+                      <li class=""><a href="#friday" data-toggle="tab" aria-expanded="false">ศุกร์</a></li>
+                      <li class=""><a href="#saturday" data-toggle="tab" aria-expanded="false">เสาร์</a></li>
+                      <li class=""><a href="#sunday" data-toggle="tab" aria-expanded="false">อาทิตย์</a></li>
+                    </ul>
+                    <div class="tab-content">
+                      <div class="tab-pane active" id="monday">
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <p class="time-list"><i class="mdi mdi-timer"></i> 00:00-01:00
+                            <span class="input-group">
+                              <input type="number" class="form-control" />
+                              <span class="input-group-addon">บาท</span>
+                            </span>
+                            </p>
+                            <p class="time-list"><i class="mdi mdi-timer"></i> 01:00-02:00 
+                            <span class="input-group">
+                              <input type="number" class="form-control" />
+                              <span class="input-group-addon">บาท</span>
+                            </span>
+                            </p>
+                            <p class="time-list"><i class="mdi mdi-timer"></i> 02:00-03:00 
+                            <span class="input-group">
+                              <input type="number" class="form-control" />
+                              <span class="input-group-addon">บาท</span>
+                            </span>
+                            </p>
+                            <p class="time-list"><i class="mdi mdi-timer"></i> 03:00-04:00 
+                            <span class="input-group">
+                              <input type="number" class="form-control" />
+                              <span class="input-group-addon">บาท</span>
+                            </span>
+                            </p>
+                            <p class="time-list"><i class="mdi mdi-timer"></i> 04:00-05:00 <span class="input-group">
+                              <input type="number" class="form-control" />
+                              <span class="input-group-addon">บาท</span>
+                            </span></p>
+                            <p class="time-list"><i class="mdi mdi-timer"></i> 05:00-06:00 <span class="input-group">
+                              <input type="number" class="form-control" />
+                              <span class="input-group-addon">บาท</span>
+                            </span></p>
+                            <p class="time-list"><i class="mdi mdi-timer"></i> 06:00-07:00 <span class="input-group">
+                              <input type="number" class="form-control" />
+                              <span class="input-group-addon">บาท</span>
+                            </span></p>
+                            <p class="time-list"><i class="mdi mdi-timer"></i> 07:00-08:00 <span class="input-group">
+                              <input type="number" class="form-control" />
+                              <span class="input-group-addon">บาท</span>
+                            </span></p>
+                            <p class="time-list"><i class="mdi mdi-timer"></i> 08:00-09:00 <span class="input-group">
+                              <input type="number" class="form-control" />
+                              <span class="input-group-addon">บาท</span>
+                            </span></p>
+                            <p class="time-list"><i class="mdi mdi-timer"></i> 09:00-10:00 <span class="input-group">
+                              <input type="number" class="form-control" />
+                              <span class="input-group-addon">บาท</span>
+                            </span></p>
+                            <p class="time-list"><i class="mdi mdi-timer"></i> 10:00-11:00 <span class="input-group">
+                              <input type="number" class="form-control" />
+                              <span class="input-group-addon">บาท</span>
+                            </span></p>
+                            <p class="time-list"><i class="mdi mdi-timer"></i> 11:00-12:00 <span class="input-group">
+                              <input type="number" class="form-control" />
+                              <span class="input-group-addon">บาท</span>
+                            </span></p>
+                          </div>
+                          <div class="col-sm-6">
+                            <p class="time-list"><i class="mdi mdi-timer"></i> 12:00-13:00 <span class="input-group">
+                              <input type="number" class="form-control" />
+                              <span class="input-group-addon">บาท</span>
+                            </span></p> 
+                            <p class="time-list"><i class="mdi mdi-timer"></i> 13:00-14:00 <span class="input-group">
+                              <input type="number" class="form-control" />
+                              <span class="input-group-addon">บาท</span>
+                            </span></p>
+                            <p class="time-list"><i class="mdi mdi-timer"></i> 14:00-15:00 <span class="input-group">
+                              <input type="number" class="form-control" />
+                              <span class="input-group-addon">บาท</span>
+                            </span></p>
+                            <p class="time-list"><i class="mdi mdi-timer"></i> 15:00-16:00 <span class="input-group">
+                              <input type="number" class="form-control" />
+                              <span class="input-group-addon">บาท</span>
+                            </span></p>
+                            <p class="time-list"><i class="mdi mdi-timer"></i> 16:00-17:00 <span class="input-group">
+                              <input type="number" class="form-control" />
+                              <span class="input-group-addon">บาท</span>
+                            </span></p>
+                            <p class="time-list"><i class="mdi mdi-timer"></i> 17:00-18:00 <span class="input-group">
+                              <input type="number" class="form-control" />
+                              <span class="input-group-addon">บาท</span>
+                            </span></p>
+                            <p class="time-list"><i class="mdi mdi-timer"></i> 18:00-19:00 <span class="input-group">
+                              <input type="number" class="form-control" />
+                              <span class="input-group-addon">บาท</span>
+                            </span></p>
+                            <p class="time-list"><i class="mdi mdi-timer"></i> 19:00-20:00 <span class="input-group">
+                              <input type="number" class="form-control" />
+                              <span class="input-group-addon">บาท</span>
+                            </span></p>
+                            <p class="time-list"><i class="mdi mdi-timer"></i> 20:00-21:00 <span class="input-group">
+                              <input type="number" class="form-control" />
+                              <span class="input-group-addon">บาท</span>
+                            </span></p>
+                            <p class="time-list"><i class="mdi mdi-timer"></i> 21:00-22:00 <span class="input-group">
+                              <input type="number" class="form-control" />
+                              <span class="input-group-addon">บาท</span>
+                            </span></p>
+                            <p class="time-list"><i class="mdi mdi-timer"></i> 22:00-23:00 <span class="input-group">
+                              <input type="number" class="form-control" />
+                              <span class="input-group-addon">บาท</span>
+                            </span></p>
+                            <p class="time-list"><i class="mdi mdi-timer"></i> 23:00-00:00 <span class="input-group">
+                              <input type="number" class="form-control" />
+                              <span class="input-group-addon">บาท</span>
+                            </span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- /.time-wrapper -->
+                  <div class="form-group">
+                    <h4>สถานะ :</h4>
+                    <label class="radio-inline">
+                      <input type="radio" name="statusSubField" id="openSubField" value="openSubField" checked> <span class="label label-success">เปิดใช้บริการ</span>
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="statusSubField" id="closeSubField" value="closeSubField"> <span class="label label-danger">ปิดปรับปรุง</span>
+                    </label>
                   </div>
                 </form>
-                
-
-                <div class="football-group">
-                  <strong>รายละเอียด :</strong>
-                  <span>สนามหญ้าเทียมอยู่ในร่ม</span>
-                </div>
-
-                <div class="football-group time-wrapper">
-                  <h4>ราคาเช่าสนาม :</h4>
-                  <ul class="nav nav-tabs">
-                     <li class="active"><a href="#f1-monday" data-toggle="tab" aria-expanded="true">จันทร์</a></li>
-                     <li class=""><a href="#f1-tuesday" data-toggle="tab" aria-expanded="false">อังคาร</a></li>
-                    <li class=""><a href="#f1-wednesday" data-toggle="tab" aria-expanded="false">พุธ</a></li>
-                    <li class=""><a href="#f1-thursday" data-toggle="tab" aria-expanded="false">พฤหัสบดี</a></li>
-                    <li class=""><a href="#f1-friday" data-toggle="tab" aria-expanded="false">ศุกร์</a></li>
-                    <li class=""><a href="#f1-saturday" data-toggle="tab" aria-expanded="false">เสาร์</a></li>
-                    <li class=""><a href="#f1-sunday" data-toggle="tab" aria-expanded="false">อาทิตย์</a></li>
-                  </ul>
-                  <div class="tab-content">
-                    <div class="tab-pane active" id="f1-monday">
-                      <div class="row">
-                        <div class="col-sm-6">
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 00:00-01:00 <span class="price">500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 01:00-02:00 <span class="price">500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 02:00-03:00 <span class="price">500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 03:00-04:00 <span class="price">500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 04:00-05:00 <span class="price">500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 05:00-06:00 <span class="price">500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 06:00-07:00 <span class="price">500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 07:00-08:00 <span class="price">500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 08:00-09:00 <span class="price">500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 09:00-10:00 <span class="price">500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 10:00-11:00 <span class="price">500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 11:00-12:00 <span class="price">500 บาท</span></p>
-                        </div>
-                        <div class="col-sm-6">
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 12:00-13:00 <span class="price">500 บาท</span></p> 
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 13:00-14:00 <span class="price">500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 14:00-15:00 <span class="price">500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 15:00-16:00 <span class="price">500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 16:00-17:00 <span class="price">500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 17:00-18:00 <span class="price">500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 18:00-19:00 <span class="price">500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 19:00-20:00 <span class="price">500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 20:00-21:00 <span class="price">500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 21:00-22:00 <span class="price">500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 22:00-23:00 <span class="price">500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 23:00-00:00 <span class="price">500 บาท</span></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="tab-pane" id="f1-tuesday">
-                      <div class="row">
-                        <div class="col-sm-6">
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 00:00-01:00 <span class="price">1500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 01:00-02:00 <span class="price">1500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 02:00-03:00 <span class="price">1500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 03:00-04:00 <span class="price">1500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 04:00-05:00 <span class="price">1500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 05:00-06:00 <span class="price">1500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 06:00-07:00 <span class="price">1500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 07:00-08:00 <span class="price">1500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 08:00-09:00 <span class="price">1500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 09:00-10:00 <span class="price">1500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 10:00-11:00 <span class="price">1500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 11:00-12:00 <span class="price">1500 บาท</span></p>
-                        </div>
-                        <div class="col-sm-6">
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 12:00-13:00 <span class="price">500 บาท</span></p> 
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 13:00-14:00 <span class="price">500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 14:00-15:00 <span class="price">500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 15:00-16:00 <span class="price">500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 16:00-17:00 <span class="price">500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 17:00-18:00 <span class="price">500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 18:00-19:00 <span class="price">500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 19:00-20:00 <span class="price">500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 20:00-21:00 <span class="price">500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 21:00-22:00 <span class="price">500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 22:00-23:00 <span class="price">500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 23:00-00:00 <span class="price">500 บาท</span></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="tab-pane" id="f1-wednesday">
-                      <div class="row">
-                        <div class="col-sm-6">
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 00:00-01:00 <span class="price">1000 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 01:00-02:00 <span class="price">1000 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 02:00-03:00 <span class="price">1500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 03:00-04:00 <span class="price">1500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 04:00-05:00 <span class="price">1500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 05:00-06:00 <span class="price">1500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 06:00-07:00 <span class="price">1500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 07:00-08:00 <span class="price">1500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 08:00-09:00 <span class="price">1500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 09:00-10:00 <span class="price">1500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 10:00-11:00 <span class="price">1500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 11:00-12:00 <span class="price">1500 บาท</span></p>
-                        </div>
-                        <div class="col-sm-6">
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 12:00-13:00 <span class="price">500 บาท</span></p> 
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 13:00-14:00 <span class="price">500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 14:00-15:00 <span class="price">500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 15:00-16:00 <span class="price">500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 16:00-17:00 <span class="price">500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 17:00-18:00 <span class="price">500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 18:00-19:00 <span class="price">500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 19:00-20:00 <span class="price">500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 20:00-21:00 <span class="price">500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 21:00-22:00 <span class="price">500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 22:00-23:00 <span class="price">500 บาท</span></p>
-                          <p class="time-list"><i class="mdi mdi-timer"></i> 23:00-00:00 <span class="price">500 บาท</span></p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-                <div class="football-group">
-                  <strong>สถนานะ :</strong>
-                  <a href="#"><span class="label label-success">เปิดใช้งาน</span></a>
-                  <a href="#"><span class="label label-danger">ปิดปรับปรุง</span></a>
-                </div>
+              
               </div><!--End card-body-->
-
+              <div class="card-actionbar">
+                <div class="card-actionbar-row">
+                <a href="javascript:void(0);" class="btn btn-flat" data-dismiss="modal">ยกเลิก</a>
+                <input type="submit" class="btn btn-default btn-success" value="บันทึก">
+                </div>
+              </div><!--End card-actionbar-->
             </div>
           </div>
           <!--End 1 field-->
@@ -351,16 +383,6 @@
   </div>
 </div>
 
-<!--Alert-->
-<div id="toast-container" role="alert">
-  <div class="toast-info alert alert-danger animated fadeInDown">
-     ลบเรียบร้อยแล้ว      
-  </div>
-  <div class="toast-info alert alert-success animated fadeInDown">
-     บันทึกเรียบร้อยแล้ว      
-  </div>
-</div>
-<!--End Alert-->
 
 </body>
 </html>

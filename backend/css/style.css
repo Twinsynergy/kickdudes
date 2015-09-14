@@ -15141,6 +15141,45 @@ body {
 .football-card del {
   color: #777777;
 }
+#SubFieldForm .form-group label {
+  left: 0;
+}
+#SubFieldForm .tab-content .time-list:before,
+#SubFieldForm .tab-content .time-list:after {
+  content: " ";
+  display: table;
+}
+#SubFieldForm .tab-content .time-list:after {
+  clear: both;
+}
+#SubFieldForm .tab-content .time-list:before,
+#SubFieldForm .tab-content .time-list:after {
+  content: " ";
+  display: table;
+}
+#SubFieldForm .tab-content .time-list:after {
+  clear: both;
+}
+#SubFieldForm .tab-content .price-group {
+  float: right;
+  width: 100px;
+}
+#SubFieldForm .tab-content .price-group input {
+  padding-top: 0;
+  height: 22px;
+}
+#SubFieldForm .tab-content .input-group {
+  float: right;
+  width: 100px;
+}
+#SubFieldForm .tab-content .input-group .form-control {
+  height: 22px;
+  padding-top: 0;
+}
+#SubFieldForm .tab-content .input-group-addon {
+  padding: 0;
+  vertical-align: top;
+}
 #toast-container {
   position: fixed;
   z-index: 2000;
