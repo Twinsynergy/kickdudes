@@ -15117,17 +15117,26 @@ body {
   width: 100%;
   display: inline-block;
 }
-.football-card .time-wrapper .start-time,
-.football-card .promotion-wrapper .start-time {
-  color: #5cb85c;
-}
-.football-card .time-wrapper .end-time,
-.football-card .promotion-wrapper .end-time {
-  color: #d9534f;
-}
-.football-card .time-wrapper .price,
-.football-card .promotion-wrapper .price {
+.football-card .time-wrapper .price {
   color: #5bc0de;
+}
+.football-card .time-wrapper .nav-tabs a {
+  color: #777777;
+  background-color: #ededed;
+}
+.football-card .time-wrapper .nav-tabs a:hover {
+  background-color: #ededed !important;
+}
+.football-card .time-wrapper .nav-tabs li.active a {
+  color: #00a89e;
+  background-color: #ededed !important;
+  border-bottom: 2px solid #00a89e !important;
+}
+.football-card .time-wrapper .tab-content {
+  margin-top: 15px;
+}
+.football-card .time-wrapper .time-list span {
+  margin-left: 10px;
 }
 .football-card del {
   color: #777777;

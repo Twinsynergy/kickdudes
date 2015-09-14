@@ -1265,11 +1265,26 @@ body{
       display: inline-block;
     }
   }
-	.time-wrapper,
-  .promotion-wrapper{
-		.start-time{ color: @brand-success; }
-		.end-time{ color: @brand-danger; }
+	.time-wrapper{
 		.price{ color: @brand-info; }
+    .nav-tabs{
+      a{ 
+        color: @gray-light; 
+        background-color: @grayLight;
+        &:hover{ background-color: @grayLight !important; }
+      }
+      li.active{
+        a{ 
+          color: @green; 
+          background-color: @grayLight !important;
+          border-bottom: 2px solid @green !important;
+        }
+      }
+    }
+    .tab-content{ margin-top: 15px; }
+    .time-list{
+      span{ margin-left: 10px; }
+    }
 	}
   del{ color: @gray-light; }
 }
