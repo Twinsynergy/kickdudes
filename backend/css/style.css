@@ -15180,6 +15180,16 @@ body {
   padding: 0;
   vertical-align: top;
 }
+#SubFieldForm .get-ampm {
+  margin-bottom: 15px;
+}
+#SubFieldForm .get-ampm label {
+  font-weight: normal;
+}
+#SubFieldForm .alert {
+  font-size: 14px;
+  padding: 5px;
+}
 #toast-container {
   position: fixed;
   z-index: 2000;
