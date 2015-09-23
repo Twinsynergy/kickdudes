@@ -59,44 +59,41 @@ $(function(){
     return arg != value;
   }, "Value must not equal arg.");
   //--------------------------------------------------------------
-  $('form').validate({
-    errorClass: "error-block help-block",
-    errorElement: "span",
-    rules:{
-      team_ff:{
-        rangelength: [1, 2],
+  $('form').each(function() {
+    $(this).validate({
+      errorClass: "error-block help-block",
+      errorElement: "span",
+      rules:{
+        team_ff:{
+          rangelength: [1, 2],
+        },
+        provinceProfile:{
+          valueNotEquals: "default"
+        },
+        holderPass: "required",
+        holderRepass: {
+          equalTo: "#holderPass"
+        },
       },
-      provinceProfile:{
-        valueNotEquals: "default"
+      messages:{
+        team_ff:{
+          rangelength: "ใส่ได้สองหลัก"
+        },
+        provinceProfile:{
+          valueNotEquals: "ต้องเลือกข้อมูล"
+        },
+        holderPass: "ต้องกรอกข้อมูล",
+        holderRepass: {
+          equalTo: "รหัสผ่านไม่เหมือนกัน"
+        },
       },
-      holderPass: "required",
-      holderRepass: {
-        equalTo: "#holderPass"
+      highlight: function(element) {
+          $(element).parent('div').addClass('error');
       },
-    },
-    messages:{
-      team_ff:{
-        rangelength: "ใส่ได้สองหลัก"
-      },
-      provinceProfile:{
-        valueNotEquals: "ต้องเลือกข้อมูล"
-      },
-      holderPass: "ต้องกรอกข้อมูล",
-      holderRepass: {
-        equalTo: "รหัสผ่านไม่เหมือนกัน"
-      },
-    },
-    highlight: function(element) {
-        $(element).parent('div').addClass('error');
-    },
-    unhighlight: function(element) {
-        $(element).parent('div').removeClass('error');
-    }
+      unhighlight: function(element) {
+          $(element).parent('div').removeClass('error');
+      }
+    });
   });
 
-  /*input mask*/
-  $("form input.inputmaskTime").inputmask({
-    "mask": "99:99",
-    "placeholder": "hh:mm"
-  });
 });

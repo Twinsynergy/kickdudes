@@ -45,7 +45,7 @@ $(function(){
   $('#toast-container').click(function() {
     $(this).slideUp(400, function() {
       $(this).remove();
-    });;
+    });
   });
 
   var offcanvasbody = $( window ).height() - 80;
