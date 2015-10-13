@@ -15644,6 +15644,15 @@ form.updateStatus select {
   background-color: transparent !important;
   border-right: 2px solid #00a89e !important;
 }
+.revenue-filter {
+  margin-bottom: 25px;
+}
+.revenue-filter span {
+  margin-right: 15px;
+}
+.revenue-filter .form-group {
+  padding-top: 0;
+}
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   .menubar-pin #wraper {
