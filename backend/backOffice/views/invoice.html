@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Kickdudes">
+  <meta name="author" content="Twinsynergy.co.th">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Invoice</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script src="../js/jquery.js" type="text/javascript" ></script>
+  <script src="../js/bootstrap/bootstrap.js" type="text/javascript" ></script>
+
+  <!--Addition-->
+  <script src="../js/bootstrap/jasny-bootstrap.js" type="text/javascript" ></script>
+  <script src="../js/scripts.js" type="text/javascript" ></script>
+
+</head>
+<body class="header-fixed">
+  <header id="header">
+    <div class="headerbar">
+      <div class="headerbar-left">
+        <div class="brand-holder">
+          <img src="../images/logo-green.png" alt="logo">
+          <a href="javascript:void(0);" class="btn-icon-toggle menu-toggle">
+            <i class="mdi mdi-menu"></i>
+          </a>
+        </div>
+      </div>
+
+        <ul class="headerbar-right nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropdown-toggle ripplelink ripplelink-hidden" data-toggle="dropdown" role="button" aria-expanded="false">
+              <img src="../images/avatar1.jpg" alt="">
+              <span class="profile-info">
+    						Daniel Johnson
+    						<small>สนามพระราม 9</small>
+    					</span>
+              <span class="caret"></span></a>
+            <ul class="dropdown-menu dropdown-up" role="menu">
+              <li><a href="profile.html"><i class="mdi mdi-account"></i>My profile</a></li>
+              <li><a href="#"><i class="mdi mdi-close"></i>Log out</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="header-notification hidden-xs">
+          <ul class="nav navbar-nav">
+            <li class="dropdown"><a href="javascript:void(0);" class="btn-icon-toggle dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="mdi mdi-bell"></i><span class="badge">4</span></a>
+              <ul class="dropdown-menu dropdown-menu-raduis" role="menu">
+                <li class="dropdown-header"><h4>Messages</h4></li>
+                <li><a href="javascript:void(0);" class="alert alert-callout alert-waiting">
+    							<img class="pull-right img-circle dropdown-avatar" src="../images/avatar1.jpg" alt="">
+    							<strong>Alex Anistor</strong><br>
+    							<small>จองสนามเข้ามา</small>
+                </a></li>
+                <li><a href="#" class="alert alert-callout alert-verify">
+                  <img class="pull-right img-circle dropdown-avatar" src="../images/avatar1.jpg" alt="">
+    							<strong>Alex Anistor</strong><br>
+    							<small>รอการตรวจสอบ</small>
+                </a></li>
+                <li><a href="#" class="alert alert-callout alert-success">
+                  <img class="pull-right img-circle dropdown-avatar" src="../images/avatar1.jpg" alt="">
+    							<strong>Alex Anistor</strong><br>
+    							<small>ชำระเงินแล้ว</small>
+                </a></li>
+                <li><a href="history.html">View all messages <i class="mdi mdi-arrow-right-bold pull-right"></i></a></li>
+                <li><a href="#">Mask as read <i class="mdi mdi-arrow-right-bold pull-right"></i></a></li>
+              </ul>
+            </li>
+          </ul>
+
+        </div>
+    </div>
+  </header>
+  <section id="wraper">
+    <div id="content">
+      <section id="section-body" class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card card-gray card-invoice">
+              <div class="card-head">
+
+              </div><!--End card head-->
+              <div class="card-body">
+                <!--Invoice header-->
+                <div class="row">
+                  <div class="col-sm-8 col-md-8 clearfix">
+                    <img id="logoInvoice" src="../images/logo-invoice.png" alt="logo" />
+                    <ul class="list-unstyled">
+                      <li><h1 id="nameInvoice" class="text-light">สนามฟุตบอลธาราวาดี</h1></li>
+                      <li><span class="label label-success">สถานะ: ยืนยันการจองแล้ว</span></li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-4 col-md-4 text-right">
+                    <h2 class="text-light">Invoice</h2> 
+                  </div>
+                </div>
+                <br />
+                <!--Invoice description-->
+                <div class="row">
+                  <div class="col-sm-4 col-md-4">
+                    <h4 class="text-light">Prepared by</h4>
+                    <p>
+                    <strong>สนามธาราวดี</strong>
+                    <address>
+                      1 ซ.พัฒนาการ 35, สวนหลวง, กรุงเทพ 10250
+                    </address>
+                    </p>
+                    <p>โทร: 02-321-6666</p>
+                  </div>
+                  <div class="col-sm-4 col-md-4">
+                    <h4 class="text-light">Prepared for</h4>
+                    <p>
+                    <strong>คุณอานนท์ กิจเลิศผล</strong>
+                    </p>
+                    <p>โทร: 02-321-6666</p>
+                  </div>
+                  <div class="col-sm-4 col-md-4">
+                    <div class="well">
+                      <dl class="dl-horizontal">
+                        <dt>หมายเลขทำรายการ:</dt>
+                        <dd>#122345678</dd>
+                        <dt>วันที่ทำรายการ:</dt>
+                        <dd>12/05/2558</dd>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+                <br />
+                <!--Invoice product-->
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead>
+                          <th class="col-md-1"></th>
+                          <th class="col-md-9">รายละเอียด</th>
+                          <th class="col-md-2">ราคา</th>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>สนามหญ้าเทียม ขนาด 12 คน | ช่วงเวลา 18:00-20:00 น.</td>
+                            <td>1,8000 บาท</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>สนามหญ้าจริง ขนาด 24 คน | ช่วงเวลา 21:00-00:00 น.</td>
+                            <td>1,8000 บาท</td>
+                          </tr>
+                          <tr>
+                            <td colspan="1"></td>
+                            <td class="text-right text-accent">รวมสุทธิ:</td>
+                            <td class="text-accent"><strong>5,3000 บาท</strong></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <!--Change status-->
+                <div class="row">
+                    <form id="invoice-status" action="#">
+                      <div class="form-group col-xs-6 col-sm-4 col-md-2">
+                        <select class="form-control">
+                          <option>เลือกสถานะ...</option>
+                          <option>ยืนยันการจอง</option>
+                          <option>ยกเลิก</option>
+                        </select>
+                        <span class="bar"></span>
+                      </div>  
+                      <input type="submit" value="ตกลง" class="btn btn-default col-xs-6 col-sm-2 col-md-1" />
+                    </form>
+                </div>
+                
+              </div>
+            </div> <!--End card-->
+          </div>
+        </div> <!--End row-->
+
+      </section>
+    </div>
+    <nav id="menubar">
+      <ul id="main-menu">
+        <li>
+          <a href="dashboard.html" class="dashboard">
+            <span class="gui-icon">
+            </span>
+            <span class="title">dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="fields.html" class="fields">
+            <span class="gui-icon">
+            </span>
+            <span class="title">fields</span>
+          </a>
+        </li>
+        <li>
+          <a href="booking.html" class="booking">
+            <span class="gui-icon">
+            </span>
+            <span class="title">booking</span>
+          </a>
+        </li>
+        <li>
+          <a href="customer.html" class="customer">
+            <span class="gui-icon">
+            </span>
+            <span class="title">customer</span>
+          </a>
+        </li>
+        <li class="active">
+          <a href="history.html" class="history">
+            <span class="gui-icon">
+            </span>
+            <span class="title">history</span>
+          </a>
+        </li>
+        <li>
+          <a href="profile.html" class="profile">
+            <span class="gui-icon">
+            </span>
+            <span class="title">profile</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <a href="javascript:void(0);" class="intercom btn btn-floating-action">
+      <i class="mdi mdi-help"></i><span class="badge">2</span>
+    </a>
+  </section>
+<div class="offcanvas">
+  <div id="offcanvas-help" class="offcanvas-pane">
+    <div class="offcanvas-head">
+      <header>Kickdudes Team</header>
+      <div class="offcanvas-tools">
+        <a href="javascript:void(0);" class="close-intercom btn btn-icon-toggle pull-right">
+          <i class="mdi mdi-close"></i>
+        </a>
+      </div>
+    </div><!--/.offcanvas-head-->
+    <div class="offcanvas-body no-padding">
+      <p>วันนี้ให้เราช่วยอะไรได้บ้างค่ะ หากคุณมีปัญหาหรือข้อแนะนำในการใช้งาน ส่งข้อความมาหาเราได้ที่นี่</p>
+      <h3 class="offcanvas-title">ข้อความ</h3>
+      <ul class="list-group">
+        <li class="list-group-item"><a href="messagesRead.html"><i class="mdi mdi-comment-alert text-danger"></i> Cras justo odio <small class="pull-right">12 weeks ago</small></a></li>
+        <li class="list-group-item"><a href="messagesRead.html">Dapibus ac facilisis in <small class="pull-right">12 weeks ago</small></a></li>
+        <li class="list-group-item"><a href="messagesRead.html">Morbi leo risus <small class="pull-right">12 weeks ago</small></a></li>
+        <li class="list-group-item"><a href="messagesRead.html">Porta ac consectetur ac <small class="pull-right">12 weeks ago</small></a></li>
+        <li class="list-group-item"><a href="messagesRead.html"><i class="mdi mdi-message-alert text-danger"></i>Vestibulum at eros <small class="pull-right">12 weeks ago</small></a></li>
+      </ul>
+    </div>
+    <div class="offcanvas-footer">
+      <a id="send_messages" href="javascript:void(0);" data-toggle="modal" data-target=".messages_model" class="btn btn-default btn-success"><i class="mdi mdi-pencil"></i>เขียนข้อความ</a>
+    </div>
+  </div>
+</div>
+<div class="modal fade messages_model" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">เขียนข้อความ</h4>
+      </div>
+      <form action="#">
+        <div class="modal-body">
+          <div class="form-group">
+            <input type="text" class="form-control inputRequired">
+            <span class="bar"></span>
+            <label for="">หัวข้อ</label>
+          </div>
+          <div class="form-group">
+            <textarea name="#" id="" cols="30" rows="10" class="form-control inputRequired"></textarea>
+            <span class="bar"></span>
+            <label for="">ข้อความ</label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="javascript:void(0);" class="btn btn-flat" data-dismiss="modal">ยกเลิก</a>
+          <input type="submit" class="btn btn-default btn-success" value="ส่งข้อความ" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>

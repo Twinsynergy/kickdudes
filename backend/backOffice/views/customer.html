@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Kickdudes">
+  <meta name="author" content="Twinsynergy.co.th">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Customer</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script src="../js/jquery.js" type="text/javascript" ></script>
+  <script src="../js/bootstrap/bootstrap.js" type="text/javascript" ></script>
+
+  <!--Addition-->
+  <script src="../js/bootstrap/tooltip.js" type="text/javascript"></script>
+  <script src="../js/bootstrap/bootstrap-table.js" type="text/javascript" ></script>
+  <script src="../js/bootstrap/bootstrap-table-toolbar.js" type="text/javascript" ></script>
+  <script src="../js/bootstrap/bootstrap-table-th-TH.js"></script>
+  <script src="../js/scripts.js" type="text/javascript" ></script>
+
+</head>
+<body class="header-fixed">
+  <header id="header">
+    <div class="headerbar">
+      <div class="headerbar-left">
+        <div class="brand-holder">
+          <img src="../images/logo-green.png" alt="logo">
+          <a href="javascript:void(0);" class="btn-icon-toggle menu-toggle">
+            <i class="mdi mdi-menu"></i>
+          </a>
+        </div>
+      </div>
+
+        <ul class="headerbar-right nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropdown-toggle ripplelink ripplelink-hidden" data-toggle="dropdown" role="button" aria-expanded="false">
+              <img src="../images/avatar1.jpg" alt="">
+              <span class="profile-info">
+    						Daniel Johnson
+    						<small>สนามพระราม 9</small>
+    					</span>
+              <span class="caret"></span></a>
+            <ul class="dropdown-menu dropdown-up" role="menu">
+              <li><a href="profile.html"><i class="mdi mdi-account"></i>My profile</a></li>
+              <li><a href="#"><i class="mdi mdi-close"></i>Log out</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="header-notification hidden-xs">
+          <ul class="nav navbar-nav">
+            <li class="dropdown"><a href="javascript:void(0);" class="btn-icon-toggle dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="mdi mdi-bell"></i><span class="badge">4</span></a>
+              <ul class="dropdown-menu dropdown-menu-raduis" role="menu">
+                <li class="dropdown-header"><h4>Messages</h4></li>
+                <li><a href="javascript:void(0);" class="alert alert-callout alert-waiting">
+    							<img class="pull-right img-circle dropdown-avatar" src="../images/avatar1.jpg" alt="">
+    							<strong>Alex Anistor</strong><br>
+    							<small>จองสนามเข้ามา</small>
+                </a></li>
+                <li><a href="#" class="alert alert-callout alert-verify">
+                  <img class="pull-right img-circle dropdown-avatar" src="../images/avatar1.jpg" alt="">
+    							<strong>Alex Anistor</strong><br>
+    							<small>รอการตรวจสอบ</small>
+                </a></li>
+                <li><a href="#" class="alert alert-callout alert-success">
+                  <img class="pull-right img-circle dropdown-avatar" src="../images/avatar1.jpg" alt="">
+    							<strong>Alex Anistor</strong><br>
+    							<small>ชำระเงินแล้ว</small>
+                </a></li>
+                <li><a href="history.html">View all messages <i class="mdi mdi-arrow-right-bold pull-right"></i></a></li>
+                <li><a href="#">Mask as read <i class="mdi mdi-arrow-right-bold pull-right"></i></a></li>
+              </ul>
+            </li>
+          </ul>
+
+        </div>
+    </div>
+  </header>
+  <section id="wraper">
+    <div id="content">
+      <section id="section-body" class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-head style-primary">
+							  <header>ลูกค้าที่เคยเช่าทั้งหมด</header>
+  						</div>
+              <div class="card-body">
+                
+                  <div class="list-results">
+                    <div id="toolbar">
+                        <a class="btn btn-default" href="javascript:void(0);" data-toggle="modal" data-target=".sent_message_model">ส่งข้อความ</a>
+                    </div>
+                    <table 
+                        class="table table-hover table-striped" 
+                        data-toggle="table"
+                        data-sort-name="customerName"
+                        data-sort-order="acc"
+                        data-search="true"
+                        data-pagination="true">
+                        <thead>
+                          <tr>
+                            <th data-checkbox="true"></th>
+                            <th></th>
+                            <th data-field="customerName" 
+                                data-sortable="true">ชื่อ</th>
+                            <th>อีเมล</th>
+                            <th>เบอร์โทร</th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td></td>
+                            <td class="avatar"><img class="img-circle" src="../images/avatar9.jpg" alt="อานนท์ กิจเลิศผล"></td>
+                            <td>arnon กิจเลิศผล</td>
+                            <td>snappy.kop@gmail.com</td>
+                            <td>02-4390063</td>
+                            <td class="actions">
+                              <a href="history-customer.html" class="btn" data-toggle="tooltip" data-placement="top" title="" data-original-title="ดูเพิ่มเติม">
+                                <i class="mdi mdi-eye"></i>
+                              </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td class="avatar"><img class="img-circle" src="../images/avatar9.jpg" alt="อานนท์ กิจเลิศผล"></td>
+                            <td>สุเชา มุดนุ่ม</td>
+                            <td>suchot@gmail.com</td>
+                            <td>02-4390063</td>
+                            <td class="actions">
+                              <a href="history-customer.html" class="btn" data-toggle="tooltip" data-placement="top" title="" data-original-title="ดูเพิ่มเติม">
+                                <i class="mdi mdi-eye"></i>
+                              </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td class="avatar"><img class="img-circle" src="../images/avatar9.jpg" alt="อานนท์ กิจเลิศผล"></td>
+                            <td>คมกฤษ เลิศประเสริฐ</td>
+                            <td>khomkrit@gmail.com</td>
+                            <td>02-4390063</td>
+                            <td class="actions">
+                              <a href="history-customer.html" class="btn" data-toggle="tooltip" data-placement="top" title="" data-original-title="ดูเพิ่มเติม">
+                                <i class="mdi mdi-eye"></i>
+                              </a>
+                            </td>
+                          </tr>
+                        </tbody>
+                    </table>
+                    
+                  </div><!--End list-results-->
+                
+              </div><!--End card-body-->
+            </div>
+          </div>
+        </div> <!--End row-->
+
+      </section>
+    </div>
+    <nav id="menubar">
+      <ul id="main-menu">
+        <li>
+          <a href="dashboard.html" class="dashboard">
+            <span class="gui-icon">
+            </span>
+            <span class="title">dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="fields.html" class="fields">
+            <span class="gui-icon">
+            </span>
+            <span class="title">fields</span>
+          </a>
+        </li>
+        <li>
+          <a href="booking.html" class="booking">
+            <span class="gui-icon">
+            </span>
+            <span class="title">booking</span>
+          </a>
+        </li>
+        <li class="active">
+          <a href="customer.html" class="customer">
+            <span class="gui-icon">
+            </span>
+            <span class="title">customer</span>
+          </a>
+        </li>
+        <li>
+          <a href="history.html" class="history">
+            <span class="gui-icon">
+            </span>
+            <span class="title">history</span>
+          </a>
+        </li>
+        <li>
+          <a href="profile.html" class="profile">
+            <span class="gui-icon">
+            </span>
+            <span class="title">profile</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <a href="javascript:void(0);" class="intercom btn btn-floating-action">
+      <i class="mdi mdi-help"></i><span class="badge">2</span>
+    </a>
+  </section>
+<div class="offcanvas">
+  <div id="offcanvas-help" class="offcanvas-pane">
+    <div class="offcanvas-head">
+      <header>Kickdudes Team</header>
+      <div class="offcanvas-tools">
+        <a href="javascript:void(0);" class="close-intercom btn btn-icon-toggle pull-right">
+          <i class="mdi mdi-close"></i>
+        </a>
+      </div>
+    </div><!--/.offcanvas-head-->
+    <div class="offcanvas-body no-padding">
+      <p>วันนี้ให้เราช่วยอะไรได้บ้างค่ะ หากคุณมีปัญหาหรือข้อแนะนำในการใช้งาน ส่งข้อความมาหาเราได้ที่นี่</p>
+      <h3 class="offcanvas-title">ข้อความ</h3>
+      <ul class="list-group">
+        <li class="list-group-item"><a href="messagesRead.html"><i class="mdi mdi-comment-alert text-danger"></i> Cras justo odio <small class="pull-right">12 weeks ago</small></a></li>
+        <li class="list-group-item"><a href="messagesRead.html">Dapibus ac facilisis in <small class="pull-right">12 weeks ago</small></a></li>
+        <li class="list-group-item"><a href="messagesRead.html">Morbi leo risus <small class="pull-right">12 weeks ago</small></a></li>
+        <li class="list-group-item"><a href="messagesRead.html">Porta ac consectetur ac <small class="pull-right">12 weeks ago</small></a></li>
+        <li class="list-group-item"><a href="messagesRead.html"><i class="mdi mdi-message-alert text-danger"></i>Vestibulum at eros <small class="pull-right">12 weeks ago</small></a></li>
+      </ul>
+    </div>
+    <div class="offcanvas-footer">
+      <a id="send_messages" href="javascript:void(0);" data-toggle="modal" data-target=".messages_model" class="btn btn-default btn-success"><i class="mdi mdi-pencil"></i>เขียนข้อความ</a>
+    </div>
+  </div>
+</div>
+<div class="modal fade messages_model" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">เขียนข้อความ</h4>
+      </div>
+      <form id="sendMessage" action="#">
+        <div class="modal-body">
+          <div class="form-group">
+            <input type="text" name="messageTitle" class="form-control inputRequired">
+            <span class="bar"></span>
+            <label for="">หัวข้อ</label>
+          </div>
+          <div class="form-group">
+            <textarea name="messageDetail" id="" cols="30" rows="10" class="form-control inputRequired"></textarea>
+            <span class="bar"></span>
+            <label for="">ข้อความ</label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn btn-flat" data-dismiss="modal">ยกเลิก</a>
+          <input type="submit" class="btn btn-default btn-success" value="ส่งข้อความ" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="modal fade sent_message_model" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form id="sent_message" action="#">
+      <div class="modal-body">
+        <p>ข้อความที่จะส่ง:</p>
+        <div class="form-group">
+            <textarea id="textarea_message" class="form-control" rows="3" maxlength="120"></textarea>
+            <div id="textarea_feedback" class="help-block"></div>
+        </div>
+        <p>คนที่เลือก:</p>
+          <div class="form-group">
+            <ul class="list-unstyled list-inline list-user">
+              <li><img src="../images/avatar9.jpg" data-toggle="tooltip" data-placement="top" data-original-title="อานนท์ กิจเลิศผล" class="img-circle"></li>
+              <li><img src="../images/avatar9.jpg" data-toggle="tooltip" data-placement="top" data-original-title="อานนท์ กิจเลิศผล" class="img-circle"></li>
+              <li><img src="../images/avatar9.jpg" data-toggle="tooltip" data-placement="top" data-original-title="อานนท์ กิจเลิศผล" class="img-circle"></li>
+              <li><img src="../images/avatar9.jpg" data-toggle="tooltip" data-placement="top" data-original-title="อานนท์ กิจเลิศผล" class="img-circle"></li>
+              <li><img src="../images/avatar9.jpg" data-toggle="tooltip" data-placement="top" data-original-title="อานนท์ กิจเลิศผล" class="img-circle"></li>
+              <li class="list-count">+20</li>
+            </ul>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <a href="javascript:void(0);" class="btn btn-flat" data-dismiss="modal">ยกเลิก</a>
+        <a href="#" class="btn btn-default btn-success">ส่งข้อความ</a>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script>
+          $(document).ready(function() {
+            var text_max = 120;
+            $('#textarea_feedback').html(text_max + ' ตัวอักษร');
+
+            $('#textarea_message').keyup(function() {
+                var text_length = $('#textarea_message').val().length;
+                var text_remaining = text_max - text_length;
+
+                $('#textarea_feedback').html(text_remaining + ' ตัวอักษร');
+            });
+        });
+        </script>
+</body>
+</html>

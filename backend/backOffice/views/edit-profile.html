@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Kickdudes">
+  <meta name="author" content="Twinsynergy.co.th">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Edit profiles</title>
+  
+  <link rel="stylesheet" href="../js/bootstrap/jasny-bootstrap/dist/css/jasny-bootstrap.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script src="../js/jquery.js" type="text/javascript" ></script>
+  <script src="../js/bootstrap/bootstrap.js" type="text/javascript" ></script>
+
+  <!--Addition-->
+  <script src="../js/bootstrap/tab.js" type="text/javascript" ></script>
+  <script src="../js/validate.js" type="text/javascript" ></script>
+  <script src="../js/include/form-validate.js" type="text/javascript" ></script>
+  <script src="../js/inputmask/inputmask.js" type="text/javascript"></script>
+  <script src="../js/inputmask/jquery.inputmask.js" type="text/javascript"></script>
+  <script src="../js/geo.js" type="text/javascript" ></script>
+  <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
+  <script src="../js/bootstrap/jasny-bootstrap/dist/js/jasny-bootstrap.min.js" type="text/javascript"></script>
+  <script src="../js/scripts.js" type="text/javascript" ></script>
+</head>
+<body class="header-fixed">
+  <header id="header">
+    <div class="headerbar">
+      <div class="headerbar-left">
+        <div class="brand-holder">
+          <img src="../images/logo-green.png" alt="logo">
+          <a href="javascript:void(0);" class="btn-icon-toggle menu-toggle">
+            <i class="mdi mdi-menu"></i>
+          </a>
+        </div>
+      </div>
+
+        <ul class="headerbar-right nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropdown-toggle ripplelink ripplelink-hidden" data-toggle="dropdown" role="button" aria-expanded="false">
+              <img src="../images/avatar1.jpg" alt="">
+              <span class="profile-info">
+    						Daniel Johnson
+    						<small>สนามพระราม 9</small>
+    					</span>
+              <span class="caret"></span></a>
+            <ul class="dropdown-menu dropdown-up" role="menu">
+              <li><a href="profile.html"><i class="mdi mdi-account"></i>My profile</a></li>
+              <li><a href="#"><i class="mdi mdi-close"></i>Log out</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="header-notification hidden-xs">
+          <ul class="nav navbar-nav">
+            <li class="dropdown"><a href="javascript:void(0);" class="btn-icon-toggle dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="mdi mdi-bell"></i><span class="badge">4</span></a>
+              <ul class="dropdown-menu dropdown-menu-raduis" role="menu">
+                <li class="dropdown-header"><h4>Messages</h4></li>
+                <li><a href="javascript:void(0);" class="alert alert-callout alert-waiting">
+    							<img class="pull-right img-circle dropdown-avatar" src="../images/avatar1.jpg" alt="">
+    							<strong>Alex Anistor</strong><br>
+    							<small>จองสนามเข้ามา</small>
+                </a></li>
+                <li><a href="#" class="alert alert-callout alert-verify">
+                  <img class="pull-right img-circle dropdown-avatar" src="../images/avatar1.jpg" alt="">
+    							<strong>Alex Anistor</strong><br>
+    							<small>รอการตรวจสอบ</small>
+                </a></li>
+                <li><a href="#" class="alert alert-callout alert-success">
+                  <img class="pull-right img-circle dropdown-avatar" src="../images/avatar1.jpg" alt="">
+    							<strong>Alex Anistor</strong><br>
+    							<small>ชำระเงินแล้ว</small>
+                </a></li>
+                <li><a href="history.html">View all messages <i class="mdi mdi-arrow-right-bold pull-right"></i></a></li>
+                <li><a href="#">Mask as read <i class="mdi mdi-arrow-right-bold pull-right"></i></a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+    </div>
+  </header>
+  <section id="wraper">
+    <div id="content">
+      <section id="section-body" class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-head style-primary">
+							  <header><i class="mdi mdi-pencil"></i>แก้ไขข้อมูลเจ้าของสนาม
+                </header>
+  						</div>
+              <!--Start form-->
+              <form id="profile-form" action="#">
+                <div class="card-body style-primary form-inverse">
+                  <div class="row">
+                    <div class="form-group col-sm-6 col-md-6">
+                      <input type="text" id="nameProfile" name="nameProfile" class="form-control input-lg inputRequired" placeholder="ชื่อ" />
+                      <span class="bar"></span>
+                    </div>
+                    <div class="form-group col-sm-6 col-md-6">
+                      <input type="text" id="lastnameProfile" name="lastnameProfile" class="form-control input-lg inputRequired" placeholder="นามสกุล" />
+                      <span class="bar"></span>
+                    </div>
+                  </div><!--End row-->
+                  <div class="row">
+                    <div class="form-group col-sm-6 col-md-6">
+                      <input type="text" name="addressProfile" class="form-control input-lg inputRequired" placeholder="ที่อยู่" />
+                      <span class="bar"></span>
+                    </div>
+                    <div class="form-group col-sm-3 col-md-3">
+                      <input type="text" name="zoneProfile" class="form-control input-lg inputRequired" placeholder="เขต" />
+                      <span class="bar"></span>
+                    </div>
+                    <div class="form-group col-sm-3 col-md-3">
+                      <select class="form-control input-lg" name="provinceProfile">
+                                <option value="default" selected>เลือกจังหวัด</option>
+                                <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
+                                <option value="กระบี่">กระบี่ </option>
+                                <option value="กาญจนบุรี">กาญจนบุรี </option>
+                                <option value="กาฬสินธุ์">กาฬสินธุ์ </option>
+                                <option value="กำแพงเพชร">กำแพงเพชร </option>
+                                <option value="ขอนแก่น">ขอนแก่น</option>
+                                <option value="จันทบุรี">จันทบุรี</option>
+                                <option value="ฉะเชิงเทรา">ฉะเชิงเทรา </option>
+                                <option value="ชัยนาท">ชัยนาท </option>
+                                <option value="ชัยภูมิ">ชัยภูมิ </option>
+                                <option value="ชุมพร">ชุมพร </option>
+                                <option value="ชลบุรี">ชลบุรี </option>
+                                <option value="เชียงใหม่">เชียงใหม่ </option>
+                                <option value="เชียงราย">เชียงราย </option>
+                                <option value="ตรัง">ตรัง </option>
+                                <option value="ตราด">ตราด </option>
+                                <option value="ตาก">ตาก </option>
+                                <option value="นครนายก">นครนายก </option>
+                                <option value="นครปฐม">นครปฐม </option>
+                                <option value="นครพนม">นครพนม </option>
+                                <option value="นครราชสีมา">นครราชสีมา </option>
+                                <option value="นครศรีธรรมราช">นครศรีธรรมราช </option>
+                                <option value="นครสวรรค์">นครสวรรค์ </option>
+                                <option value="นราธิวาส">นราธิวาส </option>
+                                <option value="น่าน">น่าน </option>
+                                <option value="นนทบุรี">นนทบุรี </option>
+                                <option value="บึงกาฬ">บึงกาฬ</option>
+                                <option value="บุรีรัมย์">บุรีรัมย์</option>
+                                <option value="ประจวบคีรีขันธ์">ประจวบคีรีขันธ์ </option>
+                                <option value="ปทุมธานี">ปทุมธานี </option>
+                                <option value="ปราจีนบุรี">ปราจีนบุรี </option>
+                                <option value="ปัตตานี">ปัตตานี </option>
+                                <option value="พะเยา">พะเยา </option>
+                                <option value="พระนครศรีอยุธยา">พระนครศรีอยุธยา </option>
+                                <option value="พังงา">พังงา </option>
+                                <option value="พิจิตร">พิจิตร </option>
+                                <option value="พิษณุโลก">พิษณุโลก </option>
+                                <option value="เพชรบุรี">เพชรบุรี </option>
+                                <option value="เพชรบูรณ์">เพชรบูรณ์ </option>
+                                <option value="แพร่">แพร่ </option>
+                                <option value="พัทลุง">พัทลุง </option>
+                                <option value="ภูเก็ต">ภูเก็ต </option>
+                                <option value="มหาสารคาม">มหาสารคาม </option>
+                                <option value="มุกดาหาร">มุกดาหาร </option>
+                                <option value="แม่ฮ่องสอน">แม่ฮ่องสอน </option>
+                                <option value="ยโสธร">ยโสธร </option>
+                                <option value="ยะลา">ยะลา </option>
+                                <option value="ร้อยเอ็ด">ร้อยเอ็ด </option>
+                                <option value="ระนอง">ระนอง </option>
+                                <option value="ระยอง">ระยอง </option>
+                                <option value="ราชบุรี">ราชบุรี</option>
+                                <option value="ลพบุรี">ลพบุรี </option>
+                                <option value="ลำปาง">ลำปาง </option>
+                                <option value="ลำพูน">ลำพูน </option>
+                                <option value="เลย">เลย </option>
+                                <option value="ศรีสะเกษ">ศรีสะเกษ</option>
+                                <option value="สกลนคร">สกลนคร</option>
+                                <option value="สงขลา">สงขลา </option>
+                                <option value="สมุทรสาคร">สมุทรสาคร </option>
+                                <option value="สมุทรปราการ">สมุทรปราการ </option>
+                                <option value="สมุทรสงคราม">สมุทรสงคราม </option>
+                                <option value="สระแก้ว">สระแก้ว </option>
+                                <option value="สระบุรี">สระบุรี </option>
+                                <option value="สิงห์บุรี">สิงห์บุรี </option>
+                                <option value="สุโขทัย">สุโขทัย </option>
+                                <option value="สุพรรณบุรี">สุพรรณบุรี </option>
+                                <option value="สุราษฎร์ธานี">สุราษฎร์ธานี </option>
+                                <option value="สุรินทร์">สุรินทร์ </option>
+                                <option value="สตูล">สตูล </option>
+                                <option value="หนองคาย">หนองคาย </option>
+                                <option value="หนองบัวลำภู">หนองบัวลำภู </option>
+                                <option value="อำนาจเจริญ">อำนาจเจริญ </option>
+                                <option value="อุดรธานี">อุดรธานี </option>
+                                <option value="อุตรดิตถ์">อุตรดิตถ์ </option>
+                                <option value="อุทัยธานี">อุทัยธานี </option>
+                                <option value="อุบลราชธานี">อุบลราชธานี</option>
+                                <option value="อ่างทอง">อ่างทอง </option>
+                                <option value="อื่นๆ">อื่นๆ</option>
+                      </select>
+                      <span class="bar"></span>
+                    </div>
+                  </div><!--End row-->
+                  <div class="row">
+                    <div class="form-group col-sm-3 col-md-3">
+                      <input type="number" name="zipProfile" class="form-control input-lg inputRequired inputNum" placeholder="รหัสไปรษณี" />
+                      <span class="bar"></span>
+                    </div>
+                    <div class="form-group col-sm-3 col-md-3">
+                      <input type="number" name="phoneProfile" class="form-control input-lg inputRequired inputNum" placeholder="เบอร์โทรติดต่อ" />
+                      <span class="bar"></span>
+                    </div>
+                    <div class="form-group col-sm-6 col-md-6">
+                      <input type="email" name="emailProfile" class="form-control input-lg inputRequired inputEmail" placeholder="อีเมล" />
+                      <span class="bar"></span>
+                    </div>  
+                  </div><!--End row-->
+                </div><!--End card-body-->
+                  
+                <!--Start Tab form-->
+                <div role="tabpanel">
+                  <div class="card-head style-primary">
+                      <!-- Nav tabs -->
+                      <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a id="tab-1" href="#field-info" aria-controls="field-info" role="tab" data-toggle="tab"><i class="mdi mdi-clipboard-text"></i> ข้อมูลสนาม</a></li>
+                        <li role="presentation"><a id="tab-2" href="#field-facility" aria-controls="field-facility" role="tab" data-toggle="tab"><i class="mdi mdi-format-list-numbers"></i> สิ่งอำนวยความสะดวกในสนาม</a></li>
+                        <li role="presentation"><a id="tab-3" href="#field-images" aria-controls="field-images" role="tab" data-toggle="tab"><i class="mdi mdi-folder-image"></i> รูปภาพสนาม</a></li>
+                      </ul>
+                  </div>
+                  <div class="card-body">
+                    <!-- Tab panes -->
+                      <div class="tab-content">
+                        
+                        <div role="tabpanel" class="tab-pane active" id="field-info">
+                          <div class="row">
+                            <div class="form-group col-sm-6 col-md-4">
+                              <input type="text" name="nameFootball" class="form-control inputRequired">
+                              <span class="bar"></span>
+                              <label for="">ชื่อสนาม</label>
+                            </div> 
+                            <div class="form-group col-sm-6 col-md-8">
+                              <input type="text" name="detailFootball" class="form-control inputRequired">
+                              <span class="bar"></span>
+                              <label for="">รายละเอียดสนาม</label>
+                            </div>                                   
+                          </div><!--End row-->
+                          <div class="row">
+                            <div class="form-group col-sm-6 col-md-6">
+                              <input type="text" name="addressFootball" class="form-control inputRequired" />
+                              <span class="bar"></span>
+                              <label for="">ที่อยู่</label>
+                            </div>
+                            <div class="form-group col-sm-3 col-md-3">
+                              <input type="text" name="zoneFootball" class="form-control inputRequired" />
+                              <span class="bar"></span>
+                              <label for="">เขต</label>
+                            </div>
+                            <div class="form-group col-sm-3 col-md-3">
+                              <select class="form-control" name="provinceFootball">
+                                <option value="" selected>เลือกจังหวัด</option>
+                                <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
+                                <option value="กระบี่">กระบี่ </option>
+                                <option value="กาญจนบุรี">กาญจนบุรี </option>
+                                <option value="กาฬสินธุ์">กาฬสินธุ์ </option>
+                                <option value="กำแพงเพชร">กำแพงเพชร </option>
+                                <option value="ขอนแก่น">ขอนแก่น</option>
+                                <option value="จันทบุรี">จันทบุรี</option>
+                                <option value="ฉะเชิงเทรา">ฉะเชิงเทรา </option>
+                                <option value="ชัยนาท">ชัยนาท </option>
+                                <option value="ชัยภูมิ">ชัยภูมิ </option>
+                                <option value="ชุมพร">ชุมพร </option>
+                                <option value="ชลบุรี">ชลบุรี </option>
+                                <option value="เชียงใหม่">เชียงใหม่ </option>
+                                <option value="เชียงราย">เชียงราย </option>
+                                <option value="ตรัง">ตรัง </option>
+                                <option value="ตราด">ตราด </option>
+                                <option value="ตาก">ตาก </option>
+                                <option value="นครนายก">นครนายก </option>
+                                <option value="นครปฐม">นครปฐม </option>
+                                <option value="นครพนม">นครพนม </option>
+                                <option value="นครราชสีมา">นครราชสีมา </option>
+                                <option value="นครศรีธรรมราช">นครศรีธรรมราช </option>
+                                <option value="นครสวรรค์">นครสวรรค์ </option>
+                                <option value="นราธิวาส">นราธิวาส </option>
+                                <option value="น่าน">น่าน </option>
+                                <option value="นนทบุรี">นนทบุรี </option>
+                                <option value="บึงกาฬ">บึงกาฬ</option>
+                                <option value="บุรีรัมย์">บุรีรัมย์</option>
+                                <option value="ประจวบคีรีขันธ์">ประจวบคีรีขันธ์ </option>
+                                <option value="ปทุมธานี">ปทุมธานี </option>
+                                <option value="ปราจีนบุรี">ปราจีนบุรี </option>
+                                <option value="ปัตตานี">ปัตตานี </option>
+                                <option value="พะเยา">พะเยา </option>
+                                <option value="พระนครศรีอยุธยา">พระนครศรีอยุธยา </option>
+                                <option value="พังงา">พังงา </option>
+                                <option value="พิจิตร">พิจิตร </option>
+                                <option value="พิษณุโลก">พิษณุโลก </option>
+                                <option value="เพชรบุรี">เพชรบุรี </option>
+                                <option value="เพชรบูรณ์">เพชรบูรณ์ </option>
+                                <option value="แพร่">แพร่ </option>
+                                <option value="พัทลุง">พัทลุง </option>
+                                <option value="ภูเก็ต">ภูเก็ต </option>
+                                <option value="มหาสารคาม">มหาสารคาม </option>
+                                <option value="มุกดาหาร">มุกดาหาร </option>
+                                <option value="แม่ฮ่องสอน">แม่ฮ่องสอน </option>
+                                <option value="ยโสธร">ยโสธร </option>
+                                <option value="ยะลา">ยะลา </option>
+                                <option value="ร้อยเอ็ด">ร้อยเอ็ด </option>
+                                <option value="ระนอง">ระนอง </option>
+                                <option value="ระยอง">ระยอง </option>
+                                <option value="ราชบุรี">ราชบุรี</option>
+                                <option value="ลพบุรี">ลพบุรี </option>
+                                <option value="ลำปาง">ลำปาง </option>
+                                <option value="ลำพูน">ลำพูน </option>
+                                <option value="เลย">เลย </option>
+                                <option value="ศรีสะเกษ">ศรีสะเกษ</option>
+                                <option value="สกลนคร">สกลนคร</option>
+                                <option value="สงขลา">สงขลา </option>
+                                <option value="สมุทรสาคร">สมุทรสาคร </option>
+                                <option value="สมุทรปราการ">สมุทรปราการ </option>
+                                <option value="สมุทรสงคราม">สมุทรสงคราม </option>
+                                <option value="สระแก้ว">สระแก้ว </option>
+                                <option value="สระบุรี">สระบุรี </option>
+                                <option value="สิงห์บุรี">สิงห์บุรี </option>
+                                <option value="สุโขทัย">สุโขทัย </option>
+                                <option value="สุพรรณบุรี">สุพรรณบุรี </option>
+                                <option value="สุราษฎร์ธานี">สุราษฎร์ธานี </option>
+                                <option value="สุรินทร์">สุรินทร์ </option>
+                                <option value="สตูล">สตูล </option>
+                                <option value="หนองคาย">หนองคาย </option>
+                                <option value="หนองบัวลำภู">หนองบัวลำภู </option>
+                                <option value="อำนาจเจริญ">อำนาจเจริญ </option>
+                                <option value="อุดรธานี">อุดรธานี </option>
+                                <option value="อุตรดิตถ์">อุตรดิตถ์ </option>
+                                <option value="อุทัยธานี">อุทัยธานี </option>
+                                <option value="อุบลราชธานี">อุบลราชธานี</option>
+                                <option value="อ่างทอง">อ่างทอง </option>
+                                <option value="อื่นๆ">อื่นๆ</option>
+                              </select>
+                              <span class="bar"></span>
+                              <label for="provinceFootball">จังหวัด</label>
+                            </div>                                  
+                          </div><!--End row-->
+                          <div class="row">
+                            <div class="form-group col-sm-3 col-md-3">
+                              <input type="number" name="zipFootball" class="form-control inputRequired inputNum" />
+                              <span class="bar"></span>
+                              <label for="">รหัสไปรษณี</label>
+                            </div>
+                            <div class="form-group col-sm-3 col-md-3">
+                              <input type="number" name="phoneFootball" class="form-control inputRequired inputNum" />
+                              <span class="bar"></span>
+                              <label for="">เบอร์โทรติดต่อ</label>
+                            </div>
+                            <div class="form-group col-sm-6 col-md-6">
+                              <input type="email" name="emailFootball" class="form-control inputRequired inputEmail" />
+                              <span class="bar"></span>
+                              <label for="">อีเมล</label>
+                              <p class="help-block">adc@example.com</p>
+                            </div>
+                          </div><!--End row-->
+                          <div class="geoMap row">
+                            <h3 class="col-md-12">ตำแหน่งของสนาม</h3>
+                            <div class="col-md-12">
+                              <ol class="counter-reset">
+                                <li>
+                                  <p class="lead">ทำการค้นหาสถานที่ใกล้เคียง</p>
+                                  <div class="row">
+                                    <div class="col-md-6">
+                                      <div class="form-group">
+                                        <input id="geocomplete" type="text" class="form-control" value="กรุงเทพมหานคร ประเทศไทย" />
+                                        <span class="bar"></span>
+                                      </div>  
+                                      <input id="findGeo" class="btn btn-default btn-success" type="button" value="ค้นหา" />
+                                      <a id="resetGeo" href="#" class="btn btn-cancel" style="display:none;">คืนค่าเดิม</a>
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                      <input type="text" name="latitudeFootball" class="form-control" readonly/>
+                                      <span class="bar"></span>
+                                      <label for="latitudeFootball">latitude</label>
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                      <input type="text" name="longitudeFootball" class="form-control" readonly/>
+                                      <span class="bar"></span>
+                                      <label for="longitudeFootball">longitude</label>
+                                    </div>
+                                  </div>
+                                  
+                                </li>
+                                <li>
+                                  <p class="lead">เลื่อนตำแหน่งที่อยู่ของสนาม</p>
+                                  <div class="map_canvas"></div>
+                                </li>
+                              </ol>
+                            </div>
+                          </div><!--End row-->
+                          <div class="card-actionbar">
+                            <div class="card-actionbar-row">
+                              <a data-tab-destination="tab-2" class="btn btn-default btn-accent">ต่อไป</a>
+                            </div>
+                          </div><!--End card-actionbar -->
+                        </div><!--End field-info-->
+
+                        <div role="tabpanel" class="tab-pane" id="field-facility">
+                          <div class="row">
+                            <div class="checkbox col-md-6">
+                              <div class="checkbox-group">
+                                  <input type="checkbox" id="checkiz1">
+                                  <label for="checkiz1">
+                                      <span class="check"></span>
+                                      <span class="box"></span>
+                                       Internet Café
+                                   </label>
+                              </div> <!--End checkbox group-->
+                              <div class="checkbox-group">
+                                  <input type="checkbox" id="checkiz2">
+                                  <label for="checkiz2">
+                                      <span class="check"></span>
+                                      <span class="box"></span>
+                                       CTH Cable
+                                   </label>
+                              </div> <!--End checkbox group-->
+                              <div class="checkbox-group">
+                                  <input type="checkbox" id="checkiz3">
+                                  <label for="checkiz3">
+                                      <span class="check"></span>
+                                      <span class="box"></span>
+                                       FREE WIFI
+                                   </label>
+                              </div> <!--End checkbox group-->
+                              <div class="checkbox-group">
+                                  <input type="checkbox" id="checkiz4">
+                                  <label for="checkiz4">
+                                      <span class="check"></span>
+                                      <span class="box"></span>
+                                       ห้องอาบน้ำ
+                                   </label>
+                              </div> <!--End checkbox group-->
+                              <div class="checkbox-group">
+                                  <input type="checkbox" id="checkiz5">
+                                  <label for="checkiz5">
+                                      <span class="check"></span>
+                                      <span class="box"></span>
+                                       บริการให้เช่ารองเท้าสตั๊ด
+                                   </label>
+                              </div> <!--End checkbox group-->
+                              <div class="checkbox-group">
+                                  <input type="checkbox" id="checkiz6">
+                                  <label for="checkiz6">
+                                      <span class="check"></span>
+                                      <span class="box"></span>
+                                       บริการลูกฟุตบอล (ฟรี)
+                                   </label>
+                              </div> <!--End checkbox group-->
+                              <div class="checkbox-group">
+                                  <input type="checkbox" id="checkiz7">
+                                  <label for="checkiz7">
+                                      <span class="check"></span>
+                                      <span class="box"></span>
+                                       ถุงมือผู้รักษาประตู (ฟรี)
+                                   </label>
+                              </div> <!--End checkbox group-->
+                              <div class="checkbox-group">
+                                  <input type="checkbox" id="checkiz8">
+                                  <label for="checkiz8">
+                                      <span class="check"></span>
+                                      <span class="box"></span>
+                                       เสื้อกั๊ก (ฟรี)
+                                   </label>
+                              </div> <!--End checkbox group-->
+                              
+                              <a href="javascript:void(0)" id="add_facility" class="btn btn-default btn-success">
+                                <i class="mdi mdi-plus"></i>เพิ่มข้อมูล
+                              </a>
+                            </div> 
+                          </div>
+                          <div class="card-actionbar">
+                            <div class="card-actionbar-row">
+                              <a data-tab-destination="tab-1" class="btn btn-flat" >ถอยกลับ</a>
+                              <a data-tab-destination="tab-3" class="btn btn-default btn-accent">ต่อไป</a>
+                            </div>
+                          </div><!--End card-actionbar -->
+
+                        </div><!--End field-facility-->
+                        <div role="tabpanel" class="tab-pane" id="field-images">
+                          <div class="row">
+                            <div class="col-sm-4">
+                              <div class="fileinput fileinput-new" data-provides="fileinput" style="width: 100%;">
+                                <div class="fileinput-new thumbnail" style="width: 100%; height: 280px;">
+                                  <div class="table-display">
+                                    <div class="table-cell">
+                                      <p>610x280</p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 610px; max-height: 280px;"></div>
+                                <div>
+                                  <span class="btn btn-default btn-file"><span class="fileinput-new">เลือกรูป</span><span class="fileinput-exists">เปลี่ยน</span><input type="file" name="..."></span>
+                                  <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">ลบ</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-sm-4">
+                              <div class="fileinput fileinput-new" data-provides="fileinput" style="width: 100%;">
+                                <div class="fileinput-new thumbnail" style="width: 100%; height: 280px;">
+                                  <div class="table-display">
+                                    <div class="table-cell">
+                                      <p>610x280</p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 610px; max-height: 280px;"></div>
+                                <div>
+                                  <span class="btn btn-default btn-file"><span class="fileinput-new">เลือกรูป</span><span class="fileinput-exists">เปลี่ยน</span><input type="file" name="..."></span>
+                                  <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">ลบ</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-sm-4">
+                              <div class="fileinput fileinput-new" data-provides="fileinput" style="width: 100%;">
+                                <div class="fileinput-new thumbnail" style="width: 100%; height: 280px;">
+                                  <div class="table-display">
+                                    <div class="table-cell">
+                                      <p>610x280</p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 610px; max-height: 280px;"></div>
+                                <div>
+                                  <span class="btn btn-default btn-file"><span class="fileinput-new">เลือกรูป</span><span class="fileinput-exists">เปลี่ยน</span><input type="file" name="..."></span>
+                                  <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">ลบ</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="card-actionbar">
+                            <div class="card-actionbar-row">
+                              <a class="btn btn-flat" href="profile.html">ยกเลิก</a>
+                              <input type="submit" class="btn btn-default" value="บันทึก" />
+                            </div>
+                          </div><!--End card-actionbar -->
+
+                        </div><!--End payment-->
+                      </div>
+                  </div>
+                </div>
+                <!--End Tab form-->
+                  
+                </div><!--End card-body-->
+              </form>
+              <!--End form-->
+            </div>
+          </div>
+        </div> <!--End row-->
+
+      </section>
+    </div>
+    <nav id="menubar">
+      <ul id="main-menu">
+        <li>
+          <a href="dashboard.html" class="dashboard">
+            <span class="gui-icon">
+            </span>
+            <span class="title">dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="fields.html" class="fields">
+            <span class="gui-icon">
+            </span>
+            <span class="title">fields</span>
+          </a>
+        </li>
+        <li>
+          <a href="booking.html" class="booking">
+            <span class="gui-icon">
+            </span>
+            <span class="title">booking</span>
+          </a>
+        </li>
+        <li>
+          <a href="customer.html" class="customer">
+            <span class="gui-icon">
+            </span>
+            <span class="title">customer</span>
+          </a>
+        </li>
+        <li>
+          <a href="history.html" class="history">
+            <span class="gui-icon">
+            </span>
+            <span class="title">history</span>
+          </a>
+        </li>
+        <li class="active">
+          <a href="profile.html" class="profile">
+            <span class="gui-icon">
+            </span>
+            <span class="title">profile</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <a href="#" class="intercom btn btn-floating-action">
+      <i class="mdi mdi-help"></i><span class="badge">2</span>
+    </a>
+  </section>
+<div class="offcanvas">
+  <div id="offcanvas-help" class="offcanvas-pane">
+    <div class="offcanvas-head">
+      <header>Kickdudes Team</header>
+      <div class="offcanvas-tools">
+        <a href="javascript:void(0);" class="close-intercom btn btn-icon-toggle pull-right">
+          <i class="mdi mdi-close"></i>
+        </a>
+      </div>
+    </div><!--/.offcanvas-head-->
+    <div class="offcanvas-body no-padding">
+      <p>วันนี้ให้เราช่วยอะไรได้บ้างค่ะ หากคุณมีปัญหาหรือข้อแนะนำในการใช้งาน ส่งข้อความมาหาเราได้ที่นี่</p>
+      <h3 class="offcanvas-title">ข้อความ</h3>
+      <ul class="list-group">
+        <li class="list-group-item"><a href="messagesRead.html"><i class="mdi mdi-comment-alert text-danger"></i> Cras justo odio <small class="pull-right">12 weeks ago</small></a></li>
+        <li class="list-group-item"><a href="messagesRead.html">Dapibus ac facilisis in <small class="pull-right">12 weeks ago</small></a></li>
+        <li class="list-group-item"><a href="messagesRead.html">Morbi leo risus <small class="pull-right">12 weeks ago</small></a></li>
+        <li class="list-group-item"><a href="messagesRead.html">Porta ac consectetur ac <small class="pull-right">12 weeks ago</small></a></li>
+        <li class="list-group-item"><a href="messagesRead.html"><i class="mdi mdi-message-alert text-danger"></i>Vestibulum at eros <small class="pull-right">12 weeks ago</small></a></li>
+      </ul>
+    </div>
+    <div class="offcanvas-footer">
+      <a id="send_messages" href="javascript:void(0);" data-toggle="modal" data-target=".messages_model" class="btn btn-default btn-success"><i class="mdi mdi-pencil"></i>เขียนข้อความ</a>
+    </div>
+  </div>
+</div>
+<div class="modal fade messages_model" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">เขียนข้อความ</h4>
+      </div>
+      <form action="#">
+        <div class="modal-body">
+          <div class="form-group">
+            <input type="text" class="form-control inputRequired">
+            <span class="bar"></span>
+            <label for="">หัวข้อ</label>
+          </div>
+          <div class="form-group">
+            <textarea name="#" id="" cols="30" rows="10" class="form-control inputRequired"></textarea>
+            <span class="bar"></span>
+            <label for="">ข้อความ</label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="javascript:void(0);" class="btn btn-flat" data-dismiss="modal">ยกเลิก</a>
+          <input type="submit" class="btn btn-default btn-success" value="ส่งข้อความ" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  // Find latitude and longitude by masker on google map
+  $("#geocomplete").geocomplete({
+    map: ".map_canvas",
+    details: "form ",
+    markerOptions: {
+      draggable: true
+    }  
+  });
+  $("#geocomplete").bind("geocode:dragged", function(event, latLng){
+    $("input[name=latitudeFootball]").val(latLng.lat());
+    $("input[name=longitudeFootball]").val(latLng.lng());
+    $("#resetGeo").show();
+  });
+  $("#resetGeo").click(function(){
+    $("#geocomplete").geocomplete("resetMarker");
+    $("#resetGeo").hide();
+    return false;
+  });
+  $("#findGeo").click(function(){
+    $("#geocomplete").trigger("geocode");
+  }).click();
+
+  //Click next&back tab
+  $("a[data-tab-destination]").on('click', function() {
+      var tab = $(this).attr('data-tab-destination');
+      $("#"+tab).click();
+  });
+
+  
+</script>
+</body>
+</html>
