@@ -5,7 +5,7 @@
   <meta name="description" content="Kickdudes">
   <meta name="author" content="Twinsynergy.co.th">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Booking add</title>
+  <title>Edit invoice</title>
   <link rel="stylesheet" href="../css/style.css">
 
   <!--[if lt IE 9]>
@@ -86,18 +86,18 @@
           <div class="col-md-6">
             <div class="card">
               <div class="card-head">
-							  <header>ทำการจองสนาม</header>
+							  <header>แก้ไขการจองสนาม</header>
   						</div>
               <form id="booking-form"  action="#">
               <div class="card-body">
                 
                     <div class="form-group">
-                      <input type="text" id="name_booking" name="name_booking" class="form-control inputRequired">
+                      <input type="text" id="name_booking" name="name_booking" class="form-control inputRequired" value="แขมป์" readonly>
                       <span class="bar"></span>
                       <label for="">ช่ือลูกค้า</label>
                     </div>
                     <div class="form-group">
-                      <input type="text" id="phone_booking" name="phone_booking" class="form-control inputRequired inputNum">
+                      <input type="text" id="phone_booking" name="phone_booking" class="form-control inputRequired inputNum" value="0886445050" readonly>
                       <span class="bar"></span>
                       <label for="">เบอร์ติดต่อ</label>
                     </div>
@@ -214,32 +214,6 @@
                         </div>
                       </div><!--/End time-->
 
-                    </div>
-                    <div class="form-group">
-                      <h4>โปรโมชั่น</h4>
-                      <label class="radio-inline">
-                          <input type="radio" name="choosePromotions" class="choosePromotions" value="no" checked=""> ไม่มี
-                      </label>
-                      <span class="additional-info-wrap">
-                        <label class="radio-inline">
-                          <input type="radio" id="freePro" name="choosePromotions" class="choosePromotions" value="free"> ฟรี
-                        </label>
-                      </span>
-                      <span class="additional-info-wrap">
-                        <label class="radio-inline">
-                          <input type="radio" id="disPro" name="choosePromotions" class="choosePromotions" value="dis"> ลดราคา
-                        </label>
-                      </span>
-                    </div>
-                    <div id="freeComment" class="additional-info hidden">
-                      <p>ความคิดเห็นเพิ่มเติม</p>
-                      <textarea name="freeComment" class="form-control"></textarea>
-
-                    </div>
-                    <div id="priceDis" class="additional-info hidden">
-                      <p>ลดเหลือ <input name="priceDis" type="number" class="form-control inputNum"> บาทต่อชั่วโมง</p>
-                      <p>ความคิดเห็นเพิ่มเติม</p>
-                      <textarea name="disComment" class="form-control"></textarea>
                     </div>
                   
               </div><!--End card-body-->
@@ -359,19 +333,5 @@
     </div>
   </div>
 </div>
-<script>
-  $('.choosePromotions').click(function() {
-    if($(this).attr('id') == 'freePro'){
-      $('#freeComment').removeClass('hidden');
-    }else{
-      $('#freeComment').addClass('hidden');
-    };
-    if($(this).attr('id') == 'disPro'){
-      $('#priceDis').removeClass('hidden');
-    }else{
-      $('#priceDis').addClass('hidden');
-    };
-  });
-</script>
 </body>
 </html>

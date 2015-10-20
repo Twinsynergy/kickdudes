@@ -15296,7 +15296,7 @@ body {
   font-size: 100%;
 }
 .card-invoice h2 {
-  font-size: 40px;
+  font-size: 30px;
 }
 .card-invoice dl {
   margin: 0;
@@ -15510,6 +15510,21 @@ form.updateStatus label {
 }
 form.updateStatus select {
   margin-right: 5px;
+}
+#booking-form .form-group label {
+  left: 0;
+}
+#booking-form .timeLabel {
+  margin-bottom: 0;
+  color: #777;
+  font-size: 14px;
+}
+#booking-form .additional-info-wrap {
+  margin-left: 10px;
+}
+#priceDis input[type="number"] {
+  width: 100px;
+  display: inline-block;
 }
 /*Messages*/
 .message-reply {
