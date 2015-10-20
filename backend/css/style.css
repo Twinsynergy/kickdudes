@@ -14385,10 +14385,7 @@ body {
   height: 100vh;
 }
 #login_form {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: 80px;
 }
 #login_form form {
   padding: 40px;
