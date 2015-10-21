@@ -1,68 +1,23 @@
 [
     {
-        "imgCustomer": "<img class='img-circle' src='../images/avatar9.jpg' />",
-        "nameCustomer": "Tesser Phutthasen",
-        "emailCustomer": "snapp@gmail.com",
-        "accessCustomer": "1 week ago"
+        "nameEmployee": "Tesser Phutthasen",
+        "emailEmployee": "snapp@gmail.com",
+        "accessEmployee": "1 week ago",
+        "statusEmployee": "<span class='label label-success'>อนุญาติ</span>",
+        "actionEmployee": "<span class='actions'><a href='employeeAdd.html' class='btn'><i class='mdi mdi-eye'></i></a></span>"
     },
     {
-        "imgCustomer": "<img class='img-circle' src='../images/avatar9.jpg' />",
-        "nameCustomer": "Cahmp kijlerdphon",
-        "emailCustomer": "snapp@gmail.com",
-        "accessCustomer": "1 week ago"
+        "nameEmployee": "Cahmp kijlerdphon",
+        "emailEmployee": "snapp@gmail.com",
+        "accessEmployee": "1 week ago",
+        "statusEmployee": "<span class='label label-danger'>ไม่อนุญาติ</span>",
+        "actionEmployee": "<span class='actions'><a href='employeeAdd.html' class='btn'><i class='mdi mdi-eye'></i></a></span>"
     },
     {
-        "imgCustomer": "<img class='img-circle' src='../images/avatar9.jpg' />",
-        "nameCustomer": "Khomkrid lerdprasert",
-        "emailCustomer": "snapp@gmail.com",
-        "accessCustomer": "1 week ago"
-    },
-    {
-        "imgCustomer": "<img class='img-circle' src='../images/avatar9.jpg' />",
-        "nameCustomer": "Cahmp kijlerdphon",
-        "emailCustomer": "snapp@gmail.com",
-        "accessCustomer": "1 week ago"
-    },
-    {
-        "imgCustomer": "<img class='img-circle' src='../images/avatar9.jpg' />",
-        "nameCustomer": "Khomkrid lerdprasert",
-        "emailCustomer": "snapp@gmail.com",
-        "accessCustomer": "1 week ago"
-    },
-    {
-        "imgCustomer": "<img class='img-circle' src='../images/avatar9.jpg' />",
-        "nameCustomer": "Cahmp kijlerdphon",
-        "emailCustomer": "snapp@gmail.com",
-        "accessCustomer": "1 week ago"
-    },
-    {
-        "imgCustomer": "<img class='img-circle' src='../images/avatar9.jpg' />",
-        "nameCustomer": "Khomkrid lerdprasert",
-        "emailCustomer": "snapp@gmail.com",
-        "accessCustomer": "1 week ago"
-    },
-    {
-        "imgCustomer": "<img class='img-circle' src='../images/avatar9.jpg' />",
-        "nameCustomer": "Cahmp kijlerdphon",
-        "emailCustomer": "snapp@gmail.com",
-        "accessCustomer": "1 week ago"
-    },
-    {
-        "imgCustomer": "<img class='img-circle' src='../images/avatar9.jpg' />",
-        "nameCustomer": "Khomkrid lerdprasert",
-        "emailCustomer": "snapp@gmail.com",
-        "accessCustomer": "1 week ago"
-    },
-    {
-        "imgCustomer": "<img class='img-circle' src='../images/avatar9.jpg' />",
-        "nameCustomer": "Cahmp kijlerdphon",
-        "emailCustomer": "snapp@gmail.com",
-        "accessCustomer": "1 week ago"
-    },
-    {
-        "imgCustomer": "<img class='img-circle' src='../images/avatar9.jpg' />",
-        "nameCustomer": "Khomkrid lerdprasert",
-        "emailCustomer": "snapp@gmail.com",
-        "accessCustomer": "1 week ago"
+        "nameEmployee": "Khomkrid lerdprasert",
+        "emailEmployee": "snapp@gmail.com",
+        "accessEmployee": "1 week ago",        
+        "statusEmployee": "<span class='label label-success'>อนุญาติ</span>",
+        "actionEmployee": "<span class='actions'><a href='employeeAdd.html' class='btn'><i class='mdi mdi-eye'></i></a></span>"
     }
 ]

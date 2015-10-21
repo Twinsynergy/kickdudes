@@ -325,22 +325,22 @@
                           
                         </div><!--End field-info-->
                         <div id="employee" class="tab-pane" role="tabpanel">
+                          <a href="employeeAdd.html" class="btn btn-default btn-accent">+ เพิ่มพนักงาน</a>
                           <table 
                             class="table table-hover table-striped" 
                             data-toggle="table"
-                            data-sort-name="customerName"
+                            data-sort-name="accessEmployee"
                             data-sort-order="acc"
                             data-search="true"
                             data-pagination="true"
                             data-url="../json/dataEmployee.json">
                             <thead>
                               <tr>
-                                <th data-checkbox="true"></th>
-                                <th data-field="imgCustomer"></th>
-                                <th data-field="nameCustomer" 
-                                    data-sortable="true">ชื่อ</th>
-                                <th data-field="emailCustomer">อีเมล</th>
-                                <th data-field="accessCustomer">เข้าสู่ระบบล่าสุด</th>
+                                <th data-field="nameEmployee">ชื่อ</th>
+                                <th data-field="emailEmployee">อีเมล</th>
+                                <th data-field="accessEmployee" data-sortable="true">เข้าระบบล่าสุด</th>
+                                <th data-field="statusEmployee">สถานะ</th>
+                                <th data-field="actionEmployee"></th>
                               </tr>
                             </thead>
                           </table>
