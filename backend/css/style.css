@@ -14212,6 +14212,17 @@ form.form-inline .btn-group label {
 form.form-inline .btn.active {
   background-color: #008178;
 }
+form .alert {
+  margin-bottom: 0;
+  padding: 5px;
+  background-color: #eeeeee;
+}
+form .resultText {
+  font-size: 14px;
+}
+form .resultText p {
+  margin-bottom: 0;
+}
 textarea:focus,
 input:focus,
 button:focus {
