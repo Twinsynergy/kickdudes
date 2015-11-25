@@ -15676,6 +15676,9 @@ form.updateStatus select {
 .revenue-filter .form-group {
   padding-top: 0;
 }
+.revenue-sum {
+  margin-top: 25px;
+}
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   .menubar-pin #wraper {
