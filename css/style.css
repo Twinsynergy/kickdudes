@@ -13697,6 +13697,13 @@ body#page404 img {
 body#page404 p {
   font-size: 1.5rem;
 }
+/*Reset pass*/
+body#repass h3 {
+  font-size: 20px;
+}
+body#repass .btn {
+  margin-right: 10px;
+}
 /* Large devices (large desktops, 1200px and up) */
 /* Medium devices (desktops, 992px and 1200px) */
 @media (min-width: 992px) and (max-width: 1199px) {
