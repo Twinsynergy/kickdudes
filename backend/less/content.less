@@ -1540,6 +1540,28 @@ body{
 }
 
 /*Customer page*/
+#cutomer_page{
+  .nav-tabs{
+    padding: 24px 24px 0 24px;
+    border-bottom: 1px solid @gray-lighter;
+    a{
+      color: @gray-light;
+      line-height: 50px;
+    }
+    > li{
+      margin-bottom: 0;
+    }
+    > li.active{
+      border-bottom: 2px solid @green;
+      a{
+        color: @green;
+      }
+    }
+  }
+  .tab-content{
+    padding: 24px;
+  }
+}
 #sent_message{
   p{ margin-bottom: 0; }
   .list-user{

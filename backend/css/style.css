@@ -15449,6 +15449,26 @@ body {
   border-bottom: none;
 }
 /*Customer page*/
+#cutomer_page .nav-tabs {
+  padding: 24px 24px 0 24px;
+  border-bottom: 1px solid #eeeeee;
+}
+#cutomer_page .nav-tabs a {
+  color: #777777;
+  line-height: 50px;
+}
+#cutomer_page .nav-tabs > li {
+  margin-bottom: 0;
+}
+#cutomer_page .nav-tabs > li.active {
+  border-bottom: 2px solid #00a89e;
+}
+#cutomer_page .nav-tabs > li.active a {
+  color: #00a89e;
+}
+#cutomer_page .tab-content {
+  padding: 24px;
+}
 #sent_message p {
   margin-bottom: 0;
 }
