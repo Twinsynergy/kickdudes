@@ -1,4 +1,5 @@
 $(function(){
+
     //click circle fade
     var ink, d, x, y;
     $(".ripplelink").click(function(e){
@@ -40,11 +41,24 @@ $(function(){
         $("#toast-container").slideUp(400, function(){
           $(this).remove();
         })
-    }, 3000);
+    }, 4000);
   $('#toast-container').click(function() {
     $(this).slideUp(400, function() {
       $(this).remove();
-    });;
+    });
   });
+
+  var offcanvasbody = $( window ).height() - 80;
+
+  $('.intercom').click(function(e) {
+    e.preventDefault();
+    $('#offcanvas-help').addClass('active').css('transform','translate(-320px, 0px)');
+    $('.offcanvas-body').css('height',offcanvasbody )
+  });
+  $('.close-intercom').click(function(e) {
+    e.preventDefault();
+    $('#offcanvas-help').removeClass('active').css('transform','translate(0px, 0px)');
+  });
+
 
 });

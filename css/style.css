@@ -13130,15 +13130,36 @@ form em.error {
   }
 }
 /*Miscellaneous*/
+html {
+  font-size: 16px;
+}
 body {
   color: #333333;
-  font-size: 16px;
+  font-size: 1rem;
   background-color: #50aa8d;
   position: relative;
   padding-top: 80px;
 }
 body#home {
   padding-top: 0;
+}
+.scroll-content {
+  max-height: 1100px;
+  overflow-y: scroll;
+  margin: 25px 0;
+  background: transparent url(../images/bg_box.png) 0 0 repeat;
+  padding: 15px;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  color: #fff;
+}
+.scroll-content a {
+  color: #50aa8d;
+}
+.scroll-content h1 {
+  color: #fff !important;
 }
 /*Header*/
 #logo {
@@ -13284,31 +13305,76 @@ body#home {
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-#about {
-  background: transparent url(../images/bg_mainpage.jpg) center center no-repeat;
-}
-#about .row {
+#video {
+  position: relative;
+  width: 100%;
   height: 100vh;
 }
-#about .intro {
+#video .intro {
+  width: 100%;
+}
+#video .intro-content {
+  font-size: 1.2rem;
+  height: 100vh;
+  text-align: center;
+  color: #fff;
+}
+#video .container {
+  text-align: center;
+  background-color: #000;
+}
+#video_pattern {
+  background-image: url(../images/pattern.png);
+  position: absolute;
+  opacity: 0.8;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+video#bgvid {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100% !important;
+  min-height: 100vh;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  background: #000;
+  background-size: cover;
+}
+video#bgvid source {
+  width: 100%;
+}
+.intro {
   display: table;
   position: relative;
+  z-index: 2;
 }
-#about .intro .row {
+.intro .intro-content {
   display: table-cell;
   vertical-align: middle;
+}
+.intro .intro-title {
+  font-size: 2rem;
+}
+#about {
+  background: transparent url(../images/bg_mainpage.jpg) center center no-repeat;
 }
 #about #title_about {
   padding-top: 130px;
 }
 #about h1 {
   color: #fff;
-  font-size: 4rem;
+  font-size: 2.3rem;
   text-indent: 60px;
   position: relative;
   margin-bottom: 25px;
   display: none;
   line-height: 1.5em;
+  text-shadow: 1px 1px 3px #969696;
 }
 #about h1:before {
   position: absolute;
@@ -13329,6 +13395,8 @@ body#home {
 }
 .app_store {
   margin-top: 30px;
+  color: #fff;
+  text-shadow: 1px 1px 3px #969696;
 }
 .app_store:before,
 .app_store:after {
@@ -13347,28 +13415,38 @@ body#home {
   clear: both;
 }
 .app_store a {
-  font-size: 2.375rem;
+  font-size: 1.375rem;
   text-transform: uppercase;
   margin-right: 10px;
   background-color: rgba(0, 0, 0, 0.8);
+}
+.app_store span {
+  font-size: 2rem;
 }
 #logo_top {
   position: absolute;
   top: 0;
   left: 15px;
+  z-index: 2;
   display: inline-block;
   width: 191px;
   height: 55px;
   background: transparent url(../images/logo.png) 0 0 no-repeat;
 }
 #magic_arrow {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  z-index: 99;
+  text-align: center;
+  margin-left: -25px;
   color: #fff;
   width: 49px;
   height: 49px;
-  display: inline-block;
   font-size: 35px;
   border: 1px solid #fff;
   border-radius: 50%;
+  display: none;
 }
 #magic_arrow .mdi {
   -webkit-animation: zoom 3s infinite;
@@ -13502,12 +13580,12 @@ body#register h1 {
 .signupform .nav-tabs li {
   width: 50%;
   text-align: center;
-  font-size: 1.25rem;
+  font-size: 1rem;
   margin-bottom: 0;
 }
 .signupform .nav-tabs li a {
   font-family: kick_font;
-  font-size: 2.375rem;
+  font-size: 1.8rem;
   color: #eeeeee;
   border: 0;
   margin-right: 0;
@@ -13608,6 +13686,24 @@ body#register h1 {
 .finish_submit .app_store a {
   margin-right: 0;
 }
+/*404 page*/
+body#page404 {
+  background-color: #fff;
+  text-align: center;
+}
+body#page404 img {
+  max-width: 100%;
+}
+body#page404 p {
+  font-size: 1.5rem;
+}
+/*Reset pass*/
+body#repass h3 {
+  font-size: 20px;
+}
+body#repass .btn {
+  margin-right: 10px;
+}
 /* Large devices (large desktops, 1200px and up) */
 /* Medium devices (desktops, 992px and 1200px) */
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -13623,7 +13719,7 @@ body#register h1 {
 }
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 767px) {
-  body {
+  html {
     font-size: 14px;
   }
   #main_navbar {
@@ -13638,15 +13734,28 @@ body#register h1 {
     margin-top: 25px;
     margin-right: 40px;
   }
+  video#bgvid {
+    display: none;
+  }
+  #magic_arrow {
+    display: inline-block;
+  }
   #about .row {
     height: auto;
+  }
+  #about #title_about {
+    padding-top: 0;
   }
   #about #iphone {
     margin-top: 20px;
     margin-bottom: 20px;
   }
+  #about h1 {
+    font-size: 2rem;
+  }
   #magic_arrow {
-    margin: 20px 0;
+    margin-top: 0;
+    bottom: 50px;
   }
   .app_store {
     text-align: center;
@@ -13669,6 +13778,18 @@ body#register h1 {
   .signupform {
     padding: 0 15px;
   }
+  .signupform .nav-tabs li a {
+    font-size: 1.5rem;
+  }
+  .signupform .nav-tabs .tab-content {
+    padding: 40px 30px;
+  }
+  .signupform-container .btn {
+    font-size: 1.2rem;
+  }
+  .signupform-start {
+    margin-bottom: 15px;
+  }
 }
 @media (max-width: 480px) {
   .app_store a {
@@ -13683,14 +13804,5 @@ body#register h1 {
   footer .navbar-foot,
   footer .navbar-text {
     width: 100%;
-  }
-  .signupform .nav-tabs li a {
-    font-size: 1.8rem;
-  }
-  .signupform-container .btn {
-    font-size: 1.5rem;
-  }
-  .signupform .tab-content {
-    padding: 40px 30px;
   }
 }

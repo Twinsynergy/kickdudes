@@ -5,6 +5,10 @@
 @footer: #414141;
 
 /*Mixins*/
+.bdr-block(@bdr: 4px){
+  .border-top-radius(@bdr);
+  .border-bottom-radius(@bdr);
+}
 
 /*Links and type*/
 @font-face {
@@ -126,13 +130,25 @@ form{
 }
 
 /*Miscellaneous*/
+html{ font-size: 16px; }
 body{
   color: @text-color;
-  font-size: 16px;
+  font-size: 1rem;
   background-color: @kickdudes;
   position: relative;
   padding-top: 80px;
   &#home{ padding-top: 0; }
+}
+.scroll-content{
+  max-height: 1100px;
+  overflow-y: scroll;
+  margin: 25px 0;
+  background: transparent url(../images/bg_box.png) 0 0 repeat;
+  padding: 15px;
+  .bdr-block();
+  color: #fff;
+  a{ color: @kickdudes; }
+  h1{ color: #fff !important; }
 }
 
 /*Header*/
@@ -265,29 +281,76 @@ body{
 	transition: all 0.3s ease;
 }
 
-
-#about{
-  background: transparent url(../images/bg_mainpage.jpg) center center no-repeat;
-  .row{ height: 100vh; }
+#video{
+  position: relative;
+  width: 100%;
+  height: 100vh;
   .intro{
+    width: 100%;
+  }
+  .intro-content{
+    font-size: 1.2rem;
+    height: 100vh;
+    text-align: center;
+    color: #fff;
+  }
+  .container{
+    text-align: center;
+    background-color: #000;
+  }
+}
+#video_pattern{
+  background-image: url(../images/pattern.png);
+  position: absolute;
+  opacity: 0.8;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+video#bgvid{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100% !important;
+  min-height: 100vh;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  background: #000;
+  background-size: cover;
+  source{
+    width: 100%;
+  }
+}
+
+.intro{
     display: table;
     position: relative;
-    .row{
+    z-index: 2;
+    .intro-content{
       display: table-cell;
       vertical-align: middle;
     }
+    .intro-title{
+      font-size: 2rem;
+    }
   }
+#about{
+  background: transparent url(../images/bg_mainpage.jpg) center center no-repeat; 
   #title_about{
     padding-top: 130px;
   }
   h1{
     color: #fff;
-    font-size: 4rem;
+    font-size: 2.3rem;
     text-indent: 60px;
     position: relative;
     margin-bottom: 25px;
     display: none;
     line-height: 1.5em;
+    text-shadow: 1px 1px 3px rgba(150, 150, 150, 1);
     &:before{
       position: absolute;
       display: inline-block;
@@ -308,31 +371,41 @@ body{
 }
 .app_store{
   margin-top: 30px;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(150, 150, 150, 1);
   .clearfix();
   a{
-    font-size: 2.375rem;
+    font-size: 1.375rem;
     text-transform: uppercase;
     margin-right: 10px;
     background-color: rgba(0,0,0,.8);
   }
+  span{ font-size: 2rem; }
 }
 #logo_top{
   position: absolute;
   top: 0;
   left: 15px;
+  z-index: 2;
   display: inline-block;
   width: 191px;
   height: 55px;
   background: transparent url(../images/logo.png) 0 0 no-repeat;
 }
 #magic_arrow{
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  z-index: 99;
+  text-align: center;
+  margin-left: -25px;
   color: #fff;
   width: 49px;
   height: 49px;
-  display: inline-block;
   font-size: 35px;
   border: 1px solid #fff;
   border-radius: 50%;
+  display: none;
   .mdi{
     -webkit-animation: zoom 3s infinite; /* Chrome, Safari, Opera */
     animation: zoom 3s infinite;
@@ -442,11 +515,11 @@ body#register{
     li{
       width: 50%;
       text-align: center;
-      font-size: 1.25rem;
+      font-size: 1rem;
       margin-bottom: 0;
       a{
         font-family: kick_font;
-        font-size: 2.375rem;
+        font-size: 1.8rem;
         color: @gray-lighter;
         border: 0;
         margin-right: 0;
@@ -535,4 +608,24 @@ body#register{
       margin-right: 0;
     }
   }
+}
+
+/*404 page*/
+body#page404{
+  background-color: #fff;
+  text-align: center;
+  img{
+    max-width: 100%;
+  }
+  p{
+    font-size: 1.5rem;
+  }
+}
+
+/*Reset pass*/
+body#repass{
+  h3{
+    font-size: 20px;
+  }
+  .btn{ margin-right: 10px; }
 }

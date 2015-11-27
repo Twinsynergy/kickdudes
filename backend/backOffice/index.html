@@ -5,7 +5,7 @@
   <meta name="description" content="Kickdudes">
   <meta name="author" content="Twinsynergy.co.th">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dashboard</title>
+  <title>Backoffice</title>
   <link rel="stylesheet" href="../css/style.css">
 
   <!--[if lt IE 9]>
@@ -35,13 +35,13 @@
         <ul class="headerbar-right nav navbar-nav navbar-right">
           <li class="dropdown">
             <a href="javascript:void(0)" class="dropdown-toggle ripplelink ripplelink-hidden" data-toggle="dropdown" role="button" aria-expanded="false">
-              <img src="../images/avatar1.jpg" alt="">
+              <img src="../images/icon-nouser.png" alt="">
               <span class="profile-info">
-    						Daniel Johnson
+    						Administrator
     					</span>
               <span class="caret"></span></a>
             <ul class="dropdown-menu dropdown-up" role="menu">
-              <li><a href="#"><i class="mdi mdi-account"></i>My profile</a></li>
+              <li><a href="account.html"><i class="mdi mdi-account"></i>My account</a></li>
               <li><a href="#"><i class="mdi mdi-close"></i>Log out</a></li>
             </ul>
           </li>
@@ -54,19 +54,19 @@
                 <li><a href="javascript:void(0);" class="alert alert-callout alert-waiting">
     							<img class="pull-right img-circle dropdown-avatar" src="../images/avatar1.jpg" alt="">
     							<strong>Alex Anistor</strong><br>
-    							<small>จองสนามเข้ามา</small>
+    							<small>สมัครเจ้าของสนาม</small>
                 </a></li>
-                <li><a href="#" class="alert alert-callout alert-verify">
-                  <img class="pull-right img-circle dropdown-avatar" src="../images/avatar1.jpg" alt="">
+                <li><a href="#" class="alert alert-callout">
+                  <img class="pull-right img-circle dropdown-avatar" src="../images/icon-nouser.png" alt="">
     							<strong>Alex Anistor</strong><br>
-    							<small>รอการตรวจสอบ</small>
+    							<small>ขอถอนเงิน</small>
                 </a></li>
-                <li><a href="#" class="alert alert-callout alert-success">
-                  <img class="pull-right img-circle dropdown-avatar" src="../images/avatar1.jpg" alt="">
+                <li><a href="#" class="alert alert-callout">
+                  <img class="pull-right img-circle dropdown-avatar" src="../images/icon-nouser.png" alt="">
     							<strong>Alex Anistor</strong><br>
-    							<small>ชำระเงินแล้ว</small>
+    							<small>ขอถอนเงิน</small>
                 </a></li>
-                <li><a href="#">View all messages <i class="mdi mdi-arrow-right-bold pull-right"></i></a></li>
+                <!-- <li><a href="#">View all messages <i class="mdi mdi-arrow-right-bold pull-right"></i></a></li> -->
                 <li><a href="#">Mask as read <i class="mdi mdi-arrow-right-bold pull-right"></i></a></li>
               </ul>
             </li>
@@ -79,45 +79,169 @@
     <div id="content">
       <section id="section-body" class="container-fluid">
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-sm-6 col-md-3">
             <div class="card">
-              <div class="card-body">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel deserunt nesciunt ab sit, rem soluta alias voluptates rerum veritatis quaerat enim molestiae nemo, quibusdam nostrum illum dignissimos, beatae ipsum. Accusamus.
+              <div class="card-body no-padding">
+                <div class="alert alert-callout alert-waiting">
+                  <div class="pull-right">
+                    <i class="mdi mdi-account-plus card-icon"></i>
+                  </div>
+                  <h4>
+                    เจ้าของสนามสมัครมาใหม่
+                  </h4>
+                    <p class="integer">
+                      <strong class="text-xl counter">20</strong><span>ราย</span>
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3">
+            <div class="card">
+              <div class="card-body no-padding">
+                <div class="alert alert-callout">
+                  <div class="pull-right">
+                    <i class="mdi mdi-cash card-icon"></i>
+                  </div>
+                  <h4>
+                    เจ้าของสนามขอถอนเงิน
+                  </h4>
+                  <p class="integer">
+                    <strong class="text-xl counter">20</strong><span>รายการ</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix visible-sm-block"></div>
+          <div class="col-md-3 col-sm-6">
+            <div class="card">
+              <div class="card-body no-padding">
+                <div class="alert alert-callout alert-info">
+                  <div class="pull-right">
+                    <i class="mdi mdi-clipboard-account card-icon"></i>
+                  </div>
+                  <h4>
+                    เจ้าของสนามทั้งหมด
+                  </h4>
+                  <p class="integer">
+                    <strong class="text-xl counter">300</strong><span>ราย</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3">
+            <div class="card">
+              <div class="card-body no-padding">
+                <div class="alert alert-callout alert-info">
+                  <div class="pull-right">
+                    <i class="mdi mdi-account-multiple card-icon"></i>
+                  </div>
+                  <h4>
+                    ผู้เล่นทั้งหมด
+                  </h4>
+                  <p class="integer">
+                    <strong class="text-xl counter">200</strong><span>ราย</span>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-head">
+                <header>New notifications</header>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                <table class="table table-hover table-striped">
+                  <thead>
+                    <tr>
+                      <th>วันที่</th>
+                      <th>ชื่อ</th>
+                      <th>เบอร์โทรติดต่อ</th>
+                      <th>สนาม</th>
+                      <th>สถานะ</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>13/01/58</td>
+                      <td>Tesser Phutthasen</td>
+                      <td>02-4390063</td>
+                      <td>ธาราวดีฟุตซอล</td>
+                      <td><span class="label label-danger">ขอถอนเงิน</span></td>
+                    </tr>
+                    <tr>
+                      <td>12/01/58</td>
+                      <td>Arnon kijlerdphon</td>
+                      <td>02-4390063</td>
+                      <td>ธาราวดีฟุตซอล</td>
+                      <td><span class="label label-waiting">สมัครใหม่</span></td>
+                    </tr>
+                    <tr>
+                      <td>12/01/58</td>
+                      <td>Tesser Phutthasen</td>
+                      <td>02-4390063</td>
+                      <td>ธาราวดีฟุตซอล</td>
+                      <td><span class="label label-waiting">สมัครใหม่</span></td>
+                    </tr>
+                  </tbbody>
+                </table>
+                </div>
+              </div><!--End card-body-->
+            </div>
+          </div>
+        </div><!--End row-->
+
       </section>
     </div>
     <nav id="menubar">
       <ul id="main-menu">
         <li class="active">
-          <a href="dashboard.html" class="dashboard">
+          <a href="index.html" class="dashboard">
             <span class="gui-icon">
-              
             </span>
             <span class="title">dashboard</span>
           </a>
         </li>
         <li>
-          <a href="fields.html" class="fields">
+          <a href="holder.html" class="fields">
             <span class="gui-icon">
             </span>
-            <span class="title">fields</span>
+            <span class="title">holder</span>
+          </a>
+        </li>
+        <li >
+          <a href="customer.html" class="fields">
+            <span class="gui-icon">
+            </span>
+            <span class="title">customer</span>
           </a>
         </li>
         <li>
-          <a href="history.html" class="history">
+          <a href="withdrawal.html" class="dashboard">
             <span class="gui-icon">
             </span>
-            <span class="title">history</span>
+            <span class="title">withdrawal</span>
           </a>
         </li>
         <li>
-          <a href="profile.html" class="profile">
+          <a href="messages.html" class="dashboard">
             <span class="gui-icon">
             </span>
-            <span class="title">profile</span>
+            <span class="title">messsages</span>
+          </a>
+        </li>
+        <li>
+          <a href="account.html" class="profile">
+            <span class="gui-icon">
+            </span>
+            <span class="title">account</span>
           </a>
         </li>
       </ul>

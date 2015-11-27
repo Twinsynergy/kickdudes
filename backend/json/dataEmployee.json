@@ -1,0 +1,23 @@
+[
+    {
+        "nameEmployee": "Tesser Phutthasen",
+        "emailEmployee": "snapp@gmail.com",
+        "accessEmployee": "1 week ago",
+        "statusEmployee": "<span class='label label-success'>อนุญาติ</span>",
+        "actionEmployee": "<span class='actions'><a href='employeeAdd.html' class='btn'><i class='mdi mdi-eye'></i></a></span>"
+    },
+    {
+        "nameEmployee": "Cahmp kijlerdphon",
+        "emailEmployee": "snapp@gmail.com",
+        "accessEmployee": "1 week ago",
+        "statusEmployee": "<span class='label label-danger'>ไม่อนุญาติ</span>",
+        "actionEmployee": "<span class='actions'><a href='employeeAdd.html' class='btn'><i class='mdi mdi-eye'></i></a></span>"
+    },
+    {
+        "nameEmployee": "Khomkrid lerdprasert",
+        "emailEmployee": "snapp@gmail.com",
+        "accessEmployee": "1 week ago",        
+        "statusEmployee": "<span class='label label-success'>อนุญาติ</span>",
+        "actionEmployee": "<span class='actions'><a href='employeeAdd.html' class='btn'><i class='mdi mdi-eye'></i></a></span>"
+    }
+]

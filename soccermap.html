@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Kickdudes">
+  <meta name="author" content="Twinsynergy.co.th">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Soccer map</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/soccermap.css" />
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script src="js/jquery.js" type="text/javascript" ></script>
+  <script src="js/bootstrap.js" type="text/javascript" ></script>
+
+  <!--Addition-->
+  <script src="js/bootstrap.js" type="text/javascript" ></script>
+  <script src="js/kickdudes.js" type="text/javascript" ></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+
+</head>
+<body id="soccermap" >
+  <div id="map-canvas"></div>
+<script type="text/javascript">
+
+var map;
+
+function initialize() {
+
+  // Try HTML5 geolocation
+  if(navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+    var pos = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+ 
+    var soccerField = [
+      [-33.890542, 151.274856, 'สนาม กรีนฟิลด์ เอฟซี','ซอยมัยลาภ (รามอินทรา 14) ถนน เกษตร-นวมินทร์ เขตประเวศ กรุงเทพมหานคร 10230','02-321-66666'],
+      [-33.923036, 151.259052, 'สนาม 55 ฟุตซอลคลับ','ซอยเจริญนคร 55 (ชัยโพธิ์ทอง) ใกล้กับสะพานสาทร สะพานกรุงเทพ ถนน เจริญนคร เขตคลองสาน กรุงเทพมหานคร 10600','02-321-77777'],
+      [-34.028249, 151.157507, 'สนาม 50 ฟุตซอล','622/50 ซอย 50 ถนน สุขุมวิท เขตคลองเตย กรุงเทพมหานคร 10110','02-321-8888'],
+      [-33.80010128657071, 151.28747820854187, 'สนาม 3 หนวด','7/3 หมู่ 9 ซอยงามวงศ์วาน 18 (ซอยจุฬาเกษม) ถนน งามวงศ์งาน บางใหญ่ บางใหญ่ นนทบุรี 11000','02-321-99999'],
+      [-33.950198, 151.259302,'24 เออแบ็น ฟุตซอล','69/2122 ซ.กิ่งแก้ว 54 ถนน บางนา-ตราด กม.12 บางนา เขตบางนา กรุงเทพมหานคร 00000','02-321-00000']
+    ];
+    var mapOptions = {
+      zoom: 16,
+      center: pos,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+    map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+    var bounds = new google.maps.LatLngBounds();
+    var infowindow = new google.maps.InfoWindow();
+    var i;
+    var icon = 'images/marker.png';
+    for (i = 0; i < soccerField.length; i++)
+      {
+          var latlng = new google.maps.LatLng(soccerField[i][0], soccerField[i][1]);
+
+          var marker = new google.maps.Marker({
+              position: latlng,
+              map: map,
+              icon: icon,
+              animation: google.maps.Animation.DROP,
+              title: soccerField[i][2]
+          });
+          
+          google.maps.event.addListener(marker, 'click', (function(marker, i) {
+            return function() {
+              var html = 
+                    '<div id="iw-container">'+
+                    '<h3 class="iw-title">'+soccerField[i][2]+'</h3>'+
+                    '<p class="iw-add"><i class="mdi mdi-map-marker"></i>'+soccerField[i][3]+'</p>'+
+                    '<p class="iw-phone"><i class="mdi mdi-phone"></i>'+soccerField[i][4]+'</p>'+
+                    '</div>';
+              infowindow.setContent(html);
+              infowindow.setOptions({maxWidth:350});
+              infowindow.open(map, marker);
+            }
+          })(marker, i));
+          google.maps.event.addListener(infowindow, 'domready', function() {
+
+           // Reference to the DIV which receives the contents of the infowindow using jQuery
+           var iwOuter = $('.gm-style-iw');
+
+           /* The DIV we want to change is above the .gm-style-iw DIV.
+            * So, we use jQuery and create a iwBackground variable,
+            * and took advantage of the existing reference to .gm-style-iw for the previous DIV with .prev().
+            */
+           var iwBackground = iwOuter.prev();
+
+           // Remove the background shadow DIV
+           iwBackground.children(':nth-child(2)').css({'display' : 'none'});
+
+           // Remove the white background DIV
+           iwBackground.children(':nth-child(4)').css({'display' : 'none'});
+           // Moves the shadow of the arrow 76px to the left margin 
+          iwBackground.children(':nth-child(1)').attr('style', function(i,s){ return s + 'left: 170px !important;'});
+
+          // Moves the arrow 76px to the left margin 
+          iwBackground.children(':nth-child(3)').attr('style', function(i,s){ return s + 'left: 170px !important;'});
+          // Changes the desired color for the tail outline.
+          // The outline of the tail is composed of two descendants of div which contains the tail.
+          // The .find('div').children() method refers to all the div which are direct descendants of the previous div. 
+          iwBackground.children(':nth-child(3)').find('div').children().css({'box-shadow': 'rgba(0, 188, 170, 0.6) 0px 1px 6px', 'z-index' : '1'});
+          var iwCloseBtn = iwOuter.next();
+
+          // Apply the desired effect to the close button
+          iwCloseBtn.css({
+            opacity: '1', // by default the close button has an opacity of 0.7
+            right: '45px', top: '10px', // button repositioning
+            border: '0px solid #00BCA9', // increasing button border and new color
+            'border-radius': '13px', // circular effect
+            'box-shadow': '0 0 5px #3990B9' // 3D effect to highlight the button
+            });
+
+          // The API automatically applies 0.7 opacity to the button after the mouseout event.
+          // This function reverses this event to the desired value.
+          iwCloseBtn.mouseout(function(){
+            $(this).css({opacity: '1'});
+          });
+
+        });
+        bounds.extend(latlng);
+      }
+       
+    map.fitBounds(bounds); 
+
+    }, function() {
+      handleNoGeolocation(true);
+    });
+  } else {
+    // Browser doesn't support Geolocation
+    handleNoGeolocation(false);
+  }
+
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+</body>
+</html>

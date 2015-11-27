@@ -34,12 +34,13 @@
       padding: 0;
     }
   }
+  // #magic_arrow{ display: inline-block; }
 
 }
 /* Extra small devices (phones, less than 768px) */
 //iphone landscarp
 @media (max-width: @screen-xs-max) {
-  body{
+  html{
     font-size: 14px;
   }
   #main_navbar{ display: none; }
@@ -50,18 +51,25 @@
     margin-top: 25px;
     margin-right: 40px;
   }
-
+  
+  video#bgvid{ display: none; }
+  #magic_arrow{ display: inline-block; }
   #about{
     .row{
       height: auto;
+    }
+    #title_about{
+      padding-top: 0;
     }
     #iphone{
       margin-top: 20px;
       margin-bottom: 20px;
     }
+    h1{ font-size: 2rem; }
   }
   #magic_arrow{
-    margin: 20px 0;
+    margin-top: 0;
+    bottom: 50px;
   }
   .app_store{ text-align: center; }
   #feature{
@@ -82,6 +90,20 @@
   }
   .signupform{
     padding: 0 15px;
+    .nav-tabs{
+      li{
+        a{ font-size: 1.5rem; }
+      }
+      .tab-content{
+        padding: 40px 30px;
+      }
+    }
+  }
+  .signupform-container .btn{
+    font-size: 1.2rem;
+  }
+  .signupform-start{
+    margin-bottom: 15px;
   }
 }
 //iphone portrait
@@ -98,14 +120,5 @@
     .navbar-text{
       width: 100%;
     }
-  }
-  .signupform .nav-tabs li a{
-    font-size: 1.8rem;
-  }
-  .signupform-container .btn{
-    font-size: 1.5rem;
-  }
-  .signupform .tab-content{
-    padding: 40px 30px;
   }
 }
